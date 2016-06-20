@@ -2,12 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
+const NODE_HOST = process.env.NODE_HOST || '0.0.0.0';
+const NODE_PORT = process.env.NODE_PORT || 8090;
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: [
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8090',
+        `webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`,
         'webpack/hot/only-dev-server',
         './client/main.js'
     ],
@@ -20,12 +23,16 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader!autoprefixer-loader",
+                loader: (process.env.NODE_ENV === "production")
+                            ? ExtractTextPlugin.extract('style', 'css!autoprefixer')
+                            : "style-loader!css-loader!autoprefixer-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
                 test: /\.less$/,
-                loader: "style-loader!css-loader!autoprefixer-loader!less",
+                loader: (process.env.NODE_ENV === "production") 
+                            ? ExtractTextPlugin.extract('style', 'css!less!autoprefixer')
+                            : "style-loader!css-loader!autoprefixer-loader!less",
                 exclude: [/node_modules/, /public/]
             },
             {
@@ -56,8 +63,8 @@ module.exports = {
         colors: true,
         historyApiFallback: true,
         inline: false,
-        contentBase: 'public',
-        port: 8090,
+        contentBase: __dirname + '/public',
+        port: NODE_PORT,
         hot: true
     },
 
@@ -70,7 +77,8 @@ module.exports = {
             allChunks: true, 
             disable: process.env.NODE_ENV == 'development'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ]
 };
 
