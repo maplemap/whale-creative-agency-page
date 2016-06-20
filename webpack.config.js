@@ -1,19 +1,23 @@
+var path = require('path');
 var webpack = require('webpack');
 
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
-    entry: "./client/main.js",
+    entry: [
+        'react-hot-loader/patch',
+        'webpack-dev-server/client?http://localhost:8090',
+        'webpack/hot/only-dev-server',
+        './client/main.js'
+    ],
     output: {
         path: __dirname + '/public/',
-        publicPath: "public/",
+        publicPath: "/public/",
         filename: "/js/bundle.js"
     },
     module: {
         loaders: [
-            {
-                test: /\.js$/,
-                loader: "babel",
-                exclude: [/node_modules/, /public/]
-            },
             {
                 test: /\.css$/,
                 loader: "style-loader!css-loader!autoprefixer-loader",
@@ -25,34 +29,60 @@ module.exports = {
                 exclude: [/node_modules/, /public/]
             },
             {
-                test: /\.scss$/,
-                loaders: ["style", "css", "sass"]
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                loaders: [
+                    'file?name=img/[sha512:hash:base64:7].[ext]',
+                    'image-webpack?progressive=true&optimizationLevel=7&interlaced=true'
+                ]
             },
             {
-                test: /\.gif$/,
-                loader: "url-loader?limit=10000&mimetype=image/gif"
+                test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                loader : 'file?name=fonts/[name].[ext]'
             },
             {
-                test: /\.jpg$/,
-                loader: "url-loader?limit=10000&mimetype=image/jpg"
-            },
-            {
-                test: /\.png$/,
-                loader: "url-loader?limit=10000&mimetype=image/png"
-            },
-            {
-                test: /\.svg/,
-                loader: "url-loader?limit=26000&mimetype=image/svg+xml"
-            },
-            {
-                test: /\.jsx$/,
-                loader: "react-hot!babel",
-                exclude: [/node_modules/, /public/]
-            },
-            {
-                test: /\.json$/,
-                loader: "json-loader"
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel',
+                query: {
+                    presets: ["es2015", "stage-0", "react"],
+                    plugins: ["react-hot-loader/babel"]
+                },
+                include: path.join(__dirname, 'client')
             }
         ]
-    }
+    },
+
+    devServer: {
+        colors: true,
+        historyApiFallback: true,
+        inline: false,
+        contentBase: 'public',
+        port: 8090,
+        hot: true
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
+        }),
+        new ExtractTextPlugin('css/bundle.css', {
+            allChunks: true, 
+            disable: process.env.NODE_ENV == 'development'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
+
+if (NODE_ENV == 'production') {
+    module.exports.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                // don't show unreachable variables etc
+                warnings:     false,
+                drop_console: true,
+                unsafe:       true
+            }
+        })
+    );
+}
