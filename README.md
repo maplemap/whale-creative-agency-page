@@ -4,5 +4,5 @@
 
 1. ```npm install```
 2. ```npm run dev-build```
-3. ```npm run webpack-devserver``` (in another terminal, and wait until build is ready)
+3. ```npm run webpack-devserver``` (in another terminal)
 5. open http://localhost:8090
