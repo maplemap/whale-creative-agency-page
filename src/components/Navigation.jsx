@@ -1,14 +1,15 @@
 import React from "react";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-import './Navbar.less';
+import './Navigation.less';
 
-export default React.createClass({
+class Navigation extends React.Component{
     render(){
         return(
             <Navbar default fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="#">React-Bootstrap</a>
+                        <img src='/static/img/en.png' className='StartPage__logo' />
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -21,4 +22,6 @@ export default React.createClass({
             </Navbar>
         )
     }
-});
+}
+
+export default Navigation;
