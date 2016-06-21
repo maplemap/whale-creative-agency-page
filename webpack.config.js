@@ -1,4 +1,3 @@
-var path = require('path');
 var webpack = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -8,16 +7,11 @@ const NODE_PORT = process.env.NODE_PORT || 8090;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: [
-        'react-hot-loader/patch',
-        `webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`,
-        'webpack/hot/only-dev-server',
-        './client/main.js'
-    ],
+    entry: getEntrySources(['./src/main.js']),
     output: {
-        path: __dirname + '/public/',
+        path: __dirname + '/public/build',
         publicPath: "/public/",
-        filename: "/js/bundle.js"
+        filename: "bundle.js"
     },
     module: {
         loaders: [
@@ -38,13 +32,13 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 loaders: [
-                    'file?name=img/[sha512:hash:base64:7].[ext]',
+                    'file?name=[sha512:hash:base64:7].[ext]',
                     'image-webpack?progressive=true&optimizationLevel=7&interlaced=true'
                 ]
             },
             {
                 test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                loader : 'file?name=fonts/[name].[ext]'
+                loader : 'file?name=[name].[ext]'
             },
             {
                 test: /\.jsx?$/,
@@ -53,8 +47,7 @@ module.exports = {
                 query: {
                     presets: ["es2015", "stage-0", "react"],
                     plugins: ["react-hot-loader/babel"]
-                },
-                include: path.join(__dirname, 'client')
+                }
             }
         ]
     },
@@ -73,7 +66,7 @@ module.exports = {
           $: 'jquery',
           jQuery: 'jquery'
         }),
-        new ExtractTextPlugin('css/bundle.css', {
+        new ExtractTextPlugin('bundle.css', {
             allChunks: true, 
             disable: process.env.NODE_ENV == 'development'
         }),
@@ -93,4 +86,14 @@ if (NODE_ENV == 'production') {
             }
         })
     );
+}
+
+function getEntrySources(sources) {
+    if (process.env.NODE_ENV !== 'production') {
+        sources.unshift('react-hot-loader/patch');
+        sources.unshift(`webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`);
+        sources.unshift('webpack/hot/only-dev-server');
+    }
+
+    return sources;
 }
