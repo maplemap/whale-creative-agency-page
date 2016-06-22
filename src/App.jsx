@@ -1,6 +1,5 @@
 import React from "react";
 
-import Navigation from './components/Navigation.jsx';
 import Presentation from './components/Presentation.jsx';
 
 class App extends React.Component {
