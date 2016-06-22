@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Whale Design Studio Page",
   "scripts": {
-    "dev-build": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=development webpack",
+    "watch": "NODE_ENV=development webpack --watch",
     "prod-build": "NODE_ENV=production webpack",
     "webpack-devserver": "webpack-dev-server --progress"
   },
