@@ -50,6 +50,10 @@ input, textarea {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
+button {
+    border: none;
+    background: none;
+}
 ol, ul {
     list-style: none;
 }

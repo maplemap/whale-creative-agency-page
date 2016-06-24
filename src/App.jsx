@@ -1,12 +1,16 @@
 import React from "react";
+import './App.less';
 
-import Navigation from './components/Navigation.jsx';
 import Presentation from './components/Presentation.jsx';
+import Header from './components/Header.jsx';
 
 class App extends React.Component {
     render(){
         return(
-            <Presentation />
+            <div className="App">
+                <Header />
+                <Presentation />
+            </div>
         )
     }
 }

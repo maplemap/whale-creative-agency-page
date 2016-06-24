@@ -1,0 +1,152 @@
+/*** presentation-section ***/
+.presentation {
+
+  &__slide {
+    position: relative;
+    height: 100%;
+  }
+
+  .presentation__body {
+    width: 100%;
+  }
+
+  &__lead-in {
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 7.3125em;
+    line-height: .92em;
+
+    &--underline {
+      display: inline-block;
+      position: relative;
+      font-family: 'FiraSans-Medium', sans-serif;
+
+      &:before,
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: .06em;
+        background: #000;
+      }
+      &:before {
+        left: 0;
+        width: 75%;
+      }
+      &:after {
+        right: 0;
+        width: 8%;
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 1.25em;
+  }
+
+  &__break-btn {
+    position: relative;
+    float: right;
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 4em;
+    text-align: right;
+    line-height: .85em;
+    cursor: pointer;
+    margin: .7em 13.4% 0 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 31%;
+      right: -17%;
+      width: 9%;
+      height: 30%;
+      background: url("../img/break-btn-arrow.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &__blur-block {
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+    top: 8.7em;
+    left: 11.4583333333333%;
+    width: 78.3%;
+    height: 44.6em;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      filter: blur(8px);
+      background: rgba(248, 231, 28, 0.87);
+    }
+  }
+
+  &__more-btn {
+    position: absolute;
+    z-index: 40;
+    top: 84.6%;
+    left: 3%;
+    color: black;
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__slide--1 {
+    width: 100%;
+    overflow: hidden;
+    background: url("../img/macbook-slider-bg.png") no-repeat 82% -11%;
+
+    .presentation__body {
+      position: relative;
+      margin-top: 8.625em;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: 11.4583333333333%;
+        width: 78.3%;
+        height: 44.6em;
+        backdrop-filter: blur(8px);
+        background: rgba(248, 231, 28, 0.87);
+      }
+    }
+
+    .presentation__intro {
+      width: 50.3%;
+      padding-top: 24.9em;
+    }
+
+    .presentation__lead-in,
+    .presentation__text,
+    .presentation__break-btn {
+      position: relative;
+      z-index: 30;
+    }
+
+    .presentation__lead-in,
+    .presentation__text {
+      color: #000;
+      text-align: right;
+    }
+
+    .presentation__text {
+      margin-top: .5em;
+    }
+  }
+}

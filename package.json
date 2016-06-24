@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Whale Design Studio Page",
   "scripts": {
-    "dev-build": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=development webpack",
+    "watch": "NODE_ENV=development webpack --watch",
     "prod-build": "NODE_ENV=production webpack",
     "webpack-devserver": "webpack-dev-server --progress"
   },
@@ -11,11 +12,8 @@
     "name": "Whale Design Studio"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "*",
     "less": "^2.7.1",
     "react": "^0.14.6",
-    "react-bootstrap": "^0.29.5",
     "react-dom": "^0.14.6",
     "react-slick": "^0.12.2"
   },

@@ -1,2 +1,73 @@
 @import "reset.css";
-@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import "font.css";
+@import "slick-slider.less";
+
+/*** default ***/
+body {
+  font-size: 100%;
+  font-family: 'FiraSans-Regular', sans-serif;
+}
+
+#main {
+  height: 100%;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*** logo ***/
+.logo {
+  color: black;
+  display: inline-block;
+  font-size: 2.125em;
+  font-family: 'FiraSans-Bold', sans-serif;
+  text-transform: lowercase;
+
+  &__star {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 23px;
+      height: 22px;
+      position: absolute;
+      top: -.1em;
+      right: -29%;
+      background: url("../img/logo-star.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &--header {
+    float: left;
+    margin-top: .2em;
+    line-height: .96em;
+  }
+}
+
+/*** team-position ***/
+.team-position {
+  color: black;
+  font-size: 1.125em;
+  font-family: 'FiraSans-Bold', sans-serif;
+
+  &--header {
+    float: left;
+    margin: .125em 0 0 3.125%;
+  }
+}
+
+/*** navigation ***/
+.navigation {
+  float: right;
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  background: url("../img/menu-icon.png") no-repeat;
+}
