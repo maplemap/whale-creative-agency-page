@@ -62,10 +62,10 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery'
-        }),
+        // new webpack.ProvidePlugin({
+        //   $: 'jquery',
+        //   jQuery: 'jquery'
+        // }),
         new ExtractTextPlugin('bundle.css', {
             allChunks: true, 
             disable: process.env.NODE_ENV == 'development'
@@ -79,7 +79,6 @@ if (NODE_ENV == 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                // don't show unreachable variables etc
                 warnings:     false,
                 drop_console: true,
                 unsafe:       true
