@@ -1,4 +1,5 @@
 import React from "react";
+import './GuidLines.less';
 
 class GuidLines extends React.Component {
     static defaultProps = {
