@@ -12,11 +12,8 @@
     "name": "Whale Design Studio"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "*",
     "less": "^2.7.1",
     "react": "^0.14.6",
-    "react-bootstrap": "^0.29.5",
     "react-dom": "^0.14.6",
     "react-slick": "^0.12.2"
   },
