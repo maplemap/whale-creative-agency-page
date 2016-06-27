@@ -59,7 +59,7 @@ body {
 
   &--header {
     float: left;
-    margin: .125em 0 0 3.125%;
+    margin: .125em 0 0 3.4%;
   }
 }
 
@@ -70,4 +70,56 @@ body {
   height: 26px;
   cursor: pointer;
   background: url("../img/menu-icon.png") no-repeat;
+}
+
+/*** brand-name ***/
+.brand-name {
+  color: black;  /* Fallback: assume this color ON TOP of image */
+  //width: 35%;
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 14.7em;
+  line-height: .82em;
+  text-transform: lowercase;
+
+  &__text {
+    display: inline-block;
+
+    i {
+      float: left;
+      font-style: normal;
+    }
+  }
+
+  &--presentation {
+
+    .brand-name__text {
+      background: url("../img/whale-bg.jpg") no-repeat 56% -38%;
+      background-size: 215%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__star {
+    font-size: .74em;
+    line-height: .8em;
+  }
+  &__W {
+    margin-left: 5.6%;
+  }
+  &__H {
+    margin-left: 13%;
+  }
+  &__A {
+    line-height: .99em;
+    margin-left: 12%;
+  }
+  &__L {
+    line-height: .99em;
+    margin-left: 23%;
+  }
+  &__E {
+    line-height: 1.16em;
+    margin-left: -28%;
+  }
 }
