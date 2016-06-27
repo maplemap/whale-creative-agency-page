@@ -49,7 +49,18 @@ class Presentation extends React.Component {
                             </h2>
                         </div>
                     </div>
-                    <div className="presentation__slide"></div>
+                    <div className="presentation__slide presentation__slide--3">
+                        <div className="presentation__body">
+                            <div className="presentation__intro">
+                                <h2 className="presentation__lead-in">
+                                    mobile<br /> application<br /> design.
+                                </h2>
+                                <div className="presentation__text">
+                                    from ideas to mockups<br /> to design<br /> to your enjoy
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="presentation__slide"></div>
                 </Slider>
                 <button className="presentation__more-btn">More</button>
@@ -77,13 +88,3 @@ class CustomNextArrow extends React.Component{
 }
 
 export default Presentation;
-
-// <span className="presentation__blur-block" />
-// <ul className="brand-name brand-name--presentation">
-//     <li className="brand-name__star">*</li>
-//     <li className="brand-name__W">w</li>
-//     <li className="brand-name__H">h</li>
-//     <li className="brand-name__A">a</li>
-//     <li className="brand-name__L">l</li>
-//     <li className="brand-name__E">e</li>
-// </ul>

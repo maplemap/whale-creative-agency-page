@@ -9,6 +9,7 @@
 
   .presentation__body {
     width: 100%;
+    height: 100%;
   }
 
   &__lead-in {
@@ -42,7 +43,7 @@
   }
 
   &__text {
-    font-family: 'FiraSans-Bold', sans-serif;
+    font-family: 'FiraSans-Medium', sans-serif;
     font-size: 1.25em;
   }
 
@@ -152,8 +153,36 @@
   &__slide--2 {
 
     .presentation__body {
-      height: 100%;
       padding: 15em 0 0 16.2%;
+    }
+  }
+
+  &__slide--3 {
+    background: url("../img/iphone-slider-bg.png") no-repeat 60% 30% #1DADB5;
+
+    .presentation__body {
+      position: relative;
+      height: 50em;
+      margin-top: 5.625em;
+      background: url("../img/iphone-slider-body-bg.png") 71% top no-repeat #1CA6AE;
+    }
+
+    .presentation__intro {
+      position: absolute;
+      left: 13.4%;
+      bottom: 3.1em;
+    }
+
+    .presentation__lead-in,
+    .presentation__text {
+      color: white;
+    }
+
+    .presentation__text {
+      position: absolute;
+      top: 1.3em;
+      right: -.4em;
+      line-height: 1.1em;
     }
   }
 }
