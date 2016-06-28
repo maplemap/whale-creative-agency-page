@@ -111,14 +111,16 @@
 
     .presentation__body {
       position: relative;
-      padding: 8.625em 0 17.5em 0;
+      height: 41.375em;
+      //padding: 8.625em 0 17.5em 0;
+      margin-top: 8.625em;
 
       &:before {
         content: '';
         display: inline-block;
         position: absolute;
         z-index: 20;
-        top: 8.625em;
+        top: 0;
         left: 11.4583333333333%;
         width: 78.3%;
         height: 44.6em;
@@ -128,8 +130,11 @@
     }
 
     .presentation__intro {
-      width: 50.3%;
-      padding-top: 24.9em;
+      position: absolute;
+      left: 6%;
+      bottom: 0;
+      //width: 50.3%;
+      //padding-top: 24.9em;
     }
 
     .presentation__lead-in,
@@ -170,7 +175,7 @@
     .presentation__intro {
       position: absolute;
       left: 13.4%;
-      bottom: 3.1em;
+      bottom: 7%;
     }
 
     .presentation__lead-in,
@@ -180,9 +185,46 @@
 
     .presentation__text {
       position: absolute;
-      top: 1.3em;
-      right: -.4em;
+      top: 9%;
+      right: -1%;
       line-height: 1.1em;
     }
   }
+
+  &__slide--4 {
+    background: #F8E71C;
+    
+    .presentation__body {
+      position: relative;
+      background: url("../img/42-slider-body-bg.png") no-repeat 109% 54%;
+    }
+
+    .presentation__intro {
+      position: absolute;
+      right: 40%;
+      bottom: 12.6%;
+      text-align: right;
+    }
+
+    .presentation__lead-in,
+    .presentation__text {
+      background: #F9F3FA;
+    }
+
+    .presentation__lead-in {
+      padding: .1em 6% .16em 16%;
+      margin-bottom: 5px;
+    }
+
+    .presentation__text {
+      display: inline;
+
+      span {
+        line-height: 1.3em;
+        padding: .4em 6% .4em 5%;
+      }
+    }
+  }
 }
+
+
