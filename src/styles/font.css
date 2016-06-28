@@ -33,3 +33,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'FiraSans-BookItalic';
+    src:
+        url('../fonts/FiraSans-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FiraSans-BookItalic.otf')  format('opentype'),
+        url('../fonts/FiraSans-BookItalic.woff') format('woff'),
+        url('../fonts/FiraSans-BookItalic.ttf')  format('truetype'),
+        url('../fonts/FiraSans-BookItalic.svg#FiraSans-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
