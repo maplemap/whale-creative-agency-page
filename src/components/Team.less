@@ -1,0 +1,76 @@
+/*** team-section ***/
+.team {
+
+  .slick-prev,
+  .slick-next {
+    width: 10em;
+    padding: 6.5em 0;
+    margin: -10.7em 0 0 0;
+    background: white;
+
+    &:after {
+      content: attr(data-page-num);
+      display: block;
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 6.1em;
+    }
+  }
+  .slick-prev {
+    left: .15625%;
+
+    &:before {
+      margin-right: 32%;
+    }
+
+    &:after {
+      float: left;
+      margin-left: 10%;
+    }
+  }
+  .slick-next {
+    right: .15625%;
+
+    &:before {
+      margin-left: 32%;
+    }
+
+    &:after {
+      float: right;
+      margin-right: 10%;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .team__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slide--1 {
+    background: url('../img/team-slider-1-bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__slide--2 {
+    background: url('../img/team-slider-2-bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__slide--3 {
+    background: url('../img/team-slider-3-bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__slide--4 {
+    background: url('../img/team-slider-4-bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+

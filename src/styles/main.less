@@ -41,16 +41,13 @@ body {
   }
 }
 
-/*** team-position ***/
-.team-position {
+/*** section-name ***/
+.section-name {
   color: black;
+  float: left;
   font-size: 1.125em;
   font-family: 'FiraSans-Bold', sans-serif;
-
-  &--header {
-    float: left;
-    margin: .125em 0 0 3.4%;
-  }
+  margin: .125em 0 0 3.4%;
 }
 
 /*** navigation ***/
@@ -135,5 +132,50 @@ body {
     position: absolute;
     left: 3%;
     bottom: 8%;
+  }
+}
+
+.description {
+  padding: 2.4em 4% 2.4em 4%;
+
+  &__title {
+    font-size: 2.25em;
+    font-family: 'FiraSans-Bold', sans-serif;
+    text-transform: lowercase;
+  }
+  &__stroke {
+    border-top: 1px solid black;
+    margin: .5em 0 0 0;
+  }
+  &__text {
+    font-size: 1.125em;
+    font-family: 'FiraSans-Regular', sans-serif;
+    line-height: 1.4em;
+    box-sizing: border-box;
+    padding: .6em 0;
+  }
+
+
+  &--team {
+    color: black;
+    position: absolute;
+    left: 5.72916666666667%;
+    bottom: 11.5%;
+    width: 55.7291666666667%;
+    padding-left: 0;
+    background: white;
+
+    &:before {
+      content: attr(data-num);
+      display: block;
+      float: left;
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 8.4375em;
+      margin: .1em 4.4% 0 4.4%;
+    }
+
+    .description__text {
+      overflow: hidden;
+    }
   }
 }
