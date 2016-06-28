@@ -1,8 +1,9 @@
 import React from "react";
 import './App.less';
 
-import Presentation from './components/Presentation.jsx';
 import Header from './components/Header.jsx';
+import Presentation from './components/Presentation.jsx';
+import Team from './components/Team.jsx';
 
 class App extends React.Component {
     render(){
@@ -10,6 +11,7 @@ class App extends React.Component {
             <div className="App">
                 <Header />
                 <Presentation />
+                <Team />
             </div>
         )
     }
