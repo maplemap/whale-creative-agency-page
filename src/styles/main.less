@@ -21,10 +21,12 @@ body {
 /*** logo ***/
 .logo {
   color: black;
+  float: left;
   display: inline-block;
   font-size: 2.125em;
   font-family: 'FiraSans-Bold', sans-serif;
   text-transform: lowercase;
+  line-height: .91em;
   transition: .5s;
 
   &__star {
@@ -35,9 +37,7 @@ body {
   }
 
   &--header {
-    float: left;
     margin-top: .2em;
-    line-height: .91em;
   }
   &--white {
     color: white;
@@ -224,7 +224,7 @@ body {
     margin-top: 3.6em;
 
     .gallery__grid {
-      margin: 1.7em auto 0 auto;
+      margin-top: 1.7em;
 
       .gallery__item {
         position: relative;
@@ -275,5 +275,55 @@ body {
       opacity: 1;
       background: rgba(0,0,0,0.6);
     }
+  }
+}
+
+/*** copyright ***/
+.copyright {
+
+  &--footer {
+    color: white;
+    position: absolute;
+    bottom: 3em;
+    left: 0;
+    font-family: 'FiraSans-Regular', sans-serif;
+    font-size: 1.75em;
+
+    .copyright__company {
+      font-size: 1.3em;
+
+      i {
+        font-size: .7em;
+        font-style: normal;
+      }
+    }
+
+    .copyright__place {
+      display: block;
+      margin-top: .2em;
+    }
+  }
+}
+
+/*** social ***/
+.socials {
+
+  [class*=__] {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+  }
+
+  &__behance {
+    background: url("../img/social-beahance-icon.svg") no-repeat center center;
+  }
+  &__dribble {
+
+  }
+  &__linkedin {
+
+  }
+  &__soundcloud {
+
   }
 }
