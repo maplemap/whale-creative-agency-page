@@ -197,7 +197,6 @@ body {
 
   &__menu {
     text-align: right;
-    white-space:nowrap;
 
     &-item {
       display: inline-block;
@@ -225,21 +224,11 @@ body {
     margin-top: 3.6em;
 
     .gallery__grid {
-      margin-top: 1.7em;
+      margin: 1.7em auto 0 auto;
 
       .gallery__item {
         position: relative;
         margin-bottom: 20px;
-
-        &:hover .mask--gallery-item {
-          opacity: 1;
-          background: rgba(0,0,0,0.6);
-        }
-        &:hover .mask__see-icon {
-          opacity: 1;
-          transform: scale(1,1);
-          transition-delay: 0.2s;
-        }
       }
     }
   }
@@ -274,6 +263,17 @@ body {
       transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
       margin: -15.5px 0 0 -22.5px;
       background: url("../img/eye-icon.png") no-repeat center;
+
+      &--active{
+        opacity: 1;
+        transform: scale(1,1);
+        transition-delay: 0.2s;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      background: rgba(0,0,0,0.6);
     }
   }
 }
