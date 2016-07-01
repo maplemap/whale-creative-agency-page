@@ -34,11 +34,13 @@ module.exports = {
                 loaders: [
                     'file?name=[sha512:hash:base64:7].[ext]',
                     'image-webpack?progressive=true&optimizationLevel=7&interlaced=true'
-                ]
+                ],
+                exclude: [/node_modules/, /public/, /src\/fonts/]
             },
             {
                 test   : /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                loader : 'file?name=[name].[ext]'
+                loader : 'file?name=[name].[ext]',
+                exclude: [/node_modules/, /public/, /src\/img/]
             },
             {
                 test: /\.json$/,
