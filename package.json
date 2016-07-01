@@ -12,9 +12,11 @@
     "name": "Whale Design Studio"
   },
   "dependencies": {
+    "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-masonry-component": "^4.0.4",
     "react-slick": "^0.12.2"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@ class GuidLines extends React.Component {
     render() {
 
         return (
-            <div className="guid-lines">
+            <div className="guid-lines guid-lines--white">
                 { this.props.lines.map((num, index) => {
                     const spanClass = 'guid-lines__' + num;
 
