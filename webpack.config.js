@@ -41,6 +41,10 @@ module.exports = {
                 loader : 'file?name=[name].[ext]'
             },
             {
+                test: /\.json$/,
+                loader: "json-loader"
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel',
