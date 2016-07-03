@@ -13,23 +13,9 @@ class PortfolioGallery extends React.Component {
 
     render() {
         const projects = this.props.projects;
-        const categories = this._getUniqueCategories();
 
         return (
             <div className="gallery gallery--portfolio">
-                <ul className="gallery__menu">
-                    <li className="gallery__menu-item">All</li>
-                    {
-                        categories.map((category, index) =>
-                            <li
-                                key={index}
-                                className="gallery__menu-item"
-                            >
-                                {category}
-                            </li>
-                        )
-                    }
-                </ul>
                 <div className="gallery__grid">
                     <Masonry options={this.props.masonryOptions}>
                         {
@@ -54,10 +40,6 @@ class PortfolioGallery extends React.Component {
                 </div>
             </div>
         )
-    }
-
-    _getUniqueCategories() {
-        return [...new Set(this.props.projects.map(project => project.category))];
     }
 }
 

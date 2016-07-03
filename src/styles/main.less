@@ -179,14 +179,16 @@ body {
   }
 
   &--portfolio {
+    color: white;
     width: 60%;
     padding: 0;
 
-    .description__stroke {
-      width: 90%;
+    .description__title {
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 1.125em;
+      text-transform: lowercase;
     }
     .description__text {
-      color: white;
       padding: .3em 0;
     }
   }
@@ -194,31 +196,6 @@ body {
 
 /*** gallery ***/
 .gallery {
-
-  &__menu {
-    text-align: right;
-
-    &-item {
-      display: inline-block;
-      color: white;
-      font-family: 'FiraSans-Bold', sans-serif;
-      font-size: 2.4em;
-      text-transform: lowercase;
-      cursor: pointer;
-      white-space: nowrap;
-      margin: 0 1.4% 0 2%;
-
-      &:first-child {
-        float: left;
-        text-align: left;
-        margin: 0;
-      }
-
-      &--active {
-        color: #1DADB5;
-      }
-    }
-  }
 
   &--portfolio {
     margin-top: 3.6em;
@@ -229,6 +206,39 @@ body {
       .gallery__item {
         position: relative;
         margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.gallery-menu {
+
+  &--portfolio {
+    text-align: right;
+    margin-top: .9375em;
+
+    .gallery-menu__item {
+      display: inline-block;
+      color: white;
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 1.5em;
+      text-transform: lowercase;
+      cursor: pointer;
+      white-space: nowrap;
+      margin: 0 1.4% .1em 2%;
+
+      &:first-child {
+        float: left;
+        text-align: left;
+        margin: 0 75px 0 0;
+      }
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+
+      &:hover,
+      &--active {
+        color: #1DADB5;
       }
     }
   }

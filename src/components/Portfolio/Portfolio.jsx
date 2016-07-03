@@ -7,10 +7,26 @@ import './Portfolio.less';
 
 class Portfolio extends React.Component {
     render() {
+        const categories = this._getUniqueCategories();
+
         return (
             <section className="section portfolio">
                 <div className="portfolio__body">
                     <article className="description description--portfolio">
+                        <h2 className="description__title">Our work</h2>
+                        <ul className="gallery-menu gallery-menu--portfolio">
+                            <li className="gallery-menu__item">All</li>
+                            {
+                                categories.map((category, index) =>
+                                    <li
+                                        key={index}
+                                        className="gallery-menu__item"
+                                    >
+                                        {category}
+                                    </li>
+                                )
+                            }
+                        </ul>
                         <hr className="description__stroke" />
                         <p className="description__text">
                             For seven years of being in IT industry, we’ve created designs for dozens of web and mobile services,
@@ -24,6 +40,10 @@ class Portfolio extends React.Component {
                 <GuidLines />
             </section>
         )
+    }
+
+    _getUniqueCategories() {
+        return [...new Set(this.props.projects.map(project => project.category))];
     }
 }
 
