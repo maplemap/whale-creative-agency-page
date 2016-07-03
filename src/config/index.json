@@ -1,0 +1,29 @@
+{
+  "socials": [
+    {
+      "id": 1,
+      "name": "behance",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "name": "dribble",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "name": "linkedin",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "name": "instagram",
+      "link": "#"
+    },
+    {
+      "id": 5,
+      "name": "soundcloud",
+      "link": "#"
+    }
+  ]
+}

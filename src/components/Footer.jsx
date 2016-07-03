@@ -1,10 +1,9 @@
 import React from "react";
 import './Footer.less';
 
+import config from '../config';
+
 class Footer extends React.Component {
-    static defaultProps = {
-        socials: ['behance', 'dribble', 'linkedin', 'soundcloud']
-    };
 
     render() {
 
@@ -15,15 +14,22 @@ class Footer extends React.Component {
                         <span className="copyright__company"><i>©</i> whaledesign.me</span>
                         <span className="copyright__place">2016 Ukraine</span>
                     </ul>
-                    <div className="footer__social">
-                        <span className="footer__social-slogan">#followthewhale</span>
-                        <ul className="socials">
+                    <div className="footer__social-links">
+                        <div className="footer__follow">
+                            #followthewhale
+                        </div>
+                        <ul className="socials socials--footer">
                             {
-                                this.props.socials.map((social, index) =>
+                                config.socials.map((social, index) =>
                                     <li
-                                        key={index}
-                                        className={`socials__${social}`}
-                                    />
+                                        key={social.id}
+                                        className="socials__cell"
+                                    >
+                                        <a
+                                            className={`socials__${social.name}`}
+                                            href={social.link}
+                                        />
+                                    </li>
                                 )
                             }
                         </ul>

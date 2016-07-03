@@ -284,7 +284,7 @@ body {
   &--footer {
     color: white;
     position: absolute;
-    bottom: 3em;
+    bottom: 3.8em;
     left: 0;
     font-family: 'FiraSans-Regular', sans-serif;
     font-size: 1.75em;
@@ -308,22 +308,42 @@ body {
 /*** social ***/
 .socials {
 
-  [class*=__] {
+  &__cell {
     display: inline-block;
-    width: 34px;
-    height: 34px;
+
+    a {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+    }
   }
 
   &__behance {
     background: url("../img/social-beahance-icon.svg") no-repeat center center;
   }
   &__dribble {
-
+    background: url("../img/social-dribble-icon.svg") no-repeat center center;
   }
   &__linkedin {
-
+    background: url("../img/social-linked-icon.svg") no-repeat center center;
+  }
+  &__instagram {
+    background: url("../img/social-instagram-icon.svg") no-repeat center center;
   }
   &__soundcloud {
+    background: url("../img/social-soundcloud-icon.svg") no-repeat center center;
+  }
 
+  &--footer {
+    text-align: right;
+    margin-top: 1.2em;
+
+    .socials__cell {
+      margin-left: 33px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }
