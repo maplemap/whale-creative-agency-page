@@ -12,7 +12,7 @@ class Header extends React.Component{
                             Whale<span className="logo__star">*</span><br/> Creative<br/> Agency
                         </a>
                     </h1>
-                    <div className="section-name section-name--white">our work</div>
+                    <div className="section-name section-name--white">full-stack <br />design services</div>
                     <Navigation />
                 </div>
             </header>
