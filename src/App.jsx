@@ -2,8 +2,8 @@ import React from "react";
 import './App.less';
 
 import Header from './components/Header.jsx';
-import Presentation from './components/Presentation.jsx';
-import Team from './components/Team.jsx';
+import Presentation from './components/Presentation/Presentation.jsx';
+import Team from './components/Team/Team.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
 
