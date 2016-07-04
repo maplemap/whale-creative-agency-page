@@ -2,7 +2,6 @@ import React from "react";
 import GuidLines from '../GuidLines.jsx';
 
 import PortfolioGallery from './PortfolioGallery.jsx';
-
 import './Portfolio.less';
 
 import Waypoint from 'react-waypoint';

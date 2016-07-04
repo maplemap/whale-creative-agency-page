@@ -2,6 +2,8 @@ import React from "react";
 import Navigation from './Navigation.jsx';
 import './Header.less';
 
+const nl2br = require('react-nl2br');
+
 class Header extends React.Component{
     render() {
         const modifier = (this.props.colorScheme === 'white') ? '--white' : '';
@@ -17,7 +19,7 @@ class Header extends React.Component{
                     <div
                         className={`section-slogan ${(modifier) ? 'section-slogan' + modifier : ''}`}
                     >
-                        {this.props.sloganName}
+                        { nl2br(this.props.sloganName) }
                     </div>
                     <Navigation colorScheme={this.props.colorScheme} />
                 </div>
