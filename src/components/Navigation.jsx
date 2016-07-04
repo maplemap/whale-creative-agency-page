@@ -7,9 +7,13 @@ class Navigation extends React.Component{
     };
 
     render() {
+        const modifier = (this.props.colorScheme === 'white') ? '--white' : '';
+
         return (
             <nav className="navigation">
-                <div className="navigation__icon navigation__icon--white">
+                <div
+                    className={`navigation__icon ${(modifier) ? 'navigation__icon' + modifier : ''}`}
+                >
                     { this.props.spanAmount.map((num, index) => {
                         return <span key={index} />
                     })}

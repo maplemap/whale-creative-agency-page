@@ -5,6 +5,8 @@ import PortfolioGallery from './PortfolioGallery.jsx';
 
 import './Portfolio.less';
 
+import Waypoint from 'react-waypoint';
+
 class Portfolio extends React.Component {
     render() {
         const categories = this._getUniqueCategories();
@@ -37,7 +39,15 @@ class Portfolio extends React.Component {
                     </article>
                     <PortfolioGallery projects={this.props.projects} />
                 </div>
-                <GuidLines />
+                
+                <GuidLines 
+                    colorScheme={this.props.colorScheme} 
+                    disableLines={[5]}
+                />
+                
+                <div className="waypoint waypoint--portfolio">
+                    <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
+                </div>
             </section>
         )
     }

@@ -12,12 +12,14 @@
     "name": "Whale Design Studio"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-masonry-component": "^4.0.4",
-    "react-slick": "^0.12.2"
+    "react-slick": "^0.12.2",
+    "react-waypoint": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "*",
