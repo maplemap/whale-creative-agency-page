@@ -7,7 +7,7 @@ import Team from './components/Team/Team.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
 
-import projects from './data/projects.json';
+import projects from './config/projects.json';
 import config from './config';
 
 class App extends React.Component {
