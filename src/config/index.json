@@ -25,5 +25,17 @@
       "name": "soundcloud",
       "link": "#"
     }
-  ]
+  ],
+
+  "section": {
+    "presentation": {
+      "slogan": "full-stack \n\ndesign services"
+    },
+    "team": {
+      "slogan": "our team"
+    },
+    "portfolio": {
+      "slogan": ""
+    }
+  }
 }

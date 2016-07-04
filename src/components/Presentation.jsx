@@ -3,6 +3,8 @@ import GuidLines from './GuidLines.jsx';
 import Slider from 'react-slick';
 import './Presentation.less';
 
+import Waypoint from 'react-waypoint';
+
 
 class Presentation extends React.Component {
     render() {
@@ -80,7 +82,11 @@ class Presentation extends React.Component {
                     </div>
                 </Slider>
                 <button className="presentation__more-btn">More</button>
-                <GuidLines />
+                <GuidLines colorScheme={this.props.colorScheme}/>
+
+                <div className="waypoint">
+                    <Waypoint onEnter={this.props.onChangeSection.bind(this, 'presentation')} />
+                </div>
             </section>
 
         )
