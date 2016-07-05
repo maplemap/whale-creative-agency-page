@@ -7,7 +7,32 @@ import './Portfolio.less';
 import Waypoint from 'react-waypoint';
 
 class Portfolio extends React.Component {
+
+    state = {
+        filter: 'all',
+        projects: this.props.projects
+    };
+
+    handlerSortClick = (e) => {
+        const sortCategory = e.target.dataset.category;
+        let sortProjects;
+
+        if(sortCategory === 'all') {
+            sortProjects = this.props.projects;
+        } else {
+            sortProjects = this.props.projects.filter(project => {
+                return project.category === sortCategory;
+            });
+        }
+
+        this.setState({
+            filter: sortCategory,
+            projects: sortProjects
+        });
+    };
+
     render() {
+        const that = this;
         const categories = this._getUniqueCategories();
 
         return (
@@ -16,12 +41,20 @@ class Portfolio extends React.Component {
                     <article className="description description--portfolio">
                         <h2 className="description__title">Our work</h2>
                         <ul className="gallery-menu gallery-menu--portfolio">
-                            <li className="gallery-menu__item">All</li>
+                            <li
+                                className={`gallery-menu__item ${ (this.state.filter === 'all')? 'gallery-menu__item--current' : '' }`}
+                                data-category="all"
+                                onClick={that.handlerSortClick}
+                            >
+                                All
+                            </li>
                             {
                                 categories.map((category, index) =>
                                     <li
                                         key={index}
-                                        className="gallery-menu__item"
+                                        data-category={category}
+                                        className={`gallery-menu__item ${ (this.state.filter === category)? 'gallery-menu__item--current' : '' }`}
+                                        onClick={that.handlerSortClick}
                                     >
                                         {category}
                                     </li>
@@ -36,7 +69,8 @@ class Portfolio extends React.Component {
                             We do understand the value of your time and the whole product so we are taking care of every pixel as our own.
                         </p>
                     </article>
-                    <PortfolioGallery projects={this.props.projects} />
+
+                    <PortfolioGallery projects={this.state.projects} />
                 </div>
                 
                 <GuidLines 
