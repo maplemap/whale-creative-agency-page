@@ -35,7 +35,17 @@
       "slogan": "our team"
     },
     "portfolio": {
-      "slogan": ""
+      "slogan": "",
+      "description": {
+        "default": "For seven years of being in IT industry, we’ve created designs for dozens of web and mobile services, and got evolved in changing web and mobile platforms. As a specialists in design and as a really passionate about our profession, we always pay attention to details. We do understand the value of your time and the whole product so we are taking care of every pixel as our own.",
+
+        "galleryCategory": {
+          "branding": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
+          "graphic design": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+          "mobile app design": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
+          "web-design": "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable."
+        }
+      }
     }
   }
 }
