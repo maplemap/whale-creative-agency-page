@@ -1,48 +1,17 @@
 import React from "react";
 import GuidLines from '../GuidLines.jsx';
-import Slider from 'react-slick';
-
-import Slide_1 from './Slide_1.jsx';
-import Slide_2 from './Slide_2.jsx';
-import Slide_3 from './Slide_3.jsx';
-import Slide_4 from './Slide_4.jsx';
+import Slider from './Slider.jsx';
+import Waypoint from 'react-waypoint';
 
 import './Team.less';
 
-import Waypoint from 'react-waypoint';
-
 
 class Team extends React.Component {
+
     render() {
-        const slideComponents = [
-            <Slide_1 />,
-            <Slide_2 />,
-            <Slide_3 />,
-            <Slide_4 />
-        ];
-
-        const sliderSettings = {
-            infinite: true,
-            arrows: true,
-            dots: false,
-            prevArrow: <CustomPrevArrow />,
-            nextArrow: <CustomNextArrow />,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 4000
-        };
-
         return(
             <section className="section team">
-                <Slider {...sliderSettings}>
-                    {
-                        slideComponents.map((slide, index) =>
-                            <div key={index}>{slide}</div>
-                        )
-                    }
-                </Slider>
+                <Slider />
                 <GuidLines colorScheme={this.props.colorScheme} />
 
                 <div className="waypoint">
@@ -50,22 +19,6 @@ class Team extends React.Component {
                 </div>
             </section>
 
-        )
-    }
-}
-
-class CustomPrevArrow extends React.Component{
-    render() {
-        return (
-            <button type="button" className="slick-prev" data-page-num="3"{...this.props} />
-        )
-    }
-}
-
-class CustomNextArrow extends React.Component{
-    render() {
-        return (
-            <button type="button" className="slick-next" data-page-num="4" {...this.props} />
         )
     }
 }

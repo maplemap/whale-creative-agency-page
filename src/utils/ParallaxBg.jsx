@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 class ParallaxBackground extends React.Component {
     static defaultProps = {
-        parallaxSpeed: 0.03
+        parallaxSpeed: 0.07
     };
 
     state = {
