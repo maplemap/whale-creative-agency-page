@@ -60,6 +60,7 @@ class App extends React.Component {
                 <Portfolio
                     projects={this.state.projects}
                     colorScheme={this.state.colorScheme}
+                    categoryDescription={config.section.portfolio.description}
                     onChangeSection={this.handlerChangeSection}
                 />
                 <Footer />
