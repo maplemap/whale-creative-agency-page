@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 class ParallaxBackground extends React.Component {
     static defaultProps = {
+        disableParallax: false,
         parallaxSpeed: 0.07
     };
 
@@ -13,6 +14,8 @@ class ParallaxBackground extends React.Component {
     };
 
     componentDidMount() {
+        if(this.props.disableParallax) return;
+
         window.addEventListener('scroll', this.handleScroll);
 
         const parallaxBox = ReactDOM.findDOMNode( this.refs.parallaxBox );
