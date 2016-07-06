@@ -45,3 +45,16 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'FiraSans-SemiBold';
+    src:
+        url('../fonts/FiraSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FiraSans-SemiBold.otf')  format('opentype'),
+        url('../fonts/FiraSans-SemiBold.woff') format('woff'),
+        url('../fonts/FiraSans-SemiBold.ttf')  format('truetype'),
+        url('../fonts/FiraSans-SemiBold.svg#FiraSans-SemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

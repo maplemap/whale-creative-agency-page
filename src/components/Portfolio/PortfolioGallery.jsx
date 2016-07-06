@@ -23,8 +23,9 @@ class PortfolioGallery extends React.Component {
                                 <div
                                     key={project.id}
                                     className="gallery__item"
+                                    onClick={this.props.onClickGalleryItem}
                                 >
-                                    <img src={`static/projects/${project.image}`} alt={project.name} />
+                                    <img src={`static/projects/${project.shortcut}`} alt={project.name} />
                                     <div className="mask mask--gallery-item">
                                         <a href="#"
                                            className="mask__see-icon"

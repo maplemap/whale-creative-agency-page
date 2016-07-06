@@ -3,6 +3,7 @@ import GuidLines from '../GuidLines.jsx';
 
 import PortfolioGallery from './PortfolioGallery.jsx';
 import PortolioDescription from './PortolioDescription.jsx';
+import GalleryReview from '../GalleryReview.jsx';
 import './Portfolio.less';
 
 import Waypoint from 'react-waypoint';
@@ -11,7 +12,8 @@ class Portfolio extends React.Component {
 
     state = {
         filter: 'all',
-        projects: this.props.projects
+        projects: this.props.projects,
+        galleryReviewOn: false
     };
 
     handlerSortPortfolio = (e) => {
@@ -32,6 +34,18 @@ class Portfolio extends React.Component {
         });
     };
 
+    handlerClickCloseReview = () => {
+        this.setState({
+            galleryReviewOn: false
+        });
+    };
+
+    handlerClickGalleryItem = () => {
+        this.setState({
+            galleryReviewOn: true
+        });
+    };
+
     render() {
         return (
             <section className="section portfolio">
@@ -43,7 +57,10 @@ class Portfolio extends React.Component {
                         onClickSortPortfolio={this.handlerSortPortfolio}
                     />
                     
-                    <PortfolioGallery projects={this.state.projects} />
+                    <PortfolioGallery 
+                        projects={this.state.projects}
+                        onClickGalleryItem={this.handlerClickGalleryItem}
+                    />
                 </div>
                 
                 <GuidLines 
@@ -53,6 +70,12 @@ class Portfolio extends React.Component {
                 
                 <div className="waypoint waypoint--portfolio">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
+                </div>
+                <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
+                    <GalleryReview
+                        onClickCloseReview={this.handlerClickCloseReview}
+                        projects={this.props.projects}
+                    />
                 </div>
             </section>
         )
