@@ -1,6 +1,6 @@
 import React from "react";
 import GuidLines from '../GuidLines.jsx';
-import Slider from './Slider.jsx';
+import Slider from './TeamSlider.jsx';
 import Waypoint from 'react-waypoint';
 
 import './Team.less';

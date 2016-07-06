@@ -1,19 +1,21 @@
 import React from "react";
 import Parallax from '../../utils/ParallaxBg.jsx';
 
-class Slide_1 extends React.Component {
+
+class Slide_3 extends React.Component {
 
     render() {
         return(
-            <Parallax className="presentation__slide presentation__slide--1">
+            <Parallax
+                className="presentation__slide presentation__slide--3"
+            >
                 <div className="presentation__body">
-                    <button className="presentation__break-btn">break it<br /> with us</button>
                     <div className="presentation__intro">
                         <h2 className="presentation__lead-in">
-                            imagination<br /> is the <span className="presentation__lead-in--underline">only</span> limit.
+                            mobile<br /> application<br /> design.
                         </h2>
                         <div className="presentation__text">
-                            we are keeping our hand on pulse of trends<br />but still always one step ahead
+                            from ideas to mockups<br /> to design<br /> to your enjoy
                         </div>
                     </div>
                 </div>
@@ -22,4 +24,4 @@ class Slide_1 extends React.Component {
     }
 }
 
-export default Slide_1;
+export default Slide_3;
