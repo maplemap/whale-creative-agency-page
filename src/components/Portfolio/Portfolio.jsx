@@ -3,6 +3,7 @@ import GuidLines from '../GuidLines.jsx';
 
 import PortfolioGallery from './PortfolioGallery.jsx';
 import PortolioDescription from './PortolioDescription.jsx';
+import GalleryReview from '../GalleryReview/GalleryReview.jsx';
 import './Portfolio.less';
 
 import Waypoint from 'react-waypoint';
@@ -11,7 +12,9 @@ class Portfolio extends React.Component {
 
     state = {
         filter: 'all',
-        projects: this.props.projects
+        projects: this.props.projects,
+        galleryReviewOn: false,
+        galleryElementIndex: 0
     };
 
     handlerSortPortfolio = (e) => {
@@ -32,6 +35,22 @@ class Portfolio extends React.Component {
         });
     };
 
+    handlerClickCloseReview = () => {
+        this.setState({
+            galleryReviewOn: false
+        });
+    };
+
+    handlerClickGalleryItem = (e) => {
+        let elementIndex = e.currentTarget.getAttribute('data-index');
+        elementIndex = parseInt(elementIndex, 10);
+
+        this.setState({
+            galleryElementIndex: elementIndex,
+            galleryReviewOn: true
+        });
+    };
+
     render() {
         return (
             <section className="section portfolio">
@@ -43,7 +62,10 @@ class Portfolio extends React.Component {
                         onClickSortPortfolio={this.handlerSortPortfolio}
                     />
                     
-                    <PortfolioGallery projects={this.state.projects} />
+                    <PortfolioGallery 
+                        projects={this.state.projects}
+                        onClickGalleryItem={this.handlerClickGalleryItem}
+                    />
                 </div>
                 
                 <GuidLines 
@@ -53,6 +75,13 @@ class Portfolio extends React.Component {
                 
                 <div className="waypoint waypoint--portfolio">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
+                </div>
+                <div data-slide={this.state.galleryElementIndex} className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
+                    <GalleryReview
+                        onClickCloseReview={this.handlerClickCloseReview}
+                        projects={this.props.projects}
+                        initialSlide={this.state.galleryElementIndex}
+                    />
                 </div>
             </section>
         )

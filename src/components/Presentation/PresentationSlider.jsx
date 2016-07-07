@@ -7,14 +7,9 @@ import Slide_3 from './PresentationSlide_3.jsx';
 import Slide_4 from './PresentationSlide_4.jsx';
 
 class PresentationSlider extends React.Component {
-
-    state = {
-        currentIndxSlide: 1
-    };
-
     render() {
         const slideComponents = [
-            <Slide_1 currentIndxSlide={this.state.currentIndxSlide} />,
+            <Slide_1 />,
             <Slide_2 />,
             <Slide_3 />,
             <Slide_4 />
