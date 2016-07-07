@@ -284,18 +284,18 @@ body {
       transform: scale(0, 0);
       transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
       margin: -15.5px 0 0 -22.5px;
-      background: url("../img/eye-icon.png") no-repeat center;
+      background: url("../img/eye-icon.svg") no-repeat center;
+    }
 
-      &--active{
+    &:hover {
+      opacity: 1;
+      background: rgba(0,0,0,0.6);
+
+      .mask__see-icon {
         opacity: 1;
         transform: scale(1,1);
         transition-delay: 0.2s;
       }
-    }
-
-    &--active {
-      opacity: 1;
-      background: rgba(0,0,0,0.6);
     }
   }
 }

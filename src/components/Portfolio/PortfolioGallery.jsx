@@ -19,9 +19,10 @@ class PortfolioGallery extends React.Component {
                 <div className="gallery__grid">
                     <Masonry options={this.props.masonryOptions}>
                         {
-                            projects.map(project =>
+                            projects.map((project, index) =>
                                 <div
                                     key={project.id}
+                                    data-index={index}
                                     className="gallery__item"
                                     onClick={this.props.onClickGalleryItem}
                                 >
