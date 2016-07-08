@@ -52,14 +52,14 @@ class Portfolio extends React.Component {
     };
 
     render() {
-        let galleryReview = null;
+        let GalleryReview = null;
         if (this.state.galleryReviewOn) {
             let galleryReviewSettings = {
                 onClickCloseReview: this.handlerClickCloseReview,
                 projects: this.props.projects,
                 initialSlide: this.state.galleryElementIndex
             };
-            galleryReview = <GalleryReview {...galleryReviewSettings} />
+            GalleryReview = <GalleryReview {...galleryReviewSettings} />
         }
 
         return (
@@ -81,7 +81,7 @@ class Portfolio extends React.Component {
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
                 </div>
                 <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
-                    {galleryReview}
+                    {GalleryReview}
                 </div>
 
                 <GuidLines
