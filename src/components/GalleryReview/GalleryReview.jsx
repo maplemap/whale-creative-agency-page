@@ -11,11 +11,6 @@ class GalleryReview extends React.Component {
     };
 
     render() {
-        // console.log(this.props.initialSlide);
-        // console.log(typeof this.props.initialSlide);
-
-        const that = this;
-
         const projectSliderSettings = {
             // lazyLoad: true,
             draggable: false,
@@ -28,7 +23,8 @@ class GalleryReview extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            initialSlide: this.props.initialSlide
+            initialSlide: this.props.initialSlide,
+            rtl: true
         };
 
         return(
