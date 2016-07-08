@@ -71,7 +71,6 @@ body {
     text-align: left;
 
     i {
-      //float: left;
       font-style: normal;
     }
   }
@@ -82,15 +81,20 @@ body {
       padding: .4em 0 0.4em 0;
     }
 
-    @media (-webkit-min-device-pixel-ratio:0) {
+    @supports (-webkit-background-clip: text) {
       .brand-name__text {
         background: url("../img/whale-bg.jpg") no-repeat 52% 100%;
         background-size: 300%;
-      }
-
-      .brand-name__text {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+    }
+    @supports not (-webkit-background-clip: text) {
+      .brand-name__text {
+        color: #1DADB5;
+      }
+      .brand-name__star {
+        color: black;
       }
     }
   }
