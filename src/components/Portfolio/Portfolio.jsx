@@ -52,6 +52,16 @@ class Portfolio extends React.Component {
     };
 
     render() {
+        let galleryReview = null;
+        if (this.state.galleryReviewOn) {
+            let galleryReviewSettings = {
+                onClickCloseReview: this.handlerClickCloseReview,
+                projects: this.props.projects,
+                initialSlide: this.state.galleryElementIndex
+            };
+            galleryReview = <GalleryReview {...galleryReviewSettings} />
+        }
+
         return (
             <section className="section portfolio">
                 <div className="portfolio__body">
@@ -67,22 +77,17 @@ class Portfolio extends React.Component {
                         onClickGalleryItem={this.handlerClickGalleryItem}
                     />
                 </div>
-                
-                <GuidLines 
-                    colorScheme={this.props.colorScheme} 
-                    disableLines={[5]}
-                />
-                
                 <div className="waypoint waypoint--portfolio">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
                 </div>
-                <div data-slide={this.state.galleryElementIndex} className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
-                    <GalleryReview
-                        onClickCloseReview={this.handlerClickCloseReview}
-                        projects={this.props.projects}
-                        initialSlide={this.state.galleryElementIndex}
-                    />
+                <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
+                    {galleryReview}
                 </div>
+
+                <GuidLines
+                    colorScheme={this.props.colorScheme}
+                    disableLines={[5]}
+                />
             </section>
         )
     }
