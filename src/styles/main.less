@@ -61,7 +61,6 @@ body {
 /*** brand-name ***/
 .brand-name {
   color: black;  /* Fallback: assume this color ON TOP of image */
-  //width: 35%;
   font-family: 'FiraSans-Bold', sans-serif;
   font-size: 14.7em;
   line-height: .82em;
@@ -69,9 +68,9 @@ body {
 
   &__text {
     display: inline-block;
+    text-align: left;
 
     i {
-      float: left;
       font-style: normal;
     }
   }
@@ -79,16 +78,29 @@ body {
   &--presentation {
 
     .brand-name__text {
-      background: url("../img/whale-bg.jpg") no-repeat 52% 60%;
-      background-size: 260%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      padding: .4em 0 0.4em 0;
+    }
+
+    @supports (-webkit-background-clip: text) {
+      .brand-name__text {
+        background: url("../img/whale-bg.jpg") no-repeat 52% 100%;
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    @supports not (-webkit-background-clip: text) {
+      .brand-name__text {
+        color: #1DADB5;
+      }
+      .brand-name__star {
+        color: black;
+      }
     }
   }
 
   &__star {
     font-size: .74em;
-    line-height: .8em;
   }
   &__W {
     margin-left: 5.6%;
@@ -101,14 +113,13 @@ body {
     margin-left: 12%;
   }
   &__L {
-    line-height: .99em;
-    margin-left: 23%;
+    margin-left: 24%;
   }
   &__E {
-    line-height: 1.16em;
-    margin-left: -28%;
+    margin-left: 48%;
   }
 }
+
 
 /*** terminal-42 ***/
 .terminal-42 {
