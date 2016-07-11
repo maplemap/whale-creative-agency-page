@@ -196,13 +196,12 @@
     .presentation__body {
       position: relative;
       background: url("../../img/42-slider-body-bg.svg") no-repeat 109% 54%;
-
     }
 
     .presentation__intro {
       position: absolute;
-      right: 40%;
-      bottom: 12.6%;
+      left: 30%;
+      bottom: 10.4%;
       text-align: right;
     }
 
@@ -225,6 +224,94 @@
       }
     }
   }
+
+
+  @media only screen and (max-width: 111.25em) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat 72% -11%;
+    }
+
+    &__slide--3 {
+
+      .presentation__body {
+        background: url("../../img/iphone-slider-body-bg.png") 100% 50% no-repeat #1CA6AE;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 103.125em) {
+    &__slide--1 {
+
+      .presentation__body {
+        margin-top: 13.625em;
+      }
+
+      .presentation__body,
+      .presentation__intro {
+        font-size: 90%;
+      }
+
+      background: url("../../img/macbook-slider-bg.png") no-repeat 42% -75%;
+      background-size: 90%;
+    }
+
+    &__slide--3 {
+      background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
+
+      .presentation__body {
+        background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 96.625em) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat 21% -150%;
+      background-size: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 95em) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat -41% -55%;
+      background-size: 95%;
+    }
+  }
+
+  @media only screen and (max-width: 93.75em) {
+    &__slide--4 {
+
+      .presentation__body {
+        background: url("../../img/42-slider-body-bg.svg") no-repeat 50% 54%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 91.25em) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat -41% 55%;
+      background-size: 95%;
+    }
+  }
+
+  @media only screen and (max-width: 82.5em) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat -251% 85%;
+      background-size: 95%;
+
+      .presentation__break-btn {
+        margin: .7em 15.4% 0 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 70em) {
+    &__slide--4 {
+
+      .presentation__intro {
+        left: auto;
+        right: 5%;
+      }
+    }
+  }
 }
-
-
