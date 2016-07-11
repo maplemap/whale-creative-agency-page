@@ -1,9 +1,10 @@
 import React from "react";
 import GuidLines from '../GuidLines.jsx';
-
 import PortfolioGallery from './PortfolioGallery.jsx';
 import PortolioDescription from './PortolioDescription.jsx';
 import GalleryReview from '../GalleryReview/GalleryReview.jsx';
+import CSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+
 import './Portfolio.less';
 
 import Waypoint from 'react-waypoint';
@@ -81,7 +82,15 @@ class Portfolio extends React.Component {
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
                 </div>
                 <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
-                    {galleryReview}
+                    <CSSTransitionGroup
+                        transitionName="gallery-review-transition"
+                        transitionAppear={true}
+                        transitionAppearTimeout={500}
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={200}
+                    >
+                        {galleryReview}
+                    </CSSTransitionGroup>
                 </div>
 
                 <GuidLines
