@@ -12,7 +12,6 @@ class GalleryReview extends React.Component {
 
     render() {
         const projectSliderSettings = {
-            // lazyLoad: true,
             draggable: false,
             infinite: true,
             arrows: true,
@@ -23,8 +22,7 @@ class GalleryReview extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            initialSlide: this.props.initialSlide,
-            rtl: true
+            initialSlide: this.props.initialSlide
         };
 
         return(
