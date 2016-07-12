@@ -123,7 +123,7 @@
         top: 0;
         left: 11.4583333333333%;
         width: 78.3%;
-        height: 44.6em;
+        height: 108%;
         backdrop-filter: blur(8px);
         background: rgba(248, 231, 28, 0.87);
       }
@@ -226,94 +226,155 @@
   }
 
 
-  @media only screen and (max-width: 111.25em) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat 72% -11%;
-    }
-
-    &__slide--3 {
-
-      .presentation__body {
-        background: url("../../img/iphone-slider-body-bg.png") 100% 50% no-repeat #1CA6AE;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 103.125em) {
-    &__slide--1 {
-
-      .presentation__body {
-        margin-top: 13.625em;
-      }
-
-      .presentation__body,
-      .presentation__intro {
-        font-size: 90%;
-      }
-
-      background: url("../../img/macbook-slider-bg.png") no-repeat 42% -75%;
-      background-size: 90%;
-    }
-
-    &__slide--3 {
-      background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
-
-      .presentation__body {
-        background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
-      }
-    }
-  }
-
-
   /*** media query ***/
-  @media only screen and (max-width: 96.625em) {
+
+
+  @media only screen and (max-device-width: 1600px)  {
     &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat 21% -150%;
-      background-size: 90%;
+      background: url("../../img/macbook-slider-bg.png") no-repeat 22% -11%;
     }
   }
 
-  @media only screen and (max-width: 95em) {
+  @media only screen and (max-device-width: 1500px)  {
     &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat -41% -55%;
+      background: url("../../img/macbook-slider-bg.png") no-repeat 0 -11%;
       background-size: 95%;
     }
   }
 
-  @media only screen and (max-width: 93.75em) {
-    &__slide--4 {
+  @media only screen and (max-device-width: 1350px)  {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat -30% 30%;
 
       .presentation__body {
-        background: url("../../img/42-slider-body-bg.svg") no-repeat 50% 54%;
+
+        &:before {
+          width: 80%;
+        }
       }
-    }
-  }
-
-  @media only screen and (max-width: 91.25em) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat -41% 55%;
-      background-size: 95%;
-    }
-  }
-
-  @media only screen and (max-width: 82.5em) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat -251% 85%;
-      background-size: 95%;
-
       .presentation__break-btn {
-        margin: .7em 15.4% 0 0;
+        font-size: 3em;
       }
     }
   }
 
-  @media only screen and (max-width: 70em) {
-    &__slide--4 {
+  @media only screen and (max-device-height: 850px)  {
+    &__slide--1 {
 
-      .presentation__intro {
-        left: auto;
-        right: 5%;
+      .presentation__body {
+        height: 38em;
       }
     }
   }
+
+  @media only screen and (max-device-height: 800px)  {
+    &__slide--1 {
+
+      .presentation__body {
+        height: 34em;
+      }
+    }
+  }
+
+
+
+  //@media only screen and (max-width: 111.25em) {
+  //  &__slide--1 {
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat 72% -11%;
+  //  }
+  //
+  //  &__slide--3 {
+  //
+  //    .presentation__body {
+  //      background: url("../../img/iphone-slider-body-bg.png") 100% 50% no-repeat #1CA6AE;
+  //    }
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 103.125em) {
+  //  &__slide--1 {
+  //
+  //    .presentation__body {
+  //      margin-top: 13.625em;
+  //    }
+  //
+  //    .presentation__body,
+  //    .presentation__intro {
+  //      font-size: 90%;
+  //    }
+  //
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat 42% -75%;
+  //    background-size: 90%;
+  //  }
+  //
+  //  &__slide--3 {
+  //    background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
+  //
+  //    .presentation__body {
+  //      background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
+  //    }
+  //  }
+  //}
+
+
+
+  //@media only screen and (max-width: 96.625em) {
+  //  &__slide--1 {
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat 21% -150%;
+  //    background-size: 90%;
+  //  }
+  //}
+
+  //@media only screen and (max-width: 95em) {
+  //  &__slide--1 {
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat -41% -55%;
+  //    background-size: 95%;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 93.75em) {
+  //  &__slide--4 {
+  //
+  //    .presentation__body {
+  //      background: url("../../img/42-slider-body-bg.svg") no-repeat 50% 54%;
+  //    }
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 91.25em) {
+  //  &__slide--1 {
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat -41% 55%;
+  //    background-size: 95%;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 82.5em) {
+  //  &__slide--1 {
+  //    background: url("../../img/macbook-slider-bg.png") no-repeat -251% 85%;
+  //    background-size: 95%;
+  //
+  //    .presentation__break-btn {
+  //      margin: .7em 15.4% 0 0;
+  //    }
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 70em) {
+  //  &__slide--4 {
+  //
+  //    .presentation__intro {
+  //      left: auto;
+  //      right: 5%;
+  //    }
+  //  }
+  //}
+  //
+  //@media only screen and (max-height: 56.25em) {
+  //  &__slide--3 {
+  //
+  //    .presentation__body {
+  //      height: 44em;
+  //    }
+  //  }
+  //}
 }
