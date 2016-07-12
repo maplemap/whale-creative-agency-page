@@ -227,22 +227,42 @@
 
 
   /*** media query ***/
-
-
-  @media only screen and (max-device-width: 1600px)  {
+  @media only screen and (max-width: 1600px) {
     &__slide--1 {
       background: url("../../img/macbook-slider-bg.png") no-repeat 22% -11%;
     }
+
+    &__slide--3 {
+      background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
+
+      .presentation__body {
+        background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
+      }
+    }
   }
 
-  @media only screen and (max-device-width: 1500px)  {
+  @media only screen and (max-width: 1500px)  {
     &__slide--1 {
       background: url("../../img/macbook-slider-bg.png") no-repeat 0 -11%;
       background-size: 95%;
     }
+
+    &__slide--4 {
+
+      .presentation__body {
+        background: url("../../img/42-slider-body-bg.svg") no-repeat 20% 54%;
+      }
+
+      .presentation__intro {
+        left: 53%;
+        bottom: 9.4%;
+      }
+    }
   }
 
-  @media only screen and (max-device-width: 1350px)  {
+  @media only screen
+  and (max-width: 1350px)
+  and (min-height: 751px) {
     &__slide--1 {
       background: url("../../img/macbook-slider-bg.png") no-repeat -30% 30%;
 
@@ -256,9 +276,67 @@
         font-size: 3em;
       }
     }
+
+    &__slide--4 {
+
+      .presentation__intro {
+        left: 11%;
+        bottom: 5%;
+      }
+    }
   }
 
-  @media only screen and (max-device-height: 850px)  {
+  @media only screen and (max-width: 1020px) {
+    &__slide--1 {
+      background: url("../../img/macbook-slider-bg.png") no-repeat 20% 30%;
+
+      .presentation__intro {
+        font-size: 90%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    &__slide--3 {
+
+      .presentation__body {
+        background: url("../../img/iphone-slider-body-bg.png") 10% 50% no-repeat #1CA6AE;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    &__slide--1 {
+
+      .presentation__intro {
+        font-size: 80%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 830px) {
+    &__slide--1 {
+
+      .presentation__intro {
+        left: 3%;
+        font-size: 75%;
+      }
+    }
+  }
+
+
+
+
+  @media only screen and (max-height: 890px)  {
+    &__slide--3 {
+
+      .presentation__body {
+        height: 44em;
+      }
+    }
+  }
+
+  @media only screen and (max-height: 850px)  {
     &__slide--1 {
 
       .presentation__body {
@@ -267,11 +345,91 @@
     }
   }
 
-  @media only screen and (max-device-height: 800px)  {
+  @media only screen and (max-height: 800px)  {
     &__slide--1 {
 
       .presentation__body {
         height: 34em;
+      }
+    }
+
+    &__slide--3 {
+
+      .presentation__body {
+        height: 39em;
+      }
+    }
+  }
+
+  @media only screen and (max-height: 750px)  {
+    &__slide--1 {
+      .presentation__body {
+        font-size: 85%;
+      }
+    }
+
+    &__slide--3 {
+      .presentation__body {
+        font-size: 85%;
+        margin-top: 8.625em;
+      }
+    }
+
+    &__slide--4 {
+      .presentation__intro {
+        font-size: 90%;
+        left: 10%;
+        right: auto;
+        bottom: 7%;
+      }
+    }
+  }
+
+
+  /* ----------- iPad ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    &__slide--4 {
+
+      .presentation__intro {
+        left: auto;
+        right: 14%;
+        bottom: 14%;
+      }
+    }
+  }
+
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    &__slide--4 {
+      .terminal-42--presentation {
+        top: 26%;
+        left: 12%;
+      }
+
+      .presentation__intro {
+        left: auto;
+        right: 30%;
+        bottom: 3.2%;
       }
     }
   }

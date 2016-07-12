@@ -5,8 +5,8 @@
 
 /*** default ***/
 body {
-  min-width: 1024px;
-  min-height: 768px;
+  //min-width: 1024px;
+  //min-height: 768px;
   font-size: 100%;
   font-family: 'FiraSans-Regular', sans-serif;
 }
@@ -102,9 +102,15 @@ body {
     }
 
     /*** media query ***/
-    @media only screen and (max-height: 53.75em) {
+    @media only screen and (max-height: 850px) {
       & {
         font-size: 12.7em;
+      }
+    }
+
+    @media only screen and (max-height: 750px) {
+      & {
+        font-size: 10.7em;
       }
     }
   }
@@ -152,6 +158,26 @@ body {
     position: absolute;
     left: 3%;
     bottom: 8%;
+
+
+    /*** media-query ***/
+    @media only screen
+    and (max-width: 1350px)
+    and (min-height: 751px) {
+      & {
+        top: 22%;
+        left: 8%;
+        bottom: auto;
+      }
+    }
+
+    @media only screen and (max-height: 750px) {
+      & {
+        top: 28%;
+        left: 12%;
+        font-size: 2.625em;
+      }
+    }
   }
 }
 
