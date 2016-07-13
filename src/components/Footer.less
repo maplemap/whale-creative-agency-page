@@ -22,4 +22,29 @@
     font-size: 2.25em;
     padding-right: 9%;
   }
+
+
+  /*** media query ***/
+  @media only screen and (max-width: 800px) {
+    .copyright--footer{
+      position: static;
+      text-align: center;
+      margin: 1em auto 0 auto;
+    }
+
+    &__social-links {
+      float: none;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .socials--footer {
+      text-align: center;
+      margin-top: .2em;
+    }
+
+    .footer__follow {
+      padding: 0;
+    }
+  }
 }

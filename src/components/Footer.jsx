@@ -10,10 +10,6 @@ class Footer extends React.Component {
         return (
             <footer className="footer">
                 <div className="footer__body">
-                    <ul className="copyright copyright--footer">
-                        <span className="copyright__company"><i>©</i> whaledesign.me</span>
-                        <span className="copyright__place">2016 Ukraine</span>
-                    </ul>
                     <div className="footer__social-links">
                         <div className="footer__follow">
                             #followthewhale
@@ -34,6 +30,10 @@ class Footer extends React.Component {
                             }
                         </ul>
                     </div>
+                    <ul className="copyright copyright--footer">
+                        <li className="copyright__company"><i>©</i> whaledesign.me</li>
+                        <li className="copyright__place">2016 Ukraine</li>
+                    </ul>
                 </div>
             </footer>
         )
@@ -41,15 +41,3 @@ class Footer extends React.Component {
 }
 
 export default Footer;
-
-// <a href="#" className="logo logo--header logo--white logo-footer">
-//     Whale<span className="logo__star">*</span><br/> Creative<br/> Agency
-// </a>
-
-// <ul className="contacts contacts-footer">
-//     <li className="contacts__skype">skype us</li>
-//     <li className="contacts__brief">fill out a brief</li>
-//     <li className="contacts__brief">fill out a brief</li>
-//     <li className="contacts__presentation">download presentation</li>
-//     <li className="contacts__email">email us</li>
-// </ul>
