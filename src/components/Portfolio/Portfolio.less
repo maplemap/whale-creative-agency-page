@@ -11,15 +11,91 @@
   }
 
   /*** media query ***/
-  @media only screen and (max-width: 93.75em) {
+  @media only screen and (max-width: 1500px) {
     &__body {
       padding: 6.7em 4.42708333333333% 6.25em 17.28125%;
     }
   }
 
-  @media only screen and (max-width: 81.25em) {
+  @media only screen and (max-width: 1300px) {
     &__body {
       padding: 6.7em 4.42708333333333% 6.25em 20%;
     }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .portfolio__body {
+      padding: 6.7em 4.42708333333333% 6.25em 25%;
+    }
+
+    .description--portfolio {
+      width: 85%;
+    }
+
+    .gallery__grid {
+      width: 95%;
+    }
+
+    .slick-prev,
+    .slick-next {
+      width: 6%;
+    }
+  }
+
+  @media only screen and (max-height: 650px)  {
+    .gallery-review {
+      font-size: 80%
+    }
+  }
+
+
+
+  /* --iPad -- */
+
+  /* Portrait and Landscape */
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    &__body {
+      padding: 6.7em 4.42708333333333% 6.25em 25%;
+    }
+    .description--portfolio {
+      width: 85%;
+    }
+    .gallery--portfolio {
+      width: 90%;
+    }
+  }
+
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+
+  /* --- iPad Pro -- */
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-width: 1366px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
   }
 }
