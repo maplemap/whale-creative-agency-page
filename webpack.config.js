@@ -10,7 +10,7 @@ module.exports = {
     entry: getEntrySources(['./src/main.js']),
     output: {
         path: __dirname + '/public/build',
-        publicPath: "/public/",
+        publicPath: "/build/",
         filename: "bundle.js"
     },
     module: {
@@ -73,7 +73,7 @@ module.exports = {
         //   jQuery: 'jquery'
         // }),
         new ExtractTextPlugin('bundle.css', {
-            allChunks: true, 
+            allChunks: true,
             disable: process.env.NODE_ENV == 'development'
         }),
         new webpack.HotModuleReplacementPlugin(),
