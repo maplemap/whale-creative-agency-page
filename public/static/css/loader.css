@@ -191,50 +191,50 @@
 
 .guid-lines--loader .guid-lines__1 {
     left: 3.125%;
-    -webkit-animation: guid-top-lines-height 57s ease-in-out;
-    -moz-animation: guid-top-lines-height 57s ease-in-out;
-    -o-animation: guid-top-lines-height 57s ease-in-out;
-    animation: guid-top-lines-height 57s ease-in-out;
+    -webkit-animation: guid-top-lines-height 30s ease-in-out;
+    -moz-animation: guid-top-lines-height 30s ease-in-out;
+    -o-animation: guid-top-lines-height 30s ease-in-out;
+    animation: guid-top-lines-height 30s ease-in-out;
  }
 
 .guid-lines--loader .guid-lines__2 {
      left: 11.4583333333333%;
-    -webkit-animation: guid-top-lines-height 110s ease-out;
-    -moz-animation: guid-top-lines-height 110s ease-out;
-    -o-animation: guid-top-lines-height 110s ease-out;
-    animation: guid-top-lines-height 110s ease-out;
+    -webkit-animation: guid-top-lines-height 60s ease-out;
+    -moz-animation: guid-top-lines-height 60s ease-out;
+    -o-animation: guid-top-lines-height 60s ease-out;
+    animation: guid-top-lines-height 60s ease-out;
  }
 
 .guid-lines--loader .guid-lines__3 {
      left: 13.28125%;
-    -webkit-animation: guid-top-lines-height 162s ease-in;
-    -moz-animation: guid-top-lines-height 162s ease-in;
-    -o-animation: guid-top-lines-height 162s ease-in;
-    animation: guid-top-lines-height 162s ease-in;
+    -webkit-animation: guid-top-lines-height 80s ease-in;
+    -moz-animation: guid-top-lines-height 80s ease-in;
+    -o-animation: guid-top-lines-height 80s ease-in;
+    animation: guid-top-lines-height 80s ease-in;
  }
 
 .guid-lines--loader .guid-lines__4 {
      left: 96.875%;
-    -webkit-animation: guid-top-lines-height 200s ease;
-    -moz-animation: guid-top-lines-height 200s ease;
-    -o-animation: guid-top-lines-height 200s ease;
-    animation: guid-top-lines-height 200s ease;
+    -webkit-animation: guid-top-lines-height 100s ease;
+    -moz-animation: guid-top-lines-height 100s ease;
+    -o-animation: guid-top-lines-height 100s ease;
+    animation: guid-top-lines-height 100s ease;
  }
 
 .guid-lines--loader .guid-lines__5 {
      top: 93.8775510204082%;
-    -webkit-animation: guid-top-lines-width 190s ease-out;
-    -moz-animation: guid-top-lines-width 190s ease-out;
-    -o-animation: guid-top-lines-width 190s ease-out;
-    animation: guid-top-lines-width 190s ease-out;
+    -webkit-animation: guid-top-lines-width 80s ease-out;
+    -moz-animation: guid-top-lines-width 80s ease-out;
+    -o-animation: guid-top-lines-width 80s ease-out;
+    animation: guid-top-lines-width 80s ease-out;
  }
 
 .guid-lines--loader .guid-lines__6 {
      top: 4.6875em;
-    -webkit-animation: guid-top-lines-width 120s ease-in-out;
-    -moz-animation: guid-top-lines-width 120s ease-in-out;
-    -o-animation: guid-top-lines-width 120s ease-in-out;
-    animation: guid-top-lines-width 120s ease-in-out;
+    -webkit-animation: guid-top-lines-width 60s ease-in-out;
+    -moz-animation: guid-top-lines-width 60s ease-in-out;
+    -o-animation: guid-top-lines-width 60s ease-in-out;
+    animation: guid-top-lines-width 60s ease-in-out;
 }
 
 .guid-lines--loader .guid-lines__1,
