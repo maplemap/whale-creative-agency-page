@@ -78,9 +78,6 @@ class Portfolio extends React.Component {
                         onClickGalleryItem={this.handlerClickGalleryItem}
                     />
                 </div>
-                <div className="waypoint waypoint--portfolio">
-                    <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
-                </div>
                 <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
                     <CSSTransitionGroup
                         transitionName="gallery-review-transition"
@@ -97,6 +94,9 @@ class Portfolio extends React.Component {
                     colorScheme={this.props.colorScheme}
                     disableLines={[5]}
                 />
+                <div className="waypoint waypoint--portfolio">
+                    <Waypoint onEnter={this.props.onChangeSection.bind(this, 'portfolio')} />
+                </div>
             </section>
         )
     }
