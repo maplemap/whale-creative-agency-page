@@ -87,9 +87,30 @@
   }
 
   /*** media query ***/
-  @media only screen and (max-width: 81.25em) {
+  @media only screen and (max-width: 1300px) {
     &__body {
       width: 70%;
+    }
+  }
+
+  @media only screen and (max-height: 940px)  {
+
+    &__body {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-height: 870px)  {
+
+    &__body {
+      width: 53%;
+    }
+  }
+
+  @media only screen and (max-height: 800px)  {
+
+    &__body {
+      width: 50%;
     }
   }
 
@@ -99,6 +120,23 @@
       margin-top: 1em;
     }
   }
+
+  @media only screen and (max-height: 740px)  {
+    &__body {
+      width: 45%;
+    }
+  }
+
+  @media only screen and (max-height: 680px)  {
+    &__body {
+      width: 40%;
+    }
+
+    .gallery-review__project-view {
+      margin-top: 1.8em;
+    }
+  }
+
   @media only screen and (max-height: 650px)  {
     &__project-name {
       margin-top: .8em;
@@ -145,7 +183,7 @@
   @media only screen
   and (min-device-width: 1024px)
   and (max-width: 1366px)
-  and (min-height: 769px)
+  and (min-height: 1024px)
   and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 1) {
     &__body {
