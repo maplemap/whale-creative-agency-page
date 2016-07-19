@@ -3,7 +3,6 @@ import GuidLines from '../GuidLines.jsx';
 import PortfolioGallery from './PortfolioGallery.jsx';
 import PortolioDescription from './PortolioDescription.jsx';
 import GalleryReview from '../GalleryReview/GalleryReview.jsx';
-import CSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 import './Portfolio.less';
 
@@ -79,15 +78,7 @@ class Portfolio extends React.Component {
                     />
                 </div>
                 <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
-                    <CSSTransitionGroup
-                        transitionName="gallery-review-transition"
-                        transitionAppear={true}
-                        transitionAppearTimeout={500}
-                        transitionEnterTimeout={500}
-                        transitionLeaveTimeout={200}
-                    >
-                        {galleryReview}
-                    </CSSTransitionGroup>
+                    {galleryReview}
                 </div>
 
                 <GuidLines
