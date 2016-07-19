@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import './ImageLoading.less';
+
 import Spinner from './Spinner.jsx';
 
 
@@ -26,13 +28,13 @@ class ImageLoading extends React.Component {
         let spinner = null;
 
         if (this.state.loaded) {
-            className += ' image-loaded';
+            className = (className) ? `${className} image-loaded` : 'image-loaded';
         } else {
             spinner = <Spinner />;
         }
 
         return(
-            <div>
+            <div className="image-holder">
                 {spinner}
                 <img
                     ref="imgView"
