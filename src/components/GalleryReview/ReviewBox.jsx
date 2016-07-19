@@ -1,4 +1,5 @@
 import React from "react";
+import ImageLoading from '../../utils/ImageLoading.jsx';
 
 
 class ReviewBox extends React.Component {
@@ -26,7 +27,7 @@ class ReviewBox extends React.Component {
                 <div className="gallery-review__project-name"> {this.props.project.name} </div>
                 <div className="gallery-review__project-customer"> {this.props.project.customer} </div>
                 <div className="gallery-review__project-view">
-                    <img
+                    <ImageLoading
                         src={`static/projects/${this.state.imageViewFilename}`}
                         alt={this.props.project.name}
                     />
@@ -40,10 +41,10 @@ class ReviewBox extends React.Component {
                                     className={`gallery-review__project-preview-item ${(index === this.state.activePreviewIndex) ? 'gallery-review__project-preview-item--active' : ''}`}
                                     onClick={that.handlerClickItemPreviewImg.bind(null, imageName, index)}
                                 >
-                                    <img
+                                    <ImageLoading
                                         className="gallery-review__project-image"
                                         src={`static/projects/${imageName}`}
-                                        alt="project-name"
+                                        alt={that.props.project.name}
                                     />
                                 </div>
                             }
