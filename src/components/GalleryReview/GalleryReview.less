@@ -2,19 +2,6 @@
   position: relative;
   height: 100%;
 
-  .loader {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    margin: -21px 0 0 -21px;
-    background: url("../../img/puff.svg") no-repeat;
-  }
-
   &__body {
     position: relative;
     width: 50%;
@@ -45,15 +32,11 @@
 
   &__project-view {
     position: relative;
-    height: 100%;
+    //min-height: 20em;
     max-height: 34em;
     text-align: left;
     overflow: hidden;
     margin-top: 3.8em;
-
-    //&:before {
-    //  .loader;
-    //}
 
     img {
       width:100% !important;
@@ -82,10 +65,6 @@
     overflow: hidden;
     cursor: pointer;
     margin-right: 1.2%;
-
-    //&:before {
-    //  .loader;
-    //}
 
     &:last-child {
       margin-right: 0;
@@ -200,7 +179,6 @@
   and (min-height: 1025px)
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
-
   }
 
   /* Landscape */
