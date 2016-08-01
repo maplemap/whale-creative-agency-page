@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Whale Design Studio</title>
+    <link rel="stylesheet" href="./static/css/loader.css">
+    <link rel="stylesheet" href="./build/bundle.css">
+</head>
+<!--<body>-->
+<body onLoad="onLoad();">
+<div class="loader">
+    <div class="loader__body">
+        <h2 class="loader__brand-name">
+            <div class="loader__brand-name-text">
+                <sup class="loader__brand-name-star">*</sup>
+                <i class="loader__brand-name-W">w</i>
+                <i class="loader__brand-name-H">h</i><br />
+                <i class="loader__brand-name-A">a</i>
+                <i class="loader__brand-name-L">l</i><br />
+                <i class="loader__brand-name-E">e</i>
+            </div>
+        </h2>
+    </div>
+
+    <div class="guid-lines--loader">
+        <span class="guid-lines__1"></span>
+        <span class="guid-lines__2"></span>
+        <span class="guid-lines__3"></span>
+        <span class="guid-lines__4"></span>
+        <span class="guid-lines__5"></span>
+        <span class="guid-lines__6"></span>
+    </div>
+</div>
+<div id="main"></div>
+
+<!--<script src="./build/bundle.js"></script>-->
+<script>
+    function onLoad() {
+        var head = document.getElementsByTagName("head")[0];
+        var loader = document.querySelector('.loader');
+
+//        var cssBundle = document.createElement("link");
+//        cssBundle.href = "./build/bundle.css";
+//        cssBundle.type = "text/css";
+//        cssBundle.rel = "stylesheet";
+//        cssBundle.async = true;
+
+
+        var jsBundle = document.createElement("script");
+        jsBundle.src = "./build/bundle.js";
+        jsBundle.type = "text/javascript";
+
+        setTimeout(function () {
+//            head.appendChild(cssBundle); //for production
+            head.appendChild(jsBundle);
+        }, 5000);
+
+        jsBundle.onload = function () {
+            loader.classList.add('loader--hide');
+
+            var checkOpacity = setInterval(function () {
+                var loaderStyle = window.getComputedStyle(loader);
+                var loaderOpacity = loaderStyle.getPropertyValue('opacity') * 1;
+
+                if (loaderOpacity === 0) {
+                    loader.remove();
+                    clearInterval(checkOpacity);
+                }
+            }, 50);
+        };
+    }
+</script>
+</body>
+</html>
