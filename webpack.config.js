@@ -24,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: (process.env.NODE_ENV === "production") 
+                loader: (process.env.NODE_ENV === "production")
                             ? ExtractTextPlugin.extract('style', 'css!less!autoprefixer')
                             : "style-loader!css-loader!autoprefixer-loader!less",
                 exclude: [/node_modules/, /public/]
