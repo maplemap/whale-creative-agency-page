@@ -1,12 +1,12 @@
 import React from "react";
-import Parallax from '../../utils/ParallaxBg.jsx';
+// import Parallax from '../../utils/ParallaxBg.jsx';
 
 
 class Slide_3 extends React.Component {
 
     render() {
         return(
-            <Parallax
+            <div
                 className="presentation__slide presentation__slide--3"
             >
                 <div className="presentation__body">
@@ -19,7 +19,7 @@ class Slide_3 extends React.Component {
                         </div>
                     </div>
                 </div>
-            </Parallax>
+            </div>
         )
     }
 }

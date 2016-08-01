@@ -1,5 +1,5 @@
 import React from "react";
-import Parallax from '../../utils/ParallaxBg.jsx';
+// import Parallax from '../../utils/ParallaxBg.jsx';
 
 
 class Slide_2 extends React.Component {
@@ -8,8 +8,8 @@ class Slide_2 extends React.Component {
             <div className="presentation__slide presentation__slide--2">
                 <div className="presentation__body">
                     <h2 className="brand-name brand-name--presentation">
-                        <Parallax
-                            parallaxSpeed={.15}
+                        <div
+                            // parallaxSpeed={.15}
                             className="brand-name__text"
                         >
                             <sup className="brand-name__star">*</sup>
@@ -18,7 +18,7 @@ class Slide_2 extends React.Component {
                             <i className="brand-name__A">a</i>
                             <i className="brand-name__L">l</i><br />
                             <i className="brand-name__E">e</i>
-                        </Parallax>
+                        </div>
                     </h2>
                 </div>
             </div>
