@@ -58,3 +58,24 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'FiraSans-Heavy';
+  src:
+      url('../fonts/FiraSans-Heavy.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FiraSans-Heavy.otf')  format('opentype'),
+      url('../fonts/FiraSans-Heavy.woff') format('woff'),
+      url('../fonts/FiraSans-Heavy.ttf')  format('truetype'), url('../fonts/FiraSans-Heavy.svg#FiraSans-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans-UltraLight';
+  src:
+      url('../fonts/FiraSans-UltraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FiraSans-UltraLight.otf')  format('opentype'),
+      url('../fonts/FiraSans-UltraLight.woff') format('woff'),
+      url('../fonts/FiraSans-UltraLight.ttf')  format('truetype'), url('../fonts/FiraSans-UltraLight.svg#FiraSans-UltraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

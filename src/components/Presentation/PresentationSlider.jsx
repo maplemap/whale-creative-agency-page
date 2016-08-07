@@ -31,8 +31,7 @@ class PresentationSlider extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            autoplaySpeed: 4000,
-            initialSlide: 1
+            autoplaySpeed: 4000
         };
 
         return(
