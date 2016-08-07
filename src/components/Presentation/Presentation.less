@@ -127,15 +127,6 @@
       }
     }
 
-
-
-    .presentation__intro {
-      position: absolute;
-      left: 6%;
-      bottom: 0;
-      z-index: 30;
-    }
-
     .presentation__lead-in,
     .presentation__text,
     .presentation__break-btn {
@@ -160,6 +151,22 @@
     .presentation__body {
       overflow: hidden;
       padding: 5.3em 0 0 16.5%;
+
+      .presentation__intro {
+        position: absolute;
+        left: 40.5%;
+        top: 52.6%;
+        z-index: 30;
+
+        .presentation__lead-in {
+            line-height: .9em;
+        }
+
+        .presentation__text {
+            line-height: 1.2em;
+            margin-top: .4em;
+        }
+      }
     }
   }
 

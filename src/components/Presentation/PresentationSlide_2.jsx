@@ -7,7 +7,15 @@ class Slide_2 extends React.Component {
         return(
             <div className="presentation__slide presentation__slide--2">
                 <div className="presentation__body">
-                    <h2 className="brand-name brand-name--presentation">
+                    <div className="presentation__intro">
+                        <h2 className="presentation__lead-in">
+                            imagination<br /> is the <span className="presentation__lead-in--underline">only</span> limit.
+                        </h2>
+                        <div className="presentation__text">
+                            we are keeping our hand on pulse of trends<br />but still always one step ahead
+                        </div>
+                    </div>
+                    <h3 className="brand-name brand-name--presentation">
                         <div
                             // parallaxSpeed={.15}
                             className="brand-name__text"
@@ -19,7 +27,7 @@ class Slide_2 extends React.Component {
                             <i className="brand-name__L">l</i><br />
                             <i className="brand-name__E">e</i>
                         </div>
-                    </h2>
+                    </h3>
                 </div>
             </div>
         )
