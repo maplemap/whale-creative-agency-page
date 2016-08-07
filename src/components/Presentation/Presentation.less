@@ -8,15 +8,40 @@
     overflow: auto;
   }
 
-  .presentation__body {
+  &__body {
     width: 100%;
+    height: 43.8em;
+    padding-left: 11.3%;
+    overflow: hidden;
+    margin-top: 8.625em;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 87%;
     height: 100%;
+    padding-left: 2.2%
+  }
+
+  &__slide-number {
+    position: relative;
+    top: .6em;
+    font-family: 'FiraSans-Heavy', sans-serif;
+    font-size: 4em;
+    text-decoration: underline;
+    margin-left: 3px;
+  }
+
+  &__intro {
+    position: relative;
+    z-index: 30;
+    left: 0;
   }
 
   &__lead-in {
     font-family: 'FiraSans-Bold', sans-serif;
     font-size: 7.3125em;
-    line-height: .92em;
+    line-height: .9em;
 
     &--underline {
       display: inline-block;
@@ -46,29 +71,8 @@
   &__text {
     font-family: 'FiraSans-Medium', sans-serif;
     font-size: 1.25em;
-  }
-
-  &__break-btn {
-    position: relative;
-    float: right;
-    font-family: 'FiraSans-Bold', sans-serif;
-    font-size: 4em;
-    text-align: right;
-    line-height: .85em;
-    cursor: pointer;
-    margin: .7em 13.4% 0 0;
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 31%;
-      right: -17%;
-      width: 9%;
-      height: 30%;
-      background: url("../../img/break-btn-arrow.svg") no-repeat;
-      background-size: 100% 100%;
-    }
+    line-height: 1.2em;
+    margin-top: .5em;
   }
 
   &__blur-block {
@@ -105,76 +109,46 @@
     cursor: pointer;
   }
 
+/*** slide--1 ***/
   &__slide--1 {
-    background: url("../../img/macbook-slider-bg.png") no-repeat 82% -11%;
+      .presentation__body {
+        height: 100%;
+        padding: 5.3em 0 0 16.5%;
+        margin: 0;
 
-    .presentation__body {
-      position: relative;
-      height: 41.375em;
-      overflow: hidden;
-      margin-top: 8.625em;
-
-      &:before {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        z-index: 20;
-        top: 0;
-        left: 11.4583333333333%;
-        width: 78.3%;
-        height: 108%;
-        background: rgba(248, 231, 28, 0.87);
+        .presentation__intro {
+          position: absolute;
+          top: 52.6%;
+          left: 40.5%;
+        }
       }
-    }
-
-    .presentation__lead-in,
-    .presentation__text,
-    .presentation__break-btn {
-      position: relative;
-      z-index: 30;
-    }
-
-    .presentation__lead-in,
-    .presentation__text {
-      color: #000;
-      text-align: right;
-    }
-
-    .presentation__text {
-      margin-top: .5em;
-    }
   }
 
 
   &__slide--2 {
+      background: url("../../img/macbook-blur-slider-bg.png") no-repeat 47% 1%;
 
-    .presentation__body {
-      overflow: hidden;
-      padding: 5.3em 0 0 16.5%;
+      .presentation__body {
+        .presentation__wrapper {
+          background:
+            url("../../img/macbook-slider-bg.png") no-repeat 50% 28%,
+            url('../../img/grunge-texture-1.png') #97E9E0;
 
-      .presentation__intro {
-        position: absolute;
-        left: 40.5%;
-        top: 52.6%;
-        z-index: 30;
+          .presentation__intro {
+            top: 46.5%;
 
-        .presentation__lead-in {
-            line-height: .9em;
-        }
-
-        .presentation__text {
-            line-height: 1.2em;
-            margin-top: .4em;
+            .presentation__text {
+              margin-top: .8em;
+            }
+          }
         }
       }
-    }
   }
 
   &__slide--3 {
     background: url("../../img/iphone-slider-bg.png") no-repeat 60% 30% #1DADB5;
 
     .presentation__body {
-      position: relative;
       height: 50em;
       margin-top: 5.625em;
       background: url("../../img/iphone-slider-body-bg.png") 71% top no-repeat #1CA6AE;
@@ -203,12 +177,10 @@
     background: #F8E71C;
 
     .presentation__body {
-      position: relative;
       background: url("../../img/42-slider-body-bg.svg") no-repeat 109% 54%;
     }
 
     .presentation__intro {
-      position: absolute;
       left: 30%;
       bottom: 10.4%;
       text-align: right;
@@ -236,351 +208,344 @@
 
 
   /*** media query ***/
-  @media only screen and (max-width: 1600px) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat 22% -11%;
-    }
-
-    &__slide--3 {
-      background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
-
-      .presentation__body {
-        background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 1500px)  {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat 0 -11%;
-      background-size: 95%;
-    }
-
-    &__slide--4 {
-
-      .presentation__body {
-        background: url("../../img/42-slider-body-bg.svg") no-repeat 20% 54%;
-      }
-
-      .presentation__intro {
-        left: 53%;
-        bottom: 9.4%;
-      }
-    }
-  }
-
-  @media only screen
-  and (max-width: 1366px)
-  and (min-height: 751px) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat -30% 20%;
-
-      .presentation__body {
-
-        &:before {
-          width: 80%;
-        }
-      }
-      .presentation__break-btn {
-        font-size: 3em;
-      }
-    }
-
-    &__slide--4 {
-
-      .presentation__intro {
-        left: 11%;
-        bottom: 5%;
-      }
-
-      .terminal-42--presentation {
-        top: 25%;
-        left: 8%;
-        bottom: auto;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 1020px) {
-    &__slide--1 {
-      background: url("../../img/macbook-slider-bg.png") no-repeat 20% 30%;
-
-      .presentation__intro {
-        font-size: 90%;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    &__slide--3 {
-
-      .presentation__body {
-        background: url("../../img/iphone-slider-body-bg.png") 10% 50% no-repeat #1CA6AE;
-      }
-    }
-
-    .slick-prev,
-    .slick-next {
-      width: 8%;
-    }
-  }
-
-  @media only screen and (max-width: 950px) {
-    &__slide--1 {
-
-      .presentation__intro {
-        font-size: 80%;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 830px) {
-    &__slide--1 {
-
-      .presentation__intro {
-        left: 3%;
-        font-size: 75%;
-      }
-    }
-  }
-
-
-
-
-  @media only screen and (min-height: 982px)  {
-    &__slide--1 {
-
-      .presentation__body {
-        margin-top: 10em;
-      }
-    }
-
-    &__slide--3 {
-
-      .presentation__body {
-        margin-top: 10em;
-      }
-    }
-  }
-
-  @media only screen and (max-height: 890px)  {
-    &__slide--3 {
-
-      .presentation__body {
-        height: 44em;
-      }
-    }
-  }
-
-  @media only screen and (max-height: 850px)  {
-    &__slide--1 {
-
-      .presentation__body {
-        height: 38em;
-      }
-    }
-
-    &__slide--2 {
-
-      .brand-name--presentation {
-        font-size: 12.7em;
-      }
-    }
-  }
-
-  @media only screen and (max-height: 800px)  {
-    &__slide--1 {
-
-      .presentation__body {
-        height: 34em;
-      }
-    }
-
-    &__slide--3 {
-
-      .presentation__body {
-        height: 39em;
-      }
-    }
-  }
-
-  @media only screen and (max-height: 750px)  {
-    &__slide--1 {
-      .presentation__body {
-        font-size: 85%;
-      }
-    }
-
-    &__slide--2 {
-
-      .brand-name--presentation {
-        font-size: 11em;
-      }
-    }
-
-    &__slide--3 {
-      .presentation__body {
-        font-size: 85%;
-        margin-top: 8.625em;
-      }
-    }
-
-    &__slide--4 {
-      .presentation__intro {
-        font-size: 90%;
-        left: 10%;
-        right: auto;
-        bottom: 7%;
-      }
-
-      .terminal-42--presentation {
-        top: 28%;
-        left: 12%;
-        font-size: 2.625em;
-      }
-    }
-  }
-
-  @media only screen and (max-height: 650px)  {
-    &__slide--1 {
-
-      .presentation__body {
-        font-size: 75%;
-      }
-
-      .presentation__break-btn {
-        margin: .7em 15.4% 0 0;
-      }
-    }
-
-    &__slide--2 {
-
-      .presentation__body {
-        padding: 5.3em 0 0 25.5%;
-      }
-
-      .brand-name--presentation {
-        font-size: 8.7em;
-      }
-    }
-
-    &__slide--3 {
-
-      .presentation__body {
-        height: 30em;
-        background: url("../../img/iphone-slider-body-bg.png") 0% 50% no-repeat #1CA6AE;
-      }
-    }
-
-    &__slide--4 {
-
-      .presentation__intro {
-        font-size: 65%;
-      }
-    }
-  }
-
-
-
-
-  /* --iPad & iPad Mini-- */
-    /* Portrait */
-    @media only screen
-    and (min-device-width: 768px)
-    and (max-width: 1024px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 1) {
-
-      &__slide--2 {
-
-        .brand-name--presentation {
-          font-size: 14.7em;
-        }
-      }
-
-      &__slide--4 {
-
-        .presentation__intro {
-          left: auto;
-          right: 14%;
-          bottom: 14%;
-        }
-      }
-    }
-
-    /* Landscape */
-    @media only screen
-    and (min-device-width: 768px)
-    and (max-width: 1024px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 1) {
-
-      &__slide--4 {
-        .terminal-42--presentation {
-          left: 12%;
-        }
-
-        .presentation__intro {
-          left: auto;
-          right: 30%;
-          bottom: 3.2%;
-        }
-      }
-    }
-
-
-
-  /* --- iPad Pro -- */
-  /* Portrait */
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-width: 1366px)
-  and (min-height: 1025px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    .slick-prev,
-    .slick-next {
-      width: 8%;
-    }
-
-    &__slide--1 {
-
-      .presentation__body {
-        height: 62.375em;
-      }
-    }
-
-    &__slide--2 {
-      .brand-name--presentation {
-        font-size: 20.7em;
-      }
-    }
-
-    &__slide--3 {
-      .presentation__body {
-        margin-top: 25em;
-        background: url("../../img/iphone-slider-body-bg.png") 10% top no-repeat #1CA6AE;
-      }
-    }
-
-    &__slide--4 {
-
-      .presentation__intro {
-        left: 8%;
-        right: auto;
-        bottom: 22%;
-      }
-    }
-  }
-
-  /* Landscape */
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-width: 1366px)
-  and (min-height: 769px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-  }
+  // @media only screen and (max-width: 1600px) {
+  //   &__slide--1 {
+  //     background: url("../../img/macbook-slider-bg.png") no-repeat 22% -11%;
+  //   }
+  //
+  //   &__slide--3 {
+  //     background: url("../../img/iphone-slider-bg.png") no-repeat 20% 30% #1DADB5;
+  //
+  //     .presentation__body {
+  //       background: url("../../img/iphone-slider-body-bg.png") 0 50% no-repeat #1CA6AE;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 1500px)  {
+  //   &__slide--1 {
+  //     background: url("../../img/macbook-slider-bg.png") no-repeat 0 -11%;
+  //     background-size: 95%;
+  //   }
+  //
+  //   &__slide--4 {
+  //
+  //     .presentation__body {
+  //       background: url("../../img/42-slider-body-bg.svg") no-repeat 20% 54%;
+  //     }
+  //
+  //     .presentation__intro {
+  //       left: 53%;
+  //       bottom: 9.4%;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen
+  // and (max-width: 1366px)
+  // and (min-height: 751px) {
+  //   &__slide--1 {
+  //     background: url("../../img/macbook-slider-bg.png") no-repeat -30% 20%;
+  //
+  //     .presentation__body {
+  //
+  //       &:before {
+  //         width: 80%;
+  //       }
+  //     }
+  //   }
+  //
+  //   &__slide--4 {
+  //
+  //     .presentation__intro {
+  //       left: 11%;
+  //       bottom: 5%;
+  //     }
+  //
+  //     .terminal-42--presentation {
+  //       top: 25%;
+  //       left: 8%;
+  //       bottom: auto;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 1020px) {
+  //   &__slide--1 {
+  //     background: url("../../img/macbook-slider-bg.png") no-repeat 20% 30%;
+  //
+  //     .presentation__intro {
+  //       font-size: 90%;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 1000px) {
+  //   &__slide--3 {
+  //
+  //     .presentation__body {
+  //       background: url("../../img/iphone-slider-body-bg.png") 10% 50% no-repeat #1CA6AE;
+  //     }
+  //   }
+  //
+  //   .slick-prev,
+  //   .slick-next {
+  //     width: 8%;
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 950px) {
+  //   &__slide--1 {
+  //
+  //     .presentation__intro {
+  //       font-size: 80%;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 830px) {
+  //   &__slide--1 {
+  //
+  //     .presentation__intro {
+  //       left: 3%;
+  //       font-size: 75%;
+  //     }
+  //   }
+  // }
+  //
+  //
+  //
+  //
+  // @media only screen and (min-height: 982px)  {
+  //   &__slide--1 {
+  //
+  //     .presentation__body {
+  //       margin-top: 10em;
+  //     }
+  //   }
+  //
+  //   &__slide--3 {
+  //
+  //     .presentation__body {
+  //       margin-top: 10em;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-height: 890px)  {
+  //   &__slide--3 {
+  //
+  //     .presentation__body {
+  //       height: 44em;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-height: 850px)  {
+  //   &__slide--1 {
+  //
+  //     .presentation__body {
+  //       height: 38em;
+  //     }
+  //   }
+  //
+  //   &__slide--2 {
+  //
+  //     .brand-name--presentation {
+  //       font-size: 12.7em;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-height: 800px)  {
+  //   &__slide--1 {
+  //
+  //     .presentation__body {
+  //       height: 34em;
+  //     }
+  //   }
+  //
+  //   &__slide--3 {
+  //
+  //     .presentation__body {
+  //       height: 39em;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-height: 750px)  {
+  //   &__slide--1 {
+  //     .presentation__body {
+  //       font-size: 85%;
+  //     }
+  //   }
+  //
+  //   &__slide--2 {
+  //
+  //     .brand-name--presentation {
+  //       font-size: 11em;
+  //     }
+  //   }
+  //
+  //   &__slide--3 {
+  //     .presentation__body {
+  //       font-size: 85%;
+  //       margin-top: 8.625em;
+  //     }
+  //   }
+  //
+  //   &__slide--4 {
+  //     .presentation__intro {
+  //       font-size: 90%;
+  //       left: 10%;
+  //       right: auto;
+  //       bottom: 7%;
+  //     }
+  //
+  //     .terminal-42--presentation {
+  //       top: 28%;
+  //       left: 12%;
+  //       font-size: 2.625em;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (max-height: 650px)  {
+  //   &__slide--1 {
+  //
+  //     .presentation__body {
+  //       font-size: 75%;
+  //     }
+  //   }
+  //
+  //   &__slide--2 {
+  //
+  //     .presentation__body {
+  //       padding: 5.3em 0 0 25.5%;
+  //     }
+  //
+  //     .brand-name--presentation {
+  //       font-size: 8.7em;
+  //     }
+  //   }
+  //
+  //   &__slide--3 {
+  //
+  //     .presentation__body {
+  //       height: 30em;
+  //       background: url("../../img/iphone-slider-body-bg.png") 0% 50% no-repeat #1CA6AE;
+  //     }
+  //   }
+  //
+  //   &__slide--4 {
+  //
+  //     .presentation__intro {
+  //       font-size: 65%;
+  //     }
+  //   }
+  // }
+  //
+  //
+  //
+  //
+  // /* --iPad & iPad Mini-- */
+  //   /* Portrait */
+  //   @media only screen
+  //   and (min-device-width: 768px)
+  //   and (max-width: 1024px)
+  //   and (orientation: portrait)
+  //   and (-webkit-min-device-pixel-ratio: 1) {
+  //
+  //     &__slide--2 {
+  //
+  //       .brand-name--presentation {
+  //         font-size: 14.7em;
+  //       }
+  //     }
+  //
+  //     &__slide--4 {
+  //
+  //       .presentation__intro {
+  //         left: auto;
+  //         right: 14%;
+  //         bottom: 14%;
+  //       }
+  //     }
+  //   }
+  //
+  //   /* Landscape */
+  //   @media only screen
+  //   and (min-device-width: 768px)
+  //   and (max-width: 1024px)
+  //   and (orientation: landscape)
+  //   and (-webkit-min-device-pixel-ratio: 1) {
+  //
+  //     &__slide--4 {
+  //       .terminal-42--presentation {
+  //         left: 12%;
+  //       }
+  //
+  //       .presentation__intro {
+  //         left: auto;
+  //         right: 30%;
+  //         bottom: 3.2%;
+  //       }
+  //     }
+  //   }
+  //
+  //
+  //
+  // /* --- iPad Pro -- */
+  // /* Portrait */
+  // @media only screen
+  // and (min-device-width: 1024px)
+  // and (max-width: 1366px)
+  // and (min-height: 1025px)
+  // and (orientation: portrait)
+  // and (-webkit-min-device-pixel-ratio: 1) {
+  //
+  //   .slick-prev,
+  //   .slick-next {
+  //     width: 8%;
+  //   }
+  //
+  //   &__slide--1 {
+  //
+  //     .presentation__body {
+  //       height: 62.375em;
+  //     }
+  //   }
+  //
+  //   &__slide--2 {
+  //     .brand-name--presentation {
+  //       font-size: 20.7em;
+  //     }
+  //   }
+  //
+  //   &__slide--3 {
+  //     .presentation__body {
+  //       margin-top: 25em;
+  //       background: url("../../img/iphone-slider-body-bg.png") 10% top no-repeat #1CA6AE;
+  //     }
+  //   }
+  //
+  //   &__slide--4 {
+  //
+  //     .presentation__intro {
+  //       left: 8%;
+  //       right: auto;
+  //       bottom: 22%;
+  //     }
+  //   }
+  // }
+  //
+  // /* Landscape */
+  // @media only screen
+  // and (min-device-width: 1024px)
+  // and (max-width: 1366px)
+  // and (min-height: 769px)
+  // and (orientation: landscape)
+  // and (-webkit-min-device-pixel-ratio: 1) {
+  //
+  // }
 }
