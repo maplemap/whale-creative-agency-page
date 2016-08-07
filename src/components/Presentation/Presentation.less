@@ -72,7 +72,7 @@
     font-family: 'FiraSans-Medium', sans-serif;
     font-size: 1.25em;
     line-height: 1.2em;
-    margin-top: .5em;
+    margin-top: .8em;
   }
 
   &__blur-block {
@@ -121,6 +121,9 @@
           top: 52.6%;
           left: 40.5%;
         }
+        .presentation__text {
+          margin-top: .5em;
+        }
       }
   }
 
@@ -136,40 +139,24 @@
 
           .presentation__intro {
             top: 46.5%;
-
-            .presentation__text {
-              margin-top: .8em;
-            }
           }
         }
       }
   }
 
   &__slide--3 {
-    background: url("../../img/iphone-slider-bg.png") no-repeat 60% 30% #1DADB5;
+    background: url("../../img/iphone-blur-slider-bg.png") no-repeat 85% 30%;
 
     .presentation__body {
-      height: 50em;
-      margin-top: 5.625em;
-      background: url("../../img/iphone-slider-body-bg.png") 71% top no-repeat #1CA6AE;
-    }
+      .presentation__wrapper {
+        background:
+          url("../../img/iphone-slider-bg.png") no-repeat 111% 28%,
+          url('../../img/texture-web.png') #81F2F8;
 
-    .presentation__intro {
-      position: absolute;
-      left: 13.4%;
-      bottom: 7%;
-    }
-
-    .presentation__lead-in,
-    .presentation__text {
-      color: white;
-    }
-
-    .presentation__text {
-      position: absolute;
-      top: 9%;
-      right: -1%;
-      line-height: 1.1em;
+        .presentation__intro {
+          top: 31.5%;
+        }
+      }
     }
   }
 
