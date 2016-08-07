@@ -8,7 +8,7 @@ class Slide_2 extends React.Component {
             <div className="presentation__slide presentation__slide--2">
                 <div className="presentation__body">
                     <div className="presentation__wrapper">
-                        <div className="presentation__slide-number">{this.props.slideNumber}</div>
+                        <div className="presentation__slide-number">01</div>
                         <div className="presentation__intro">
                             <h2 className="presentation__lead-in">
                                 Web<br/> design

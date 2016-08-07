@@ -10,9 +10,9 @@ class PresentationSlider extends React.Component {
     render() {
         const slideComponents = [
             <Slide_1 />,
-            <Slide_2 slideNumber='01' />,
-            <Slide_3 slideNumber='02' />,
-            <Slide_4 slideNumber='03' />
+            <Slide_2 />,
+            <Slide_3 />,
+            <Slide_4 />
         ];
 
         const slides =  slideComponents.map((slide, index) =>

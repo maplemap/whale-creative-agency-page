@@ -1,6 +1,5 @@
 /*** presentation-section ***/
 .presentation {
-
   &__slide {
     position: relative;
     width: 100%;
@@ -20,12 +19,10 @@
     position: relative;
     width: 87%;
     height: 100%;
-    padding-left: 2.2%
+    padding: 2.3em 0 0 2.2%
   }
 
   &__slide-number {
-    position: relative;
-    top: .6em;
     font-family: 'FiraSans-Heavy', sans-serif;
     font-size: 4em;
     text-decoration: underline;
@@ -33,39 +30,16 @@
   }
 
   &__intro {
-    position: relative;
+    position: absolute;
     z-index: 30;
-    left: 0;
+    left: 2.5%;
+    bottom: 5%;
   }
 
   &__lead-in {
     font-family: 'FiraSans-Bold', sans-serif;
     font-size: 7.3125em;
     line-height: .9em;
-
-    &--underline {
-      display: inline-block;
-      position: relative;
-      font-family: 'FiraSans-Medium', sans-serif;
-
-      &:before,
-      &:after{
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        height: .06em;
-        background: #000;
-      }
-      &:before {
-        left: 0;
-        width: 75%;
-      }
-      &:after {
-        right: 0;
-        width: 8%;
-      }
-    }
   }
 
   &__text {
@@ -110,91 +84,77 @@
   }
 
 /*** slide--1 ***/
-  &__slide--1 {
-      .presentation__body {
-        height: 100%;
-        padding: 5.3em 0 0 16.5%;
-        margin: 0;
+&__slide--1 {
+    .presentation__body {
+      height: 100%;
+      padding: 5.3em 0 0 16.5%;
+      margin: 0;
 
-        .presentation__intro {
-          position: absolute;
-          top: 52.6%;
-          left: 40.5%;
-        }
-        .presentation__text {
-          margin-top: .5em;
-        }
+      .presentation__intro {
+        top: 52.6%;
+        left: 40.5%;
       }
-  }
-
-
-  &__slide--2 {
-      background: url("../../img/macbook-blur-slider-bg.png") no-repeat 47% 1%;
-
-      .presentation__body {
-        .presentation__wrapper {
-          background:
-            url("../../img/macbook-slider-bg.png") no-repeat 50% 28%,
-            url('../../img/grunge-texture-1.png') #97E9E0;
-
-          .presentation__intro {
-            top: 46.5%;
-          }
-        }
+      .presentation__text {
+        margin-top: .5em;
       }
-  }
+    }
+}
 
-  &__slide--3 {
-    background: url("../../img/iphone-blur-slider-bg.png") no-repeat 85% 30%;
+/*** slide--2 ***/
+&__slide--2 {
+    background: url("../../img/macbook-blur-slider-bg.png") no-repeat 47% 1%;
 
     .presentation__body {
       .presentation__wrapper {
         background:
-          url("../../img/iphone-slider-bg.png") no-repeat 111% 28%,
-          url('../../img/texture-web.png') #81F2F8;
+          url("../../img/macbook-slider-bg.png") no-repeat 50% 28%,
+          url('../../img/grunge-texture-1.png') #97E9E0;
+      }
+    }
+}
 
-        .presentation__intro {
-          top: 31.5%;
+/*** slide--3 ***/
+&__slide--3 {
+  background: url("../../img/iphone-blur-slider-bg.png") no-repeat 85% 30%;
+
+  .presentation__body {
+    .presentation__wrapper {
+      background:
+        url("../../img/iphone-slider-bg.png") no-repeat 111% 28%,
+        url('../../img/texture-web.png') #81F2F8;
+    }
+  }
+}
+
+/*** slide--4 ***/
+&__slide--4 {
+  background: url("../../img/42-bw-slider-logo.png") no-repeat 100% 30%;
+
+  .presentation__body {
+    .presentation__wrapper {
+      background:
+        url("../../img/42-slider-logo.png") no-repeat 100% 28%,
+        url('../../img/grunge-texture-2.png') #F8E71C;
+
+      .presentation__terminal-42 {
+        color: white;
+        margin: 2.5em 0 0 .6%;
+
+        &-name {
+          font-size: 3.625em;
+          font-family: 'FiraSans-Bold', sans-serif;
+        }
+        &-text {
+          font-size: 1.25em;
+          font-family: 'FiraSans-Regular', sans-serif;
         }
       }
     }
   }
-
-  &__slide--4 {
-    background: #F8E71C;
-
-    .presentation__body {
-      background: url("../../img/42-slider-body-bg.svg") no-repeat 109% 54%;
-    }
-
-    .presentation__intro {
-      left: 30%;
-      bottom: 10.4%;
-      text-align: right;
-    }
-
-    .presentation__lead-in,
-    .presentation__text {
-      background: #F9F3FA;
-    }
-
-    .presentation__lead-in {
-      padding: .1em 6% .16em 16%;
-      margin-bottom: 5px;
-    }
-
-    .presentation__text {
-      display: inline;
-
-      span {
-        line-height: 1.3em;
-        padding: .4em 6% .4em 5%;
-      }
-    }
-  }
+}
 
 
-  /*** media query ***/
+/*** media query ***/
   // @media only screen and (max-width: 1600px) {
   //   &__slide--1 {
   //     background: url("../../img/macbook-slider-bg.png") no-repeat 22% -11%;
