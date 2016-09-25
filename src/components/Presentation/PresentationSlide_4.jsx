@@ -14,7 +14,7 @@ class Slide_4 extends React.Component {
                             <div className="presentation__terminal-42-text">coworking space</div>
                         </div>
                         <div className="presentation__intro">
-                            <h2 className="presentation__lead-in">
+                            <h2 className="lead-header lead-header--presentation">
                                 Branding
                             </h2>
                             <div className="presentation__text">

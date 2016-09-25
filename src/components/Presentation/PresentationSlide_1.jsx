@@ -8,8 +8,8 @@ class Slide_1 extends React.Component {
             <div className="presentation__slide presentation__slide--1">
                 <div className="presentation__body">
                     <div className="presentation__intro">
-                        <h2 className="presentation__lead-in">
-                            imagination<br /> is the <span className="presentation__lead-in--underline">only</span> limit.
+                        <h2 className="lead-header lead-header--presentation">
+                            imagination<br /> is the <span className="lead-header__underline">only</span> limit.
                         </h2>
                         <div className="presentation__text">
                             we are keeping our hand on pulse of trends<br />but still always one step ahead
