@@ -71,13 +71,13 @@ class Portfolio extends React.Component {
                         filter={this.state.filter}
                         onClickSortPortfolio={this.handlerSortPortfolio}
                     />
-                    
-                    <PortfolioGallery 
+
+                    <PortfolioGallery
                         projects={this.state.projects}
                         onClickGalleryItem={this.handlerClickGalleryItem}
                     />
                 </div>
-                <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
+                <div className={`popup ${(this.state.galleryReviewOn) ? 'popup--gallery-review' : ''}`}>
                     {galleryReview}
                 </div>
 

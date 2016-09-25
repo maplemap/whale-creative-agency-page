@@ -11,7 +11,7 @@ class Slide_3 extends React.Component {
                     <div className="presentation__wrapper">
                         <div className="presentation__slide-number">02</div>
                         <div className="presentation__intro">
-                            <h2 className="presentation__lead-in">
+                            <h2 className="lead-header lead-header--presentation">
                                 Mobile<br/> application<br/> design
                             </h2>
                             <div className="presentation__text">
