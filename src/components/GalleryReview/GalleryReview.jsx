@@ -22,7 +22,7 @@ class GalleryReview extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            initialSlide: this.props.initialSlide
+            slickGoTo: this.props.initialSlide
         };
 
         return(
