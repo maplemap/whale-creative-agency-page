@@ -28,12 +28,12 @@ class PortfolioGallery extends React.Component {
                                 >
                                     <img src={`static/projects/${project.shortcut}`} alt={project.name} />
                                     <div className="popup popup--gallery-item">
-                                        <a href="#"
+                                        <div
                                            className="popup__see-icon"
                                            title={`see ${project.name}`}
                                         >
                                             See project
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             )
