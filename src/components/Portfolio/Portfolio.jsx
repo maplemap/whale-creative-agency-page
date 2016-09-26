@@ -46,7 +46,8 @@ class Portfolio extends React.Component {
         elementIndex = parseInt(elementIndex, 10);
 
         this.setState({
-            galleryElementIndex: elementIndex
+            galleryElementIndex: elementIndex,
+            galleryReviewOn: true
         });
     };
 
