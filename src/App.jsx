@@ -23,19 +23,14 @@ class App extends React.Component {
 
         switch (section) {
             case "presentation":
+            case "what-we-do":
+            case "footer":
                 colorScheme = 'black';
 
                 break;
             case "team":
-                colorScheme = 'white';
-
-                break;
             case "portfolio":
                 colorScheme = 'white';
-
-                break;
-            case "what-we-do":
-                colorScheme = 'black';
 
                 break;
         }
@@ -72,7 +67,10 @@ class App extends React.Component {
                     categoryDescription={config.section.portfolio.description}
                     onChangeSection={this.handlerChangeSection}
                 />
-                <Footer />
+                <Footer
+                    colorScheme={this.state.colorScheme}
+                    onChangeSection={this.handlerChangeSection}
+                />
             </div>
         )
     }
