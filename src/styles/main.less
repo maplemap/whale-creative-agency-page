@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "font.css";
 @import "slick-slider.less";
+@import "../../node_modules/animate.css/animate.css";
 
 /*** default ***/
 body {
@@ -232,6 +233,13 @@ a.logo {
 
     .gallery__grid {
       margin-top: 1.7em;
+
+      &.animated {
+        -webkit-animation-duration: .3s;
+        -o-animation-duration: .3s;
+        -moz-animation-duration: .3s;
+        animation-duration: .3s;
+      }
 
       .gallery__item {
         position: relative;
