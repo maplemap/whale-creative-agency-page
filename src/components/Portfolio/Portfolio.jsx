@@ -72,7 +72,7 @@ class Portfolio extends React.Component {
                 <div className={`popup ${(this.state.galleryReviewOn) ? 'popup--gallery-review' : ''}`}>
                     <GalleryReview
                         onClickCloseReview={this.handlerClickCloseReview}
-                        projects={this.props.projects}
+                        projects={this.state.projects}
                         initialSlide={this.state.galleryElementIndex}
                     />
                 </div>

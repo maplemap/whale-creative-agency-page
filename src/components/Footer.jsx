@@ -9,7 +9,7 @@ class Footer extends React.Component {
         super(props);
 
         this.state = {
-            isPopupActive: true
+            isPopupActive: false
 
         }
     }
