@@ -190,7 +190,7 @@ class Footer extends React.Component {
                     </div>
                 </div>
 
-                <GuidLines colorScheme={this.props.colorScheme} />
+                <GuidLines/>
                 <div className="waypoint">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'footer')} />
                 </div>
