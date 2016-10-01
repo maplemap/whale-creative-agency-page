@@ -108,12 +108,12 @@ class WhatWeDo extends React.Component {
                     </div>
                     </div>
                 </div>
-                <div className={`popup what-we-do__got-a-project ${(this.state.isPopupActive) ? 'popup--show': ''}`}>
+                <div className={`popup ${(this.state.isPopupActive) ? 'popup--show': ''}`}>
                     <span
                         className="close-btn close-btn--what-we-do"
                         onClick={this.handlerClosePopup}
                     ></span>
-                    <div className="what-we-do__got-a-project-wrapper">
+                    <div className="popup__wrapper">
                         <h2 className="lead-header lead-header--what-we-do">
                             got a <br/> project?
                         </h2>
