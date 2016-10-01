@@ -22,6 +22,7 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100%;
+  background: white;
 }
 
 .underline {
@@ -335,6 +336,25 @@ a.logo {
     opacity: 1;
     background: rgba(0, 0, 0, 0.75);
   }
+
+  &__wrapper {
+    position: relative;
+    width: 77.2%;
+    padding: 4.6em 0 5em 6%;
+    margin: 8.625em 0 0 11.4%;
+    overflow: hidden;
+    background: #F8E71C;
+  }
+
+  &--footer {
+    .popup__wrapper {
+      padding: 1.6em 0 5em 6%;
+      background:
+        url('../img/footer-bg-2.png') no-repeat left 850px center,
+        #F8E71C;
+      background-size: 43% 113%, auto auto;
+    }
+  }
 }
 
 /*** copyright ***/
@@ -373,6 +393,7 @@ a.logo {
       display: inline-block;
       width: 34px;
       height: 34px;
+      margin-bottom: 1em;
     }
   }
 
@@ -395,8 +416,8 @@ a.logo {
 
   &--footer {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 7%;
+    bottom: 5.3em;
 
     .socials__cell {
 
@@ -431,7 +452,8 @@ a.logo {
     top: 0;
     right: 0;
   }
-  &--what-we-do {
+  &--what-we-do,
+  &--footer {
     width: 30px;
     height: 30px;
     top: 75px;
@@ -584,6 +606,14 @@ a.logo {
       &--marked {
         &:before {
           background: #F8E71C;
+        }
+
+        &-white {
+          z-index: 1;
+
+          &:before {
+            background: #fff;
+          }
         }
       }
     }
