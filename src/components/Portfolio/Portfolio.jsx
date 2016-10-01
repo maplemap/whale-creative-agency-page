@@ -77,7 +77,7 @@ class Portfolio extends React.Component {
                     />
                 </div>
                 <GuidLines
-                    colorScheme={this.props.colorScheme}
+                    colorScheme="white"
                     disableLines={[5]}
                 />
                 <div className="waypoint waypoint--portfolio">

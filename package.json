@@ -12,6 +12,7 @@
     "name": "Whale Design Studio"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "classnames": "^2.2.5",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",

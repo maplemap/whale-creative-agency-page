@@ -11,12 +11,18 @@ class PortfolioGallery extends React.Component {
         }
     };
 
+    componentWillReceiveProps(nextProps){
+        if (JSON.stringify(nextProps.projects) !== JSON.stringify(this.props.projects)) {
+            this._appearEffectForGrid()
+        }
+    }
+
     render() {
         const projects = this.props.projects;
 
         return (
             <div className="gallery gallery--portfolio">
-                <div className="gallery__grid">
+                <div ref="grid" className="gallery__grid">
                     <Masonry options={this.props.masonryOptions}>
                         {
                             projects.map(project =>
@@ -42,6 +48,15 @@ class PortfolioGallery extends React.Component {
                 </div>
             </div>
         )
+    }
+
+    _appearEffectForGrid = () => {
+        const gridClasses = this.refs.grid.classList;
+        gridClasses.add("animated", "fadeInUp");
+
+        setTimeout(() => {
+            gridClasses.remove("animated", "fadeInUp");
+        }, 1000);
     }
 }
 

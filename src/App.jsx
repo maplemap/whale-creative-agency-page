@@ -50,25 +50,20 @@ class App extends React.Component {
                     sloganName={this.state.sloganName}
                 />
                 <Presentation
-                    colorScheme={this.state.colorScheme}
                     onChangeSection={this.handlerChangeSection}
                 />
                 <Team
-                    colorScheme={this.state.colorScheme}
                     onChangeSection={this.handlerChangeSection}
                 />
                 <WhatWeDo
-                    colorScheme={this.state.colorScheme}
                     onChangeSection={this.handlerChangeSection}
                 />
                 <Portfolio
                     projects={this.state.projects}
-                    colorScheme={this.state.colorScheme}
                     categoryDescription={config.section.portfolio.description}
                     onChangeSection={this.handlerChangeSection}
                 />
                 <Footer
-                    colorScheme={this.state.colorScheme}
                     onChangeSection={this.handlerChangeSection}
                 />
             </div>
