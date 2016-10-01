@@ -1,50 +1,59 @@
 .footer {
-  position: relative;
-  top: -1px; /* fix gap*/
-  height: 15em;
-  background: black;
-
-  &__body {
-    position: relative;
-    width: 91.458333333333%;
-    height: 100%;
-    margin: 0 auto;
-  }
-
-  &__social-links {
-    float: right;
-    margin-top: 1.3em;
-  }
+    height: auto;
+    min-height: 65em;
+    background:
+      url('../img/footer-bg-2.png') no-repeat left 1200px center,
+      url('../img/footer-bg.jpg') no-repeat fixed center center;
+    background-size: auto auto, cover;
 
   &__follow {
-    color: white;
+    position: absolute;
+    right: 3.5%;
+    bottom: 5.7em;
+    color: #000;
     font-family: 'FiraSans-Regular', sans-serif;
     font-size: 2.25em;
-    padding-right: 9%;
-  }
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+   }
 
+   &__since {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -2.5em;
 
-  /*** media query ***/
-  @media only screen and (max-width: 800px) {
-    .copyright--footer{
-      position: static;
-      text-align: center;
-      margin: 1em auto 0 auto;
-    }
+      span {
+        float: right;
+        display: inline-block;
+        width: .7em;
+        font-family: 'FiraSans-Medium', sans-serif;
+        font-size: 1.125em;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        word-wrap: break-word;
+        line-height: 1.4em;
+        margin: 0 3% 0 0;
 
-    &__social-links {
-      float: none;
-      text-align: center;
-      margin-top: 0;
-    }
-
-    .socials--footer {
-      text-align: center;
-      margin-top: .2em;
-    }
-
-    .footer__follow {
-      padding: 0;
-    }
-  }
+        &:first-child {
+          float: left;
+          margin: 0 0 0 3%;
+        }
+      }
+   }
+   &__menu-sign {
+    position: absolute;
+    bottom: 1.6em;
+    right: 1.3%;
+    width: .8em;
+    font-size: 2.875em;
+    font-family: 'FiraSans-Regular', sans-serif;
+    text-align: left;
+    word-wrap: break-word;
+   }
 }

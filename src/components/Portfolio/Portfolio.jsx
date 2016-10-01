@@ -53,14 +53,6 @@ class Portfolio extends React.Component {
 
     render() {
         let galleryReview = null;
-        if (this.state.galleryReviewOn) {
-            let galleryReviewSettings = {
-                onClickCloseReview: this.handlerClickCloseReview,
-                projects: this.props.projects,
-                initialSlide: this.state.galleryElementIndex
-            };
-            galleryReview = <GalleryReview {...galleryReviewSettings} />
-        }
 
         return (
             <section className="section portfolio">
@@ -71,16 +63,19 @@ class Portfolio extends React.Component {
                         filter={this.state.filter}
                         onClickSortPortfolio={this.handlerSortPortfolio}
                     />
-                    
-                    <PortfolioGallery 
+
+                    <PortfolioGallery
                         projects={this.state.projects}
                         onClickGalleryItem={this.handlerClickGalleryItem}
                     />
                 </div>
-                <div className={`mask ${(this.state.galleryReviewOn) ? 'mask--gallery-review' : ''}`}>
-                    {galleryReview}
+                <div className={`popup ${(this.state.galleryReviewOn) ? 'popup--gallery-review' : ''}`}>
+                    <GalleryReview
+                        onClickCloseReview={this.handlerClickCloseReview}
+                        projects={this.props.projects}
+                        initialSlide={this.state.galleryElementIndex}
+                    />
                 </div>
-
                 <GuidLines
                     colorScheme={this.props.colorScheme}
                     disableLines={[5]}

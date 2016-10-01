@@ -4,6 +4,7 @@ import './App.less';
 import Header from './components/Header.jsx';
 import Presentation from './components/Presentation/Presentation.jsx';
 import Team from './components/Team/Team.jsx';
+import WhatWeDo from './components/WhatWeDo.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -22,13 +23,12 @@ class App extends React.Component {
 
         switch (section) {
             case "presentation":
+            case "what-we-do":
+            case "footer":
                 colorScheme = 'black';
 
                 break;
             case "team":
-                colorScheme = 'white';
-
-                break;
             case "portfolio":
                 colorScheme = 'white';
 
@@ -57,13 +57,20 @@ class App extends React.Component {
                     colorScheme={this.state.colorScheme}
                     onChangeSection={this.handlerChangeSection}
                 />
+                <WhatWeDo
+                    colorScheme={this.state.colorScheme}
+                    onChangeSection={this.handlerChangeSection}
+                />
                 <Portfolio
                     projects={this.state.projects}
                     colorScheme={this.state.colorScheme}
                     categoryDescription={config.section.portfolio.description}
                     onChangeSection={this.handlerChangeSection}
                 />
-                <Footer />
+                <Footer
+                    colorScheme={this.state.colorScheme}
+                    onChangeSection={this.handlerChangeSection}
+                />
             </div>
         )
     }

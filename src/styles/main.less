@@ -8,6 +8,12 @@ body {
   font-family: 'FiraSans-Regular', sans-serif;
 }
 
+a, a:link,
+a:visited,
+a:hover {
+  color: black;
+}
+
 #main {
   height: 100%;
 }
@@ -16,10 +22,15 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  background: white;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /*** logo ***/
-.logo {
+a.logo {
   color: black;
   float: left;
   display: inline-block;
@@ -265,24 +276,27 @@ body {
   }
 }
 
-/*** mask ***/
-.mask {
-  display: none;
+/*** popup ***/
+.popup {
+  display: block;
   position: absolute;
-  z-index: 300;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: .3s;
 
   &--gallery-review {
-    display: block;
     position: fixed;
+    z-index: 300;
+    opacity: 1;
     background: rgba(0, 0, 0, 0.75);
   }
 
   &--gallery-item {
-    display: block;
+    z-index: 300;
     opacity: 0;
     overflow: visible;
     background: none;
@@ -290,7 +304,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
-    .mask__see-icon {
+    .popup__see-icon {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -309,11 +323,36 @@ body {
       opacity: 1;
       background: rgba(0,0,0,0.6);
 
-      .mask__see-icon {
+      .popup__see-icon {
         opacity: 1;
         transform: scale(1,1);
         transition-delay: 0.2s;
       }
+    }
+  }
+
+  &--show {
+    z-index: 300;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 77.2%;
+    padding: 4.6em 0 5em 6%;
+    margin: 8.625em 0 0 11.4%;
+    overflow: hidden;
+    background: #F8E71C;
+  }
+
+  &--footer {
+    .popup__wrapper {
+      padding: 1.6em 0 5em 6%;
+      background:
+        url('../img/footer-bg-2.png') no-repeat left 850px center,
+        #F8E71C;
+      background-size: 43% 113%, auto auto;
     }
   }
 }
@@ -349,12 +388,12 @@ body {
 .socials {
 
   &__cell {
-    display: inline-block;
 
     a {
       display: inline-block;
       width: 34px;
       height: 34px;
+      margin-bottom: 1em;
     }
   }
 
@@ -376,11 +415,11 @@ body {
   }
 
   &--footer {
-    text-align: right;
-    margin-top: 1.2em;
+    position: absolute;
+    right: 7%;
+    bottom: 5.3em;
 
     .socials__cell {
-      margin-left: 33px;
 
       &:first-child {
         margin-left: 0;
@@ -412,5 +451,255 @@ body {
   &--gallery-review {
     top: 0;
     right: 0;
+  }
+  &--what-we-do,
+  &--footer {
+    width: 30px;
+    height: 30px;
+    top: 75px;
+    right: 3%;
+    background-size: cover;
+  }
+}
+
+/*** lead-header ***/
+.lead-header  {
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 7.3125em;
+  line-height: .9em;
+
+  &__underline {
+    position: relative;
+    display: inline-block;
+    font-family: 'FiraSans-Regular', sans-serif;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .06em;
+      position: absolute;
+      left: 0;
+      bottom: -.04em;
+      background: black;
+    }
+  }
+
+  &--presentation {
+    padding-right: 2%
+  }
+  &--what-we-do {
+    position: relative;
+
+    i {
+      position: absolute;
+      right: 100%;
+      font-style: normal;
+    }
+  }
+  &--footer {
+    margin-top: .32em;
+  }
+}
+
+/*** branches ***/
+.branches {
+  text-align: left;
+
+  &__item {
+    display: inline-block;
+    width: 9%;
+    min-width: 165px;
+    vertical-align: top;
+    margin-left: 2%;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+  &__head {
+    position: relative;
+    display: inline-block;
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 2.25em;
+    margin-bottom: .6em;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: -.04em;
+      background: black;
+    }
+
+    &--marked {
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: -10%;
+        display: block;
+        width: 120%;
+        height: 150%;
+      }
+    }
+  }
+
+  &__point {
+    margin-bottom: 1em;
+
+    &-name {
+      font-family: 'FiraSans-Medium', sans-serif;
+      font-size: 1.25em;
+      line-height: 1.2em;
+    }
+    &-description {
+      font-family: 'FiraSans-Regular', sans-serif;
+      font-size: .875em;
+      margin-top: .3em;
+    }
+  }
+
+  &--what-we-do {
+
+    .branches__head {
+      &:before {
+        content: '';
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-bottom: .4em;
+        background: url('../img/branches-icons-spryte.svg') no-repeat;
+      }
+
+      &--mobile {
+        &:before {
+          background-position: -90px 0;
+        }
+      }
+      &--promo {
+        &:before {
+          background-position: -167px 0;
+        }
+      }
+      &--branding {
+        &:before {
+          background-position: -262px 0;
+        }
+      }
+      &--graphic {
+        &:before {
+          background-position: -347px 0;
+        }
+      }
+    }
+  }
+
+  &--footer {
+    margin-top: 6em;
+
+    .branches__head {
+      &--marked {
+        &:before {
+          background: #F8E71C;
+        }
+
+        &-white {
+          z-index: 1;
+
+          &:before {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** call ***/
+.call {
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 4.8125em;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &--what-we-do {
+    float: right;
+    display: inline-block;
+    text-align: right;
+    line-height: .83em;
+    padding: .89em .58em 1em .9em;
+    background: #F8E71C;
+  }
+}
+
+/*** contacts ***/
+.contacts {
+
+
+  &--what-we-do {
+    font-size: 2.75em;
+    font-family: 'FiraSans-Bold', sans-serif;
+
+    .contacts__email,
+    .contacts__skype {
+      margin-top: 2.45em;
+
+      &:before {
+        display: block;
+        font-family: 'FiraSans-Regular', sans-serif;
+        margin-bottom: .1em;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .contacts__email {
+      &:before {
+        content: 'email';
+        display: block;
+      }
+    }
+    .contacts__skype {
+      margin-top: 1.2em;
+
+      &:before {
+        content: 'skype';
+        display: block;
+      }
+    }
+  }
+}
+
+/*** page ***/
+.page {
+
+  &__body {
+    position: relative;
+    z-index: 10;
+    padding: 11.5em 0 5em 12.7604166666667%;
+  }
+
+  &__text {
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 1.5em;
+    margin: .9em 0 0 .5%;
+  }
+
+  &__content {
+    padding-left: .6%;
+    margin: 5em 0 0 0;
+  }
+
+  &--footer {
+    .page__body {
+      padding: 11.5em 0 5em 13.3%;
+    }
   }
 }
