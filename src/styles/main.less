@@ -304,7 +304,7 @@ a.logo {
   }
 
   &--gallery-item {
-    z-index: 300;
+    z-index: 250;
     opacity: 0;
     overflow: visible;
     background: none;
@@ -512,8 +512,9 @@ a.logo {
   }
 }
 
-/*** menu ***/
-.menu {
+/*** branches ***/
+
+.branches {
   text-align: left;
 
   &__item {
@@ -576,14 +577,14 @@ a.logo {
 
   &--what-we-do {
 
-    .menu__head {
+    .branches__head {
       &:before {
         content: '';
         display: block;
         width: 42px;
         height: 42px;
         margin-bottom: .4em;
-        background: url('../img/menu-icons-spryte.svg') no-repeat;
+        background: url('../img/branches-icons-spryte.svg') no-repeat;
       }
 
       &--mobile {
@@ -612,23 +613,32 @@ a.logo {
   &--navigation {
     margin-top: 6em;
 
-    .menu__head {
+    .branches__head {
+      &--marked {
+        &:before {
+          background: #fff;
+        }
+      }
+    }
+
+    .branches__item--contacts {
+      display: none;
+    }
+  }
+
+  &--footer {
+
+    .branches__head {
       &--marked {
         &:before {
           background: #F8E71C;
         }
-
-        &-white {
-          z-index: 1;
-
-          &:before {
-            background: #fff;
-          }
-        }
       }
     }
+
   }
 }
+
 
 /*** call ***/
 .call {

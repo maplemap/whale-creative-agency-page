@@ -37,65 +37,65 @@ class WhatWeDo extends React.Component {
                             </h2>
                             <div className="page__text">Full stack design services for your company or product.</div>
                             <div className="page__content">
-                                <div className="menu menu--what-we-do">
-                                    <div className="menu__item">
-                                        <div className="menu__head menu__head--web">Web</div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">corporate website</div>
-                                            <div className="menu__point-description">for you and your company </div>
+                                <div className="branches branches--what-we-do">
+                                    <div className="branches__item">
+                                        <div className="branches__head branches__head--web">Web</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">corporate website</div>
+                                            <div className="branches__point-description">for you and your company </div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">landing pages</div>
-                                            <div className="menu__point-description">promote your startup or     product with unique design</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">landing pages</div>
+                                            <div className="branches__point-description">promote your startup or     product with unique design</div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">shop</div>
-                                            <div className="menu__point-description">increase your sales by showing them in a beautiful way</div>
-                                        </div>
-                                    </div>
-                                    <div className="menu__item">
-                                        <div className="menu__head menu__head--mobile">Mobile</div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">UI / UX</div>
-                                            <div className="menu__point-description">optimising your app for being easy to use and stunning looking</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">shop</div>
+                                            <div className="branches__point-description">increase your sales by showing them in a beautiful way</div>
                                         </div>
                                     </div>
-                                    <div className="menu__item">
-                                        <div className="menu__head menu__head--promo">Promo</div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">social network graphics</div>
-                                            <div className="menu__point-description">banners and ather content you need</div>
-                                        </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">advertisement</div>
-                                            <div className="menu__point-description">social / political promotional ads</div>
+                                    <div className="branches__item">
+                                        <div className="branches__head branches__head--mobile">Mobile</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">UI / UX</div>
+                                            <div className="branches__point-description">optimising your app for being easy to use and stunning looking</div>
                                         </div>
                                     </div>
-                                    <div className="menu__item">
-                                        <div className="menu__head menu__head--branding">Branding</div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">logo / mark or corporate identity</div>
-                                            <div className="menu__point-description">you company deserves a unique brand</div>
+                                    <div className="branches__item">
+                                        <div className="branches__head branches__head--promo">Promo</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">social network graphics</div>
+                                            <div className="branches__point-description">banners and ather content you need</div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">brandbook and assets</div>
-                                            <div className="menu__point-description">colour scheme business cards and all the props yu need</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">advertisement</div>
+                                            <div className="branches__point-description">social / political promotional ads</div>
                                         </div>
                                     </div>
-                                    <div className="menu__item">
-                                        <div className="menu__head menu__head--graphic">Graphic</div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">posters</div>
+                                    <div className="branches__item">
+                                        <div className="branches__head branches__head--branding">Branding</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">logo / mark or corporate identity</div>
+                                            <div className="branches__point-description">you company deserves a unique brand</div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">prospects & brochures</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">brandbook and assets</div>
+                                            <div className="branches__point-description">colour scheme business cards and all the props yu need</div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">presentations</div>
-                                            <div className="menu__point-description">pdf / powerpoint keynote</div>
+                                    </div>
+                                    <div className="branches__item">
+                                        <div className="branches__head branches__head--graphic">Graphic</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">posters</div>
                                         </div>
-                                        <div className="menu__point">
-                                            <div className="menu__point-name">illustration</div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">prospects & brochures</div>
+                                        </div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">presentations</div>
+                                            <div className="branches__point-description">pdf / powerpoint keynote</div>
+                                        </div>
+                                        <div className="branches__point">
+                                            <div className="branches__point-name">illustration</div>
                                         </div>
                                 </div>
                                 <div
