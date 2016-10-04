@@ -354,7 +354,9 @@ a.logo {
     background: #F8E71C;
   }
 
-  &--footer {
+  &--navigation {
+    position: fixed;
+
     .popup__wrapper {
       padding: 1.6em 0 5em 6%;
       background:
@@ -510,8 +512,8 @@ a.logo {
   }
 }
 
-/*** branches ***/
-.branches {
+/*** menu ***/
+.menu {
   text-align: left;
 
   &__item {
@@ -574,14 +576,14 @@ a.logo {
 
   &--what-we-do {
 
-    .branches__head {
+    .menu__head {
       &:before {
         content: '';
         display: block;
         width: 42px;
         height: 42px;
         margin-bottom: .4em;
-        background: url('../img/branches-icons-spryte.svg') no-repeat;
+        background: url('../img/menu-icons-spryte.svg') no-repeat;
       }
 
       &--mobile {
@@ -607,10 +609,10 @@ a.logo {
     }
   }
 
-  &--footer {
+  &--navigation {
     margin-top: 6em;
 
-    .branches__head {
+    .menu__head {
       &--marked {
         &:before {
           background: #F8E71C;
