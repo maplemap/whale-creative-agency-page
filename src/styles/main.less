@@ -355,14 +355,16 @@ a.logo {
   }
 
   &--navigation {
-    position: fixed;
+    &.popup--show {
+      position: fixed;
+    }
 
     .popup__wrapper {
       padding: 1.6em 0 5em 6%;
       background:
-        url('../img/footer-bg-2.png') no-repeat left 850px center,
+        url('../img/footer-bg-2.png') no-repeat left 858px center,
         #F8E71C;
-      background-size: 43% 113%, auto auto;
+      background-size: 42% 116%, auto auto;
     }
   }
 }
