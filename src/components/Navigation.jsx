@@ -1,18 +1,25 @@
 import React from "react";
+import classNames from 'classnames';
 import './Navigation.less';
 
 class Navigation extends React.Component{
     static defaultProps = {
         spanAmount: [1, 2, 3, 4]
-    };
+    }
 
     render() {
-        const modifier = (this.props.colorScheme === 'white') ? '--white' : '';
+        const navIconColorModifier = (this.props.colorScheme === 'white');
+        const navIconClassNames = classNames('navigation__icon', {
+            'navigation__icon--white': navIconColorModifier
+        }, {
+            'navigation__icon--open': this.props.isNavigationMenuActive
+        })
 
         return (
             <nav className="navigation">
                 <div
-                    className={`navigation__icon ${(modifier) ? 'navigation__icon' + modifier : ''}`}
+                    className={navIconClassNames}
+                    onClick={this.props.handlerShowMenuNavigation}
                 >
                     { this.props.spanAmount.map((num, index) => {
                         return <span key={index} />

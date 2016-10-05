@@ -21,7 +21,11 @@ class Header extends React.Component{
                     >
                         { nl2br(this.props.sloganName) }
                     </div>
-                    <Navigation colorScheme={this.props.colorScheme} />
+                    <Navigation
+                        colorScheme={this.props.colorScheme}
+                        isNavigationMenuActive={this.props.isNavigationMenuActive}
+                        handlerShowMenuNavigation={this.props.handlerShowMenuNavigation}
+                    />
                 </div>
             </header>
         )
@@ -29,4 +33,3 @@ class Header extends React.Component{
 }
 
 export default Header;
-// full-stack<br /> design services

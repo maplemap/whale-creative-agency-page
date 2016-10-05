@@ -112,7 +112,7 @@ class WhatWeDo extends React.Component {
                     <span
                         className="close-btn close-btn--what-we-do"
                         onClick={this.handlerClosePopup}
-                    ></span>
+                    />
                     <div className="popup__wrapper">
                         <h2 className="lead-header lead-header--what-we-do">
                             got a <br/> project?
