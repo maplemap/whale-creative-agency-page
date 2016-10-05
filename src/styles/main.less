@@ -391,7 +391,32 @@ a.logo {
       background:
         url('../img/footer-bg-2.png') no-repeat left 858px center,
         #F8E71C;
-      background-size: 42% 116%, auto auto;
+      background-size: 43% auto, auto auto;
+    }
+  }
+
+  @media only screen and (max-width: 800px)  {
+    &__wrapper {
+      width: 95%;
+      margin: 8.625em 0 0 2.5%;
+    }
+  }
+  @media only screen and (min-width: 400px),
+         only screen and (max-height: 840px)  {
+     & {
+       overflow-x: scroll;
+     }
+    &__wrapper {
+      margin-bottom: 4em;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    & {
+      overflow-x: scroll;
+    }
+    &__wrapper {
+      padding: 1.6em 0 1em 6%;
+      margin: 6.625em 0 5em 2.5%;
     }
   }
 }
@@ -542,8 +567,30 @@ a.logo {
       font-style: normal;
     }
   }
-  &--footer {
+  &--navigation {
+    padding-right: 2%;
     margin-top: .32em;
+
+    @media only screen and (max-width: 1250px)  {
+      & {
+        font-size: 6em;
+      }
+    }
+    @media only screen and (max-width: 1000px)  {
+      & {
+        font-size: 4.5em;
+      }
+    }
+    @media only screen and (max-width: 800px)  {
+      & {
+        font-size: 3.8em;
+      }
+    }
+    @media only screen and (max-width: 500px)  {
+      & {
+        font-size: 3.2em;
+      }
+    }
   }
 }
 
@@ -557,11 +604,7 @@ a.logo {
     width: 9%;
     min-width: 165px;
     vertical-align: top;
-    margin-left: 2%;
-
-    &:first-child {
-      margin: 0;
-    }
+    margin-right: 2%;
   }
   &__head {
     position: relative;
@@ -659,6 +702,12 @@ a.logo {
     .branches__item--contacts {
       display: none;
     }
+
+    @media only screen and (max-width: 400px)  {
+      & {
+        margin-top: 2em;
+      }
+    }
   }
 
   &--footer {
@@ -671,6 +720,24 @@ a.logo {
       }
     }
 
+  }
+
+  @media only screen and (max-width: 800px)  {
+    & {
+      font-size: 85%;
+    }
+  }
+  @media only screen and (max-width: 400px)  {
+    & {
+      font-size: 80%;
+    }
+    &__item {
+      min-width: 110px;
+      margin: 0 5% 0 0;
+    }
+    &__head {
+      font-size: 1.7em;
+    }
   }
 }
 
