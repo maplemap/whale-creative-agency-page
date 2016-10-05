@@ -82,6 +82,7 @@ class App extends React.Component {
                     onChangeSection={this.handlerChangeSection}
                 />
 
+                {/* // TODO: Refactoring of popup  */}
                 <div className={`popup popup--navigation ${(this.state.isNavigationMenuActive) ? 'popup--show': ''}`}>
                     <span
                         className="close-btn close-btn--navigation"
