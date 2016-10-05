@@ -54,6 +54,13 @@ a.logo {
   &--white {
     color: white;
   }
+
+  @media only screen and (max-width: 1500px)  {
+    font-size: 1.8em;
+    &--header {
+      margin-top: 0;
+    }
+  }
 }
 
 /*** section-slogan ***/
@@ -107,6 +114,23 @@ a.logo {
       }
       .brand-name__star {
         color: black;
+      }
+    }
+
+    @media only screen and (max-height: 865px)  {
+      & {
+        font-size: 13.7em;
+        margin-top: -.2em;
+      }
+    }
+    @media only screen and (max-height: 700px)  {
+      & {
+        font-size: 11.7em;
+      }
+    }
+    @media only screen and (max-height: 650px)  {
+      & {
+        font-size: 10.7em;
       }
     }
   }
