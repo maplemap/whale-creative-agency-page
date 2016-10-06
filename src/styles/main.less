@@ -566,6 +566,12 @@ a.logo {
       right: 100%;
       font-style: normal;
     }
+
+    @media only screen and (max-width: 1100px)  {
+      & {
+        font-size: 6em;
+      }
+    }
   }
   &--navigation {
     padding-right: 2%;
@@ -603,6 +609,7 @@ a.logo {
     display: inline-block;
     width: 9%;
     min-width: 165px;
+    text-align: left;
     vertical-align: top;
     margin-right: 2%;
   }
@@ -654,6 +661,9 @@ a.logo {
   }
 
   &--what-we-do {
+    float: left;
+    width: 65%;
+    margin-top: 3em;
 
     .branches__head {
       &:before {
@@ -683,6 +693,26 @@ a.logo {
       &--graphic {
         &:before {
           background-position: -347px 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1650px)  {
+      & {
+        width: 100%;
+
+        .branches__item {
+          margin-right: 3%;
+        }
+      }
+    }
+    @media only screen and (max-width: 1120px)  {
+      & {
+        font-size: 130%;
+
+        .branches__item {
+          min-width: 180px;
+          margin-right: 7%;
         }
       }
     }
@@ -751,11 +781,23 @@ a.logo {
 
   &--what-we-do {
     float: right;
-    display: inline-block;
+    max-width: 500px;
     text-align: right;
     line-height: .83em;
     padding: .89em .58em 1em .9em;
     background: #F8E71C;
+
+    @media only screen and (max-width: 1650px)  {
+      & {
+        font-size: 250%;
+        max-width: 100%;
+      }
+    }
+    @media only screen and (max-width: 1100px)  {
+      & {
+        font-size: 200%;
+      }
+    }
   }
 }
 
@@ -815,8 +857,14 @@ a.logo {
   }
 
   &__content {
-    padding-left: .6%;
-    margin: 5em 0 0 0;
+    padding: 2em 0 0 .6%;
+  }
+
+  &--what-we-do {
+
+    .page__content {
+      overflow: hidden;
+    }
   }
 
   &--footer {
