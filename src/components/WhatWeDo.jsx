@@ -109,7 +109,9 @@ class WhatWeDo extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className={`popup ${(this.state.isPopupActive) ? 'popup--show': ''}`}>
+                <div
+                    className={`popup popup--what-we-do ${(this.state.isPopupActive) ? 'popup--show': ''}`}
+                >
                     <span
                         className="close-btn close-btn--what-we-do"
                         onClick={this.handlerClosePopup}

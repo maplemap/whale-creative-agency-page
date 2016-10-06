@@ -4,7 +4,7 @@
   &__or {
     position: absolute;
     right: 5%;
-    bottom: 4.5em;
+    bottom: 5em;
     text-align: right;
 
     &-text {
@@ -18,5 +18,13 @@
     font-family: 'FiraSans-Bold', sans-serif;
     text-decoration: underline;
     margin-top: .5em;
+  }
+
+
+  @media only screen and (max-width: 600px)  {
+    &__or {
+      position: static;
+      text-align: left;
+    }
   }
 }
