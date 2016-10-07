@@ -393,6 +393,13 @@ a.logo {
       background-size: 43% auto, auto auto;
     }
   }
+  @media only screen and (max-width: 1400px)  {
+    &--navigation {
+      .popup__wrapper {
+        margin: 4em 0 0 11.4%;
+      }
+    }
+  }
   @media only screen and (max-width: 1100px)  {
     &--what-we-do {
       font-size: 90%;
@@ -547,8 +554,8 @@ a.logo {
 .close-btn {
   position: absolute;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   background: url('../img/close-icon.svg') no-repeat;
   background-size: cover;
@@ -559,8 +566,6 @@ a.logo {
   }
   &--navigation,
   &--what-we-do {
-    width: 30px;
-    height: 30px;
     top: 3.75em;
     right: 3.4%;
   }
@@ -622,11 +627,12 @@ a.logo {
       font-style: normal;
     }
 
-    @media only screen and (max-width: 1100px)  {
+    @media only screen and (max-width: 900px)  {
       & {
-        font-size: 6em;
+        font-size: 5em;
       }
     }
+
   }
   &--navigation {
     padding-right: 2%;
@@ -902,7 +908,7 @@ a.logo {
   &__body {
     position: relative;
     z-index: 10;
-    padding: 11.5em 0 5em 12.7604166666667%;
+    padding: 11.5em 0 5em 16em;
   }
 
   &__text {
@@ -924,7 +930,28 @@ a.logo {
 
   &--footer {
     .page__body {
-      padding: 11.5em 0 5em 13.3%;
+      padding: 11.5em 0 5em 15em;
+    }
+  }
+
+  @media only screen and (max-width: 1600px)  {
+    .page__body {
+      padding: 5.5em 0 5em 17em;
+    }
+    &--footer {
+      .page__body {
+        padding: 5.5em 0 5em 13em;
+      }
+    }
+  }
+  @media only screen and (max-width: 1600px)  {
+    .page__body {
+      padding: 5.5em 0 5em 14em;
+    }
+    &--footer {
+      .page__body {
+        padding: 5.5em 0 5em 12em;
+      }
     }
   }
 }
