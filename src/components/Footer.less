@@ -1,10 +1,13 @@
 .footer {
     height: auto;
-    min-height: 65em;
     background:
       url('../img/footer-bg-2.png') no-repeat left 1200px center,
       url('../img/footer-bg.jpg') no-repeat fixed center center;
     background-size: auto auto, cover;
+
+  &__body {
+    padding-bottom: 11em;
+  }
 
   &__follow {
     position: absolute;
@@ -47,14 +50,26 @@
       }
    }
 
-   @media only screen and (max-width: 1600px)  {
-     & {
-       font-size: 90%;
-     }
-   }
    @media only screen and (max-width: 1500px)  {
      & {
        font-size: 80%;
+     }
+   }
+   @media only screen and (max-width: 1300px)  {
+     & {
+       background:
+         url('../img/footer-bg-2.png') no-repeat left 900px center,
+         url('../img/footer-bg.jpg') no-repeat fixed center center;
+       background-size: auto auto, cover;
+     }
+   }
+   @media only screen and (max-width: 1120px)  {
+     & {
+        min-height: 980px;
+
+       &__body {
+         padding-bottom: 0;
+       }
      }
    }
 }
