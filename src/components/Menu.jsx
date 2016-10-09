@@ -2,10 +2,18 @@ import React from "react";
 import {Link} from 'react-scroll';
 
 class Menu extends React.Component {
+
+    handlerClickOnLinks = (e) => {
+        if (this.props.className === "branches branches--navigation") {
+            this.context.hideNavigationPopup();
+        }
+    }
+
     render() {
         const linkSettings = {
             smooth: true,
-            duration:500
+            duration: 500,
+            onClick: this.handlerClickOnLinks
         }
 
         return(
@@ -119,6 +127,10 @@ Menu.propTypes = {
 
 Menu.defaultProps = {
   className: 'branches'
+};
+
+Menu.contextTypes = {
+  hideNavigationPopup: React.PropTypes.func.isRequired
 };
 
 export default Menu;
