@@ -12,7 +12,7 @@ class Team extends React.Component {
         return(
             <section className="section team">
                 <Slider />
-                <GuidLines colorScheme={this.props.colorScheme} />
+                <GuidLines colorScheme="white" />
 
                 <div className="waypoint">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'team')} />

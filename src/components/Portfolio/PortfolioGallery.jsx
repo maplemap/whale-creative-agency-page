@@ -11,25 +11,31 @@ class PortfolioGallery extends React.Component {
         }
     };
 
+    componentWillReceiveProps(nextProps){
+        if (JSON.stringify(nextProps.projects) !== JSON.stringify(this.props.projects)) {
+            this._appearEffectForGrid()
+        }
+    }
+
     render() {
         const projects = this.props.projects;
 
         return (
             <div className="gallery gallery--portfolio">
-                <div className="gallery__grid">
+                <div ref="grid" className="gallery__grid">
                     <Masonry options={this.props.masonryOptions}>
                         {
-                            projects.map((project, index) =>
+                            projects.map(project =>
                                 <div
                                     key={project.id}
-                                    data-index={index}
+                                    data-index={project.id}
                                     className="gallery__item"
                                     onClick={this.props.onClickGalleryItem}
                                 >
                                     <img src={`static/projects/${project.shortcut}`} alt={project.name} />
-                                    <div className="popup popup--gallery-item">
+                                    <div className="gallery__mask">
                                         <div
-                                           className="popup__see-icon"
+                                           className="gallery__see-icon"
                                            title={`see ${project.name}`}
                                         >
                                             See project
@@ -42,6 +48,15 @@ class PortfolioGallery extends React.Component {
                 </div>
             </div>
         )
+    }
+
+    _appearEffectForGrid = () => {
+        const gridClasses = this.refs.grid.classList;
+        gridClasses.add("animated", "fadeInUp");
+
+        setTimeout(() => {
+            gridClasses.remove("animated", "fadeInUp");
+        }, 1000);
     }
 }
 

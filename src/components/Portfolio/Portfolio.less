@@ -7,38 +7,18 @@
   &__body {
     position: relative;
     height: 100%;
-    padding: 6.7em 4.42708333333333% 6.25em 13.28125%;
+    padding: 6.7em 4.42708333333333% 6.25em 16em;
   }
 
   /*** media query ***/
+  @media only screen and (max-width: 1700px) {
+    &__body {
+      padding: 6.7em 4.42708333333333% 6.25em 14em;
+    }
+  }
   @media only screen and (max-width: 1500px) {
     &__body {
-      padding: 6.7em 4.42708333333333% 6.25em 17.28125%;
-    }
-  }
-
-  @media only screen and (max-width: 1300px) {
-    &__body {
-      padding: 6.7em 4.42708333333333% 6.25em 20%;
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-    .portfolio__body {
-      padding: 6.7em 4.42708333333333% 6.25em 25%;
-    }
-
-    .description--portfolio {
-      width: 85%;
-    }
-
-    .gallery__grid {
-      width: 95%;
-    }
-
-    .slick-prev,
-    .slick-next {
-      width: 6%;
+      padding: 6.7em 4.42708333333333% 6.25em 11em;
     }
   }
 
@@ -60,7 +40,7 @@
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
     &__body {
-      padding: 6.7em 4.42708333333333% 6.25em 25%;
+      padding: 6.7em 4.42708333333333% 6.25em 11em;
     }
     .description--portfolio {
       width: 85%;

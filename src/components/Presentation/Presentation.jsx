@@ -11,7 +11,7 @@ class Presentation extends React.Component {
             <section className="section presentation">
                 <Slider />
 
-                <GuidLines colorScheme={this.props.colorScheme}/>
+                <GuidLines />
 
                 <div className="waypoint">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'presentation')} />

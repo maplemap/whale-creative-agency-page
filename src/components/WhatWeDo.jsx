@@ -37,6 +37,12 @@ class WhatWeDo extends React.Component {
                             </h2>
                             <div className="page__text">Full stack design services for your company or product.</div>
                             <div className="page__content">
+                                <div
+                                    className="call call--what-we-do"
+                                    onClick={this.handlerCallWhatWeDo}
+                                >
+                                    let’s make something stunning together
+                                </div>
                                 <div className="branches branches--what-we-do">
                                     <div className="branches__item">
                                         <div className="branches__head branches__head--web">Web</div>
@@ -97,22 +103,19 @@ class WhatWeDo extends React.Component {
                                         <div className="branches__point">
                                             <div className="branches__point-name">illustration</div>
                                         </div>
-                                </div>
-                                <div
-                                    className="call call--what-we-do"
-                                    onClick={this.handlerCallWhatWeDo}
-                                >let’s make <br/> something <br/> stunning <br/> together
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-                <div className={`popup ${(this.state.isPopupActive) ? 'popup--show': ''}`}>
+                <div
+                    className={`popup popup--what-we-do ${(this.state.isPopupActive) ? 'popup--show': ''}`}
+                >
                     <span
                         className="close-btn close-btn--what-we-do"
                         onClick={this.handlerClosePopup}
-                    ></span>
+                    />
                     <div className="popup__wrapper">
                         <h2 className="lead-header lead-header--what-we-do">
                             got a <br/> project?
@@ -131,7 +134,7 @@ class WhatWeDo extends React.Component {
                     </div>
                 </div>
 
-                <GuidLines colorScheme={this.props.colorScheme} />
+                <GuidLines/>
                 <div className="waypoint">
                     <Waypoint onEnter={this.props.onChangeSection.bind(this, 'what-we-do')} />
                 </div>

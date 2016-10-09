@@ -69,15 +69,15 @@ class Portfolio extends React.Component {
                         onClickGalleryItem={this.handlerClickGalleryItem}
                     />
                 </div>
-                <div className={`popup ${(this.state.galleryReviewOn) ? 'popup--gallery-review' : ''}`}>
+                <div className={`popup popup--portfolio ${(this.state.galleryReviewOn) ? 'popup--show' : ''}`}>
                     <GalleryReview
                         onClickCloseReview={this.handlerClickCloseReview}
-                        projects={this.props.projects}
+                        projects={this.state.projects}
                         initialSlide={this.state.galleryElementIndex}
                     />
                 </div>
                 <GuidLines
-                    colorScheme={this.props.colorScheme}
+                    colorScheme="white"
                     disableLines={[5]}
                 />
                 <div className="waypoint waypoint--portfolio">
