@@ -1,14 +1,26 @@
 import React from "react";
+import {Link} from 'react-scroll';
 
 class Menu extends React.Component {
-
     render() {
+        const linkSettings = {
+            smooth: true,
+            duration:500
+        }
+
         return(
             <div className={this.props.className} >
                 <div className="branches__item">
                     <div className="branches__head branches__head--marked">About us</div>
                     <div className="branches__point">
-                        <div className="branches__point-name"><a href="#">our team</a></div>
+                        <div className="branches__point-name">
+                            <Link
+                                 {...linkSettings}
+                                 to="teamSection"
+                            >
+                                our team
+                            </Link>
+                        </div>
                         <div className="branches__point-description">our story in faces</div>
                     </div>
                     <div className="branches__point">
@@ -24,20 +36,48 @@ class Menu extends React.Component {
                     </div>
                 </div>
                 <div className="branches__item">
-                    <div className="branches__head"><a href="#">Our work</a></div>
+                    <div className="branches__head">Our work</div>
                     <div className="branches__point">
-                        <div className="branches__point-name"><a href="#">web sites</a></div>
+                        <div className="branches__point-name">
+                            <Link
+                                 {...linkSettings}
+                                 to="portfolioSection"
+                            >
+                                web sites
+                            </Link>
+                        </div>
                     </div>
                     <div className="branches__point">
-                        <div className="branches__point-name"><a href="#">branding</a></div>
+                        <div className="branches__point-name">
+                            <Link
+                                 {...linkSettings}
+                                 to="portfolioSection"
+                            >
+                                branding
+                            </Link>
+                        </div>
                         <div className="branches__point-description">brand is not just a logo</div>
                     </div>
                     <div className="branches__point">
-                        <div className="branches__point-name"><a href="#">mobile apps</a></div>
+                        <div className="branches__point-name">
+                            <Link
+                                 {...linkSettings}
+                                 to="portfolioSection"
+                            >
+                                mobile apps
+                            </Link>
+                        </div>
                         <div className="branches__point-description">ios / android</div>
                     </div>
                     <div className="branches__point">
-                        <div className="branches__point-name"><a href="#">graphic design</a></div>
+                        <div className="branches__point-name">
+                            <Link
+                                 {...linkSettings}
+                                 to="portfolioSection"
+                            >
+                                graphic design
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="branches__item">
