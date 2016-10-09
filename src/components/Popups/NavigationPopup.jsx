@@ -2,11 +2,10 @@ import React from "react";
 import Menu from '../Menu.jsx';
 
 class NavigationPopup extends React.Component {
-
     render() {
         return (
             <div
-                className={`popup popup--navigation ${(this.props.isNavigationMenuActive) ? 'popup--show': ''}`}
+                className={`popup popup--navigation ${(this.props.isNavigationPopupActive) ? 'popup--show': ''}`}
             >
                 <span
                     className="close-btn close-btn--navigation"

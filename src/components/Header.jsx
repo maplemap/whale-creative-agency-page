@@ -23,13 +23,18 @@ class Header extends React.Component{
                     </div>
                     <Navigation
                         colorScheme={this.props.colorScheme}
-                        isNavigationMenuActive={this.props.isNavigationMenuActive}
-                        handlerShowMenuNavigation={this.props.handlerShowMenuNavigation}
+                        isNavigationPopupActive={this.context.isNavigationPopupActive}
+                        handlerShowMenuNavigation={this.context.showNavigationPopup}
                     />
                 </div>
             </header>
         )
     }
 }
+
+Header.contextTypes = {
+    isNavigationPopupActive: React.PropTypes.bool.isRequired,
+    showNavigationPopup: React.PropTypes.func.isRequired
+};
 
 export default Header;

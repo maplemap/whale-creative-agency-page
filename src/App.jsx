@@ -13,12 +13,30 @@ import projects from './config/projects.json';
 import config from './config';
 
 class App extends React.Component {
-    state = {
-        projects: projects,
-        colorScheme: 'black',
-        sloganName: config.section.presentation.slogan,
-        isNavigationMenuActive: false
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            projects: projects,
+            colorScheme: 'black',
+            sloganName: config.section.presentation.slogan,
+            isNavigationPopupActive: false
+        }
+    }
+
+    static childContextTypes = {
+      isNavigationPopupActive: React.PropTypes.bool.isRequired,
+      showNavigationPopup: React.PropTypes.func.isRequired,
+      hideNavigationPopup: React.PropTypes.func.isRequired
+    }
+
+    getChildContext() {
+     return {
+        isNavigationPopupActive: this.state.isNavigationPopupActive,
+        showNavigationPopup: this.showNavigationPopup,
+        hideNavigationPopup: this.hideNavigationPopup
+     }
+    }
 
     handlerChangeSection = (section) => {
         let colorScheme;
@@ -43,14 +61,14 @@ class App extends React.Component {
         });
     }
 
-    handlerShowMenuNavigation = () => {
+    showNavigationPopup = () => {
         this.setState({
-            isNavigationMenuActive: true
+            isNavigationPopupActive: true
         })
     }
-    handlerHideMenuNavigation = () => {
+    hideNavigationPopup = () => {
         this.setState({
-            isNavigationMenuActive: false
+            isNavigationPopupActive: false
         })
     }
 
@@ -61,8 +79,6 @@ class App extends React.Component {
                 <Header
                     colorScheme={this.state.colorScheme}
                     sloganName={this.state.sloganName}
-                    isNavigationMenuActive={this.state.isNavigationMenuActive}
-                    handlerShowMenuNavigation={this.handlerShowMenuNavigation}
                 />
                 <Presentation
                     onChangeSection={this.handlerChangeSection}
@@ -83,8 +99,8 @@ class App extends React.Component {
                 />
 
                 <NavigationPopup
-                    handlerHideMenuNavigation={this.handlerHideMenuNavigation}
-                    isNavigationMenuActive = {this.state.isNavigationMenuActive}
+                    handlerHideMenuNavigation={this.hideNavigationPopup}
+                    isNavigationPopupActive = {this.state.isNavigationPopupActive}
                  />
             </div>
         )
