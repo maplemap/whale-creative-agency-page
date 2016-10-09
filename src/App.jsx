@@ -57,7 +57,7 @@ class App extends React.Component {
 
     render(){
         return(
-            <div className="App">
+            <div id="appSection" className="App">
                 <Header
                     colorScheme={this.state.colorScheme}
                     sloganName={this.state.sloganName}

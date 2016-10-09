@@ -10,7 +10,7 @@ class Team extends React.Component {
 
     render() {
         return(
-            <section className="section team">
+            <section id="teamSection" className="section team">
                 <Slider />
                 <GuidLines colorScheme="white" />
 

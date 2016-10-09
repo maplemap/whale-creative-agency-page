@@ -64,7 +64,7 @@ class Footer extends React.Component {
                 </div>
                 <Link
                      className="footer__up"
-                     to="presentation"
+                     to="appSection"
                      smooth={true}
                      duration={500}
                 />
