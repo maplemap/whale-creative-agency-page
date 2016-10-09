@@ -73,7 +73,7 @@ class Portfolio extends React.Component {
                     <GalleryReview
                         onClickCloseReview={this.handlerClickCloseReview}
                         projects={this.state.projects}
-                        initialSlide={this.state.galleryElementIndex}
+                        currentSlideID={this.state.galleryElementIndex}
                     />
                 </div>
                 <GuidLines
