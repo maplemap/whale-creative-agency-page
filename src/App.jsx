@@ -82,13 +82,16 @@ class App extends React.Component {
                     onChangeSection={this.handlerChangeSection}
                 />
 
-                <div className={`popup popup--navigation ${(this.state.isNavigationMenuActive) ? 'popup--show': ''}`}>
+                {/* TODO: Refactoring of popup  */}
+                <div
+                    className={`popup popup--navigation ${(this.state.isNavigationMenuActive) ? 'popup--show': ''}`}
+                >
                     <span
                         className="close-btn close-btn--navigation"
                         onClick={this.handlerHideMenuNavigation}
                     />
                     <div className="popup__wrapper">
-                        <div className="lead-header lead-header--footer">
+                        <div className="lead-header lead-header--navigation">
                             imagination <br/> is the <span className="lead-header__underline">only</span> limit.
                         </div>
                         <Menu className="branches branches--navigation" />

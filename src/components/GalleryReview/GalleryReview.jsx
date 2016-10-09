@@ -22,7 +22,7 @@ class GalleryReview extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            slickGoTo: this.props.initialSlide
+            slickGoTo: this._getCurrentSlideIndex()
         };
 
         return(
@@ -42,6 +42,12 @@ class GalleryReview extends React.Component {
                 </ProjectSlider>
             </div>
         )
+    }
+
+    _getCurrentSlideIndex = () => {
+        const slidePosition = this.props.projects.map((project) => {return parseInt(project.id, 10)}).indexOf(this.props.currentSlideID);
+
+        return (slidePosition + 1) ? slidePosition : 1;
     }
 }
 
