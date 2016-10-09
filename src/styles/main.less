@@ -502,9 +502,9 @@ a.logo {
 
     a {
       display: inline-block;
-      width: 34px;
-      height: 34px;
-      margin-bottom: 1em;
+      width: 38px;
+      height: 38px;
+      margin-bottom: .6em;
     }
   }
 
@@ -769,8 +769,6 @@ a.logo {
     }
     @media only screen and (max-width: 1120px)  {
       & {
-        font-size: 130%;
-
         .branches__item {
           min-width: 180px;
           margin-right: 7%;
@@ -802,8 +800,10 @@ a.logo {
   }
 
   &--footer {
+    margin: 4.5em 0 0 0;
 
     .branches__head {
+
       &--marked {
         &:before {
           background: #F8E71C;
@@ -811,16 +811,24 @@ a.logo {
       }
     }
 
+    @media only screen and (max-width: 1120px)  {
+      & {
+        width: 75%;
+      }
+    }
   }
 
-  @media only screen and (max-width: 800px)  {
-    & {
-      font-size: 85%;
+
+
+  @media only screen and (max-width: 1120px)  {
+    &--what-we-do,
+    &--footer {
+      font-size: 130%;
     }
   }
   @media only screen and (max-width: 400px)  {
-    & {
-      font-size: 80%;
+    &--navigation  {
+      font-size: 85%;
     }
     &__item {
       min-width: 110px;
@@ -930,7 +938,7 @@ a.logo {
 
   &--footer {
     .page__body {
-      padding: 11.5em 0 5em 15em;
+      padding: 13.7em 0 0 15em;
     }
   }
 
@@ -940,11 +948,11 @@ a.logo {
     }
     &--footer {
       .page__body {
-        padding: 5.5em 0 5em 13em;
+        padding: 8em 0 5em 13em;
       }
     }
   }
-  @media only screen and (max-width: 1600px)  {
+  @media only screen and (max-width: 1100px)  {
     .page__body {
       padding: 5.5em 0 5em 14em;
     }
