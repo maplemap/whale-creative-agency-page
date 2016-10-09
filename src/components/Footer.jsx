@@ -1,6 +1,7 @@
 import React from "react";
 import GuidLines from './GuidLines.jsx';
 import Waypoint from 'react-waypoint';
+import {Link} from 'react-scroll';
 
 import './Footer.less';
 
@@ -61,6 +62,12 @@ class Footer extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Link
+                     className="footer__up"
+                     to="presentation"
+                     smooth={true}
+                     duration={500}
+                />
                 <div className="footer__since">
                     <span>since</span>
                     <span>2016</span>
