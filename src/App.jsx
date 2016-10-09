@@ -7,6 +7,7 @@ import Team from './components/Team/Team.jsx';
 import WhatWeDo from './components/WhatWeDo.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
+import Menu from './components/Menu.jsx';
 
 import projects from './config/projects.json';
 import config from './config';
@@ -15,7 +16,8 @@ class App extends React.Component {
     state = {
         projects: projects,
         colorScheme: 'black',
-        sloganName: config.section.presentation.slogan
+        sloganName: config.section.presentation.slogan,
+        isNavigationMenuActive: false
     };
 
     handlerChangeSection = (section) => {
@@ -39,7 +41,18 @@ class App extends React.Component {
             colorScheme: colorScheme,
             sloganName: config.section[section].slogan
         });
-    };
+    }
+
+    handlerShowMenuNavigation = () => {
+        this.setState({
+            isNavigationMenuActive: true
+        })
+    }
+    handlerHideMenuNavigation = () => {
+        this.setState({
+            isNavigationMenuActive: false
+        })
+    }
 
 
     render(){
@@ -48,6 +61,8 @@ class App extends React.Component {
                 <Header
                     colorScheme={this.state.colorScheme}
                     sloganName={this.state.sloganName}
+                    isNavigationMenuActive={this.state.isNavigationMenuActive}
+                    handlerShowMenuNavigation={this.handlerShowMenuNavigation}
                 />
                 <Presentation
                     onChangeSection={this.handlerChangeSection}
@@ -66,6 +81,23 @@ class App extends React.Component {
                 <Footer
                     onChangeSection={this.handlerChangeSection}
                 />
+
+                {/* TODO: Refactoring of popup  */}
+                <div
+                    className={`popup popup--navigation ${(this.state.isNavigationMenuActive) ? 'popup--show': ''}`}
+                >
+                    <span
+                        className="close-btn close-btn--navigation"
+                        onClick={this.handlerHideMenuNavigation}
+                    />
+                    <div className="popup__wrapper">
+                        <div className="lead-header lead-header--navigation">
+                            imagination <br/> is the <span className="lead-header__underline">only</span> limit.
+                        </div>
+                        <Menu className="branches branches--navigation" />
+                        <div className="navigation__sign">*M ENU</div>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -33,9 +33,9 @@ class PortfolioGallery extends React.Component {
                                     onClick={this.props.onClickGalleryItem}
                                 >
                                     <img src={`static/projects/${project.shortcut}`} alt={project.name} />
-                                    <div className="popup popup--gallery-item">
+                                    <div className="gallery__mask">
                                         <div
-                                           className="popup__see-icon"
+                                           className="gallery__see-icon"
                                            title={`see ${project.name}`}
                                         >
                                             See project

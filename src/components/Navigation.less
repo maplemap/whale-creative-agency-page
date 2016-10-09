@@ -1,18 +1,14 @@
 /*** navigation ***/
 .navigation {
   float: right;
-  //width: 40px;
-  //height: 26px;
-  //cursor: pointer;
-  //background: url("../img/menu-icon.png") no-repeat;
 
   &__icon {
-    width: 40px;
-    height: 26px;
     position: relative;
+    z-index: 310;
+    width: 40px;
+    height: 30px;
     cursor: pointer;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
 
     span {
       position: absolute;
@@ -23,7 +19,7 @@
       opacity: 1;
       transform: rotate(0deg);
       background: black;
-      transition: .5s ease-in-out;
+      transition: .3s all;
 
       &:nth-child(1) {
         top: 0;
@@ -38,7 +34,10 @@
     }
 
     &--open {
+
       span {
+        opacity: 0;
+
         &:nth-child(1) {
           width: 0;
           top: 12px;
@@ -63,5 +62,23 @@
         background: white;
       }
     }
+  }
+
+  &__sign {
+   position: absolute;
+   bottom: 1.6em;
+   right: 1.3%;
+   width: .8em;
+   font-size: 2.875em;
+   font-family: 'FiraSans-Regular', sans-serif;
+   text-align: left;
+   word-wrap: break-word;
+
+   @media only screen and (max-width: 1200px)  {
+     & {
+       font-size: 2em;
+       bottom: .7em;
+     }
+   }
   }
 }
