@@ -8,7 +8,7 @@ import './Presentation.less';
 class Presentation extends React.Component {
     render() {
         return(
-            <section id="presentation" className="section presentation">
+            <section className="section presentation">
                 <Slider />
 
                 <GuidLines />

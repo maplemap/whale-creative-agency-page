@@ -55,7 +55,7 @@ class Portfolio extends React.Component {
         let galleryReview = null;
 
         return (
-            <section className="section portfolio">
+            <section id="portfolioSection" className="section portfolio">
                 <div className="portfolio__body">
                     <PortolioDescription
                         projects={this.props.projects}

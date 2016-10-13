@@ -7,18 +7,36 @@ import Team from './components/Team/Team.jsx';
 import WhatWeDo from './components/WhatWeDo.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import Footer from './components/Footer.jsx';
-import Menu from './components/Menu.jsx';
+import NavigationPopup from './components/Popups/NavigationPopup.jsx';
 
 import projects from './config/projects.json';
 import config from './config';
 
 class App extends React.Component {
-    state = {
-        projects: projects,
-        colorScheme: 'black',
-        sloganName: config.section.presentation.slogan,
-        isNavigationMenuActive: false
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            projects: projects,
+            colorScheme: 'black',
+            sloganName: config.section.presentation.slogan,
+            isNavigationPopupActive: false
+        }
+    }
+
+    static childContextTypes = {
+      isNavigationPopupActive: React.PropTypes.bool.isRequired,
+      showNavigationPopup: React.PropTypes.func.isRequired,
+      hideNavigationPopup: React.PropTypes.func.isRequired
+    }
+
+    getChildContext() {
+     return {
+        isNavigationPopupActive: this.state.isNavigationPopupActive,
+        showNavigationPopup: this.showNavigationPopup,
+        hideNavigationPopup: this.hideNavigationPopup
+     }
+    }
 
     handlerChangeSection = (section) => {
         let colorScheme;
@@ -43,26 +61,24 @@ class App extends React.Component {
         });
     }
 
-    handlerShowMenuNavigation = () => {
+    showNavigationPopup = () => {
         this.setState({
-            isNavigationMenuActive: true
+            isNavigationPopupActive: true
         })
     }
-    handlerHideMenuNavigation = () => {
+    hideNavigationPopup = () => {
         this.setState({
-            isNavigationMenuActive: false
+            isNavigationPopupActive: false
         })
     }
 
 
     render(){
         return(
-            <div className="App">
+            <div id="appSection" className="App">
                 <Header
                     colorScheme={this.state.colorScheme}
                     sloganName={this.state.sloganName}
-                    isNavigationMenuActive={this.state.isNavigationMenuActive}
-                    handlerShowMenuNavigation={this.handlerShowMenuNavigation}
                 />
                 <Presentation
                     onChangeSection={this.handlerChangeSection}
@@ -82,22 +98,10 @@ class App extends React.Component {
                     onChangeSection={this.handlerChangeSection}
                 />
 
-                {/* TODO: Refactoring of popup  */}
-                <div
-                    className={`popup popup--navigation ${(this.state.isNavigationMenuActive) ? 'popup--show': ''}`}
-                >
-                    <span
-                        className="close-btn close-btn--navigation"
-                        onClick={this.handlerHideMenuNavigation}
-                    />
-                    <div className="popup__wrapper">
-                        <div className="lead-header lead-header--navigation">
-                            imagination <br/> is the <span className="lead-header__underline">only</span> limit.
-                        </div>
-                        <Menu className="branches branches--navigation" />
-                        <div className="navigation__sign">*M ENU</div>
-                    </div>
-                </div>
+                <NavigationPopup
+                    handlerHideMenuNavigation={this.hideNavigationPopup}
+                    isNavigationPopupActive = {this.state.isNavigationPopupActive}
+                 />
             </div>
         )
     }
