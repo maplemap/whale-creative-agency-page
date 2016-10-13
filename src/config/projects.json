@@ -1,225 +1,226 @@
 [
   {
     "id": "1",
-    "name": "project-1",
-    "category": "branding",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-01__shortcut.jpg",
+    "name": "Dental Flash",
+    "category": "web-design",
+    "customer": "Evgenii Illin",
+    "shortcut": "DentalFlash.png",
     "images": [
-      "project-01__01.jpg",
-      "project-01__02.jpg",
-      "project-01__03.jpg",
-      "project-01__04.jpg",
-      "project-01__01.jpg"
+      "Dental Flash/DentalFlash_1.png",
+      "Dental Flash/DentalFlash_2.png"
     ]
   },
   {
     "id": "2",
-    "name": "project-2",
+    "name": "24/7 Meetings",
     "category": "branding",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-02__shortcut.jpg",
+    "customer": "24/7 Meetings llc",
+    "shortcut": "247.png",
     "images": [
-      "project-02__01.jpg",
-      "project-02__02.jpg"
+      "247/247_1.png"
     ]
   },
   {
     "id": "3",
-    "name": "project-3",
-    "category": "graphic design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-03__shortcut.jpg",
+    "name": "Vesta Dating",
+    "category": "mobile app design",
+    "customer": "Trinity Ukraine",
+    "shortcut": "Vesta.png",
     "images": [
-      "project-03__01.jpg",
-      "project-03__02.jpg"
+      "Vesta/Vesta_1.png",
+      "Vesta/Vesta_2.jpg",
+      "Vesta/Vesta_3.jpg",
+      "Vesta/Vesta_4.jpg",
+      "Vesta/Vesta_5.jpg"
     ]
   },
   {
     "id": "4",
-    "name": "project-4",
-    "category": "mobile app design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-04__shortcut.jpg",
+    "name": "Pure Swiss Air",
+    "category": "branding",
+    "customer": "Omar Simbawy",
+    "shortcut": "Pure.png",
     "images": [
-      "project-04__01.jpg",
-      "project-04__02.jpg"
+      "Pure/Pure_1.png"
     ]
   },
   {
     "id": "5",
-    "name": "project-5",
+    "name": "Patisserie Makarun",
     "category": "branding",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-05__shortcut.jpg",
+    "customer": "Patisserie Makarun",
+    "shortcut": "Makarun.png",
     "images": [
-      "project-05__01.jpg",
-      "project-05__02.jpg"
+      "Makarun/Makarun_1.png",
+      "Makarun/Makarun_2.png",
+      "Makarun/Makarun_3.jpg"
     ]
   },
   {
     "id": "6",
-    "name": "project-6",
-    "category": "web-design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-06__shortcut.jpg",
+    "name": "Terminal 42",
+    "category": "branding",
+    "customer": "Terminal 42 - Sergii Petrenko",
+    "shortcut": "Terminal42.png",
     "images": [
-      "project-06__01.jpg",
-      "project-06__02.jpg"
+      "Terminal42/Terminal42_1.png",
+      "Terminal42/Terminal42_2.jpg",
+      "Terminal42/Terminal42_3.jpg",
+      "Terminal42/Terminal42_4.jpg"
     ]
   },
   {
     "id": "7",
-    "name": "project-7",
-    "category": "web-design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-07__shortcut.jpg",
+    "name": "SBC",
+    "category": "branding",
+    "customer": "Simple Business Class - Alex Shkolnik",
+    "shortcut": "SBC.png",
     "images": [
-      "project-07__01.jpg",
-      "project-07__02.jpg"
+      "SBC/SBC_1.png"
     ]
   },
   {
     "id": "8",
-    "name": "project-8",
-    "category": "graphic design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-08__shortcut.jpg",
+    "name": "Radius",
+    "category": "branding",
+    "customer": "Radius llc - Trinity Ukraine",
+    "shortcut": "Radius.png",
     "images": [
-      "project-08__01.jpg",
-      "project-08__02.jpg"
+      "Radius/Radius_1.png",
+      "Radius/Radius_2.png"
     ]
   },
   {
     "id": "9",
-    "name": "project-9",
-    "category": "web-design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-09__shortcut.jpg",
+    "name": "Glass Link",
+    "category": "branding",
+    "customer": "Cargo Pin llc",
+    "shortcut": "GlassLink.png",
     "images": [
-      "project-09__01.jpg",
-      "project-09__02.jpg"
+      "GlassLink/GlassLink_1.png"
     ]
   },
   {
     "id": "10",
-    "name": "project-10",
+    "name": "My.ua",
     "category": "web-design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-10__shortcut.jpg",
+    "customer": "Trinity Ukraine",
+    "shortcut": "My.ua.png",
     "images": [
-      "project-10__01.jpg",
-      "project-10__02.jpg"
+      "My.Ua/My.ua_1.png",
+      "My.Ua/My.ua_2.jpg"
     ]
   },
   {
     "id": "11",
-    "name": "project-11",
-    "category": "graphic design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-11__shortcut.jpg",
+    "name": "Rentastic",
+    "category": "branding",
+    "customer": "Rentastic",
+    "shortcut": "Rentastic.png",
     "images": [
-      "project-11__01.jpg",
-      "project-11__02.jpg"
+      "Rentastic/Rentastic_1.png",
+      "Rentastic/Rentastic_2.png"
     ]
   },
   {
     "id": "12",
-    "name": "project-12",
-    "category": "mobile app design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-12__shortcut.jpg",
+    "name": "Azimuth",
+    "category": "web-design",
+    "customer": "Own Startup",
+    "shortcut": "Azimuth.png",
     "images": [
-      "project-12__01.jpg",
-      "project-12__02.jpg"
+      "Azimuth/Azimuth_1.png",
+      "Azimuth/Azimuth_2.png",
+      "Azimuth/Azimuth_3.jpg"
     ]
   },
   {
     "id": "13",
-    "name": "project-13",
-    "category": "mobile app design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-13__shortcut.jpg",
+    "name": "Redkit",
+    "category": "branding",
+    "customer": "Trinity Ukraine",
+    "shortcut": "RedKit.png",
     "images": [
-      "project-13__01.jpg",
-      "project-13__02.jpg"
+      "RedKit/RedKit_1.png"
     ]
   },
   {
     "id": "14",
-    "name": "project-14",
+    "name": "Neru.com.ua",
     "category": "branding",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-14__shortcut.jpg",
+    "customer": "Trinity Ukraine",
+    "shortcut": "Neru.png",
     "images": [
-      "project-14__01.jpg",
-      "project-14__02.jpg"
+      "Neru/Neru_1.png",
+      "Neru/Neru_2.png",
+      "Neru/Neru_3.jpg"
     ]
   },
   {
     "id": "15",
-    "name": "project-15",
-    "category": "mobile app design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-15__shortcut.jpg",
+    "name": "Zip",
+    "category": "branding",
+    "customer": "Available for sale",
+    "shortcut": "ZIP.png",
     "images": [
-      "project-15__01.jpg",
-      "project-15__02.jpg"
+      "Zip/ZIP_1.png"
     ]
   },
   {
     "id": "16",
-    "name": "project-16",
-    "category": "graphic design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-16__shortcut.jpg",
+    "name": "G Fashion",
+    "category": "branding",
+    "customer": "Tatiana Gavronskaya",
+    "shortcut": "G.png",
     "images": [
-      "project-16__01.jpg",
-      "project-16__02.jpg"
+      "G/G_1.jpg"
     ]
   },
   {
     "id": "17",
-    "name": "project-17",
-    "category": "branding",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-17__shortcut.jpg",
+    "name": "Explosion Battle",
+    "category": "graphic design",
+    "customer": "Maxim Orobets (Maxdance)",
+    "shortcut": "Explosion.png",
     "images": [
-      "project-17__01.jpg",
-      "project-17__02.jpg"
+      "Explosion/Explosion_1.jpg",
+      "Explosion/Explosion_2.jpg",
+      "Explosion/Explosion_3.png",
+      "Explosion/Explosion_4.jpg"
     ]
   },
   {
     "id": "18",
-    "name": "project-18",
-    "category": "graphic design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-18__shortcut.jpg",
+    "name": "Lumber Duck",
+    "category": "branding",
+    "customer": "Own Startup",
+    "shortcut": "LumberDuck.png",
     "images": [
-      "project-18__01.jpg",
-      "project-18__02.jpg"
+      "LumberDuck/LumberDuck_1.png",
+      "LumberDuck/LumberDuck_2.jpg"
     ]
   },
   {
     "id": "19",
-    "name": "project-19",
+    "name": "Skrynia",
     "category": "web-design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-19__shortcut.jpg",
+    "customer": "Kovcheg Ukraine",
+    "shortcut": "Skrinya.png",
     "images": [
-      "project-19__01.jpg",
-      "project-19__02.jpg"
+      "Skrynia/Skrynia_1.png"
     ]
   },
   {
     "id": "20",
-    "name": "project-20",
+    "name": "Lumber Jump",
     "category": "mobile app design",
-    "customer": "Longest Customer title or company name you can ever imagine",
-    "shortcut": "project-20__shortcut.jpg",
+    "customer": "Master Of Code Global",
+    "shortcut": "LumberJump.png",
     "images": [
-      "project-20__01.jpg",
-      "project-20__02.jpg"
+      "LumberJump/LumberJump_1.png",
+      "LumberJump/LumberJump_2.jpg",
+      "LumberJump/LumberJump_3.jpg",
+      "LumberJump/LumberJump_4.jpg"
     ]
   }
 ]
