@@ -13,8 +13,8 @@ class GalleryReview extends React.Component {
     render() {
         const projectSliderSettings = {
             draggable: false,
-            infinite: true,
-            arrows: true,
+            infinite: (this.props.projects.length > 1),
+            arrows: (this.props.projects.length > 1),
             dots: false,
             prevArrow: <CustomPrevArrow />,
             nextArrow: <CustomNextArrow />,
@@ -29,8 +29,8 @@ class GalleryReview extends React.Component {
             <div className="gallery-review">
                 <ProjectSlider {...projectSliderSettings} >
                     {
-                        this.props.projects.map((project, index) =>
-                            <div key={index}>
+                        this.props.projects.map((project) =>
+                            <div key={project.id}>
                                 <ReviewBox
                                     project={project}
                                     onClickCloseReview={this.props.onClickCloseReview}
@@ -47,7 +47,7 @@ class GalleryReview extends React.Component {
     _getCurrentSlideIndex = () => {
         const slidePosition = this.props.projects.map((project) => {return parseInt(project.id, 10)}).indexOf(this.props.currentSlideID);
 
-        return (slidePosition + 1) ? slidePosition : 1;
+        return (slidePosition + 1) ? slidePosition : false;
     }
 }
 

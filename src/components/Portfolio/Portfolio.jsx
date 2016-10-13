@@ -14,7 +14,7 @@ class Portfolio extends React.Component {
         filter: 'all',
         projects: this.props.projects,
         galleryReviewOn: false,
-        galleryElementIndex: 0
+        currentSlideID: 0
     };
 
     handlerSortPortfolio = (e) => {
@@ -37,7 +37,8 @@ class Portfolio extends React.Component {
 
     handlerClickCloseReview = () => {
         this.setState({
-            galleryReviewOn: false
+            galleryReviewOn: false,
+            currentSlideID: 0
         });
     };
 
@@ -46,7 +47,7 @@ class Portfolio extends React.Component {
         elementIndex = parseInt(elementIndex, 10);
 
         this.setState({
-            galleryElementIndex: elementIndex,
+            currentSlideID: elementIndex,
             galleryReviewOn: true
         });
     };
@@ -73,7 +74,7 @@ class Portfolio extends React.Component {
                     <GalleryReview
                         onClickCloseReview={this.handlerClickCloseReview}
                         projects={this.state.projects}
-                        currentSlideID={this.state.galleryElementIndex}
+                        currentSlideID={this.state.currentSlideID}
                     />
                 </div>
                 <GuidLines
