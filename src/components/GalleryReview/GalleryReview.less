@@ -28,6 +28,15 @@
       display: block;
       margin-bottom: .1em;
     }
+
+    @media only screen and (max-height: 950px)  {
+      & {
+        &:before {
+          display: inline-block;;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
   }
 
   &__project-view {
@@ -46,6 +55,12 @@
 
       &.image-loaded {
         opacity: 1;
+      }
+    }
+
+    @media only screen and (max-height: 950px)  {
+      & {
+        margin-top: 1em;
       }
     }
   }
