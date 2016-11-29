@@ -22,16 +22,15 @@
   },
   {
     "id": "3",
-    "name": "Vesta Dating",
-    "category": "mobile app design",
-    "customer": "Trinity Ukraine",
-    "shortcut": "Vesta.png",
+    "name": "Terminal 42",
+    "category": "branding",
+    "customer": "Terminal 42 - Sergii Petrenko",
+    "shortcut": "Terminal42.png",
     "images": [
-      "Vesta/Vesta_1.png",
-      "Vesta/Vesta_2.jpg",
-      "Vesta/Vesta_3.jpg",
-      "Vesta/Vesta_4.jpg",
-      "Vesta/Vesta_5.jpg"
+      "Terminal42/Terminal42_1.png",
+      "Terminal42/Terminal42_2.jpg",
+      "Terminal42/Terminal42_3.jpg",
+      "Terminal42/Terminal42_4.jpg"
     ]
   },
   {
@@ -58,15 +57,16 @@
   },
   {
     "id": "6",
-    "name": "Terminal 42",
-    "category": "branding",
-    "customer": "Terminal 42 - Sergii Petrenko",
-    "shortcut": "Terminal42.png",
+    "name": "Vesta Dating",
+    "category": "mobile app design",
+    "customer": "Trinity Ukraine",
+    "shortcut": "Vesta.png",
     "images": [
-      "Terminal42/Terminal42_1.png",
-      "Terminal42/Terminal42_2.jpg",
-      "Terminal42/Terminal42_3.jpg",
-      "Terminal42/Terminal42_4.jpg"
+      "Vesta/Vesta_1.png",
+      "Vesta/Vesta_2.jpg",
+      "Vesta/Vesta_3.jpg",
+      "Vesta/Vesta_4.jpg",
+      "Vesta/Vesta_5.jpg"
     ]
   },
   {
