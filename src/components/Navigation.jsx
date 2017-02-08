@@ -1,25 +1,31 @@
 import React from "react";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import classNames from 'classnames';
 import './Navigation.less';
 
 class Navigation extends React.Component{
-    render(){
-        return(
-            <Navbar default fixedTop>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#">React-Bootstrap</a>
-                        <img src='/static/img/en.png' className='StartPage__logo' />
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="#">Link #1</NavItem>
-                        <NavItem eventKey={2} href="#">Link #2</NavItem>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+    static defaultProps = {
+        spanAmount: [1, 2, 3, 4]
+    }
+
+    render() {
+        const navIconColorModifier = (this.props.colorScheme === 'white');
+        const navIconClassNames = classNames('navigation__icon', {
+            'navigation__icon--white': navIconColorModifier
+        }, {
+            'navigation__icon--open': this.props.isNavigationMenuActive
+        })
+
+        return (
+            <nav className="navigation">
+                <div
+                    className={navIconClassNames}
+                    onClick={this.props.handlerShowMenuNavigation}
+                >
+                    { this.props.spanAmount.map((num, index) => {
+                        return <span key={index} />
+                    })}
+                </div>
+            </nav>
         )
     }
 }

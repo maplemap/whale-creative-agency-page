@@ -3,20 +3,26 @@
   "version": "0.0.1",
   "description": "Whale Design Studio Page",
   "scripts": {
-    "dev-build": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=development webpack",
+    "watch": "NODE_ENV=development webpack --watch",
     "prod-build": "NODE_ENV=production webpack",
-    "webpack-devserver": "webpack-dev-server --progress"
+    "devserver": "webpack-dev-server --progress"
   },
   "author": {
     "name": "Whale Design Studio"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "*",
+    "animate.css": "^3.5.2",
+    "classnames": "^2.2.5",
+    "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "react": "^0.14.6",
-    "react-bootstrap": "^0.29.5",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "react-masonry-component": "^4.0.4",
+    "react-nl2br": "^0.1.1",
+    "react-scroll": "^1.4.0",
+    "react-slick": "^0.12.2",
+    "react-waypoint": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "*",
@@ -25,17 +31,15 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
-    "classnames": "^2.2.5",
     "css-loader": "^0.22.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "image-webpack-loader": "^1.8.0",
     "less-loader": "^2.2.2",
-    "node-sass": "^3.8.0",
     "react-hot-loader": "3.0.0-beta.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "1.14.0"
   }
 }

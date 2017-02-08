@@ -1,0 +1,226 @@
+[
+  {
+    "id": "1",
+    "name": "Dental Flash",
+    "category": "web-design",
+    "customer": "Evgenii Illin",
+    "shortcut": "DentalFlash.png",
+    "images": [
+      "Dental Flash/DentalFlash_1.png",
+      "Dental Flash/DentalFlash_2.png"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "24/7 Meetings",
+    "category": "branding",
+    "customer": "24/7 Meetings llc",
+    "shortcut": "247.png",
+    "images": [
+      "247/247_1.png"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Terminal 42",
+    "category": "branding",
+    "customer": "Terminal 42 - Sergii Petrenko",
+    "shortcut": "Terminal42.png",
+    "images": [
+      "Terminal42/Terminal42_1.png",
+      "Terminal42/Terminal42_2.jpg",
+      "Terminal42/Terminal42_3.jpg",
+      "Terminal42/Terminal42_4.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Pure Swiss Air",
+    "category": "branding",
+    "customer": "Omar Simbawy",
+    "shortcut": "Pure.png",
+    "images": [
+      "Pure/Pure_1.png"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Patisserie Makarun",
+    "category": "branding",
+    "customer": "Patisserie Makarun",
+    "shortcut": "Makarun.png",
+    "images": [
+      "Makarun/Makarun_1.png",
+      "Makarun/Makarun_2.png",
+      "Makarun/Makarun_3.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Vesta Dating",
+    "category": "mobile app design",
+    "customer": "Trinity Ukraine",
+    "shortcut": "Vesta.png",
+    "images": [
+      "Vesta/Vesta_1.png",
+      "Vesta/Vesta_2.jpg",
+      "Vesta/Vesta_3.jpg",
+      "Vesta/Vesta_4.jpg",
+      "Vesta/Vesta_5.jpg"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "SBC",
+    "category": "branding",
+    "customer": "Simple Business Class - Alex Shkolnik",
+    "shortcut": "SBC.png",
+    "images": [
+      "SBC/SBC_1.png"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Radius",
+    "category": "branding",
+    "customer": "Radius llc - Trinity Ukraine",
+    "shortcut": "Radius.png",
+    "images": [
+      "Radius/Radius_1.png",
+      "Radius/Radius_2.png"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Glass Link",
+    "category": "branding",
+    "customer": "Cargo Pin llc",
+    "shortcut": "GlassLink.png",
+    "images": [
+      "GlassLink/GlassLink_1.png"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "My.ua",
+    "category": "web-design",
+    "customer": "Trinity Ukraine",
+    "shortcut": "My.ua.png",
+    "images": [
+      "My.Ua/My.ua_1.png",
+      "My.Ua/My.ua_2.jpg"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Rentastic",
+    "category": "branding",
+    "customer": "Rentastic",
+    "shortcut": "Rentastic.png",
+    "images": [
+      "Rentastic/Rentastic_1.png",
+      "Rentastic/Rentastic_2.png"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Azimuth",
+    "category": "web-design",
+    "customer": "Own Startup",
+    "shortcut": "Azimuth.png",
+    "images": [
+      "Azimuth/Azimuth_1.png",
+      "Azimuth/Azimuth_2.png",
+      "Azimuth/Azimuth_3.jpg"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Redkit",
+    "category": "branding",
+    "customer": "Trinity Ukraine",
+    "shortcut": "RedKit.png",
+    "images": [
+      "RedKit/RedKit_1.png"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Neru.com.ua",
+    "category": "branding",
+    "customer": "Trinity Ukraine",
+    "shortcut": "Neru.png",
+    "images": [
+      "Neru/Neru_1.png",
+      "Neru/Neru_2.png",
+      "Neru/Neru_3.jpg"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Zip",
+    "category": "branding",
+    "customer": "Available for sale",
+    "shortcut": "ZIP.png",
+    "images": [
+      "Zip/ZIP_1.png"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "G Fashion",
+    "category": "branding",
+    "customer": "Tatiana Gavronskaya",
+    "shortcut": "G.png",
+    "images": [
+      "G/G_1.jpg"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Explosion Battle",
+    "category": "graphic design",
+    "customer": "Maxim Orobets (Maxdance)",
+    "shortcut": "Explosion.png",
+    "images": [
+      "Explosion/Explosion_1.jpg",
+      "Explosion/Explosion_2.jpg",
+      "Explosion/Explosion_3.png",
+      "Explosion/Explosion_4.jpg"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Lumber Duck",
+    "category": "branding",
+    "customer": "Own Startup",
+    "shortcut": "LumberDuck.png",
+    "images": [
+      "LumberDuck/LumberDuck_1.png",
+      "LumberDuck/LumberDuck_2.jpg"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Skrynia",
+    "category": "web-design",
+    "customer": "Kovcheg Ukraine",
+    "shortcut": "Skrinya.png",
+    "images": [
+      "Skrynia/Skrynia_1.png"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Lumber Jump",
+    "category": "mobile app design",
+    "customer": "Master Of Code Global",
+    "shortcut": "LumberJump.png",
+    "images": [
+      "LumberJump/LumberJump_1.png",
+      "LumberJump/LumberJump_2.jpg",
+      "LumberJump/LumberJump_3.jpg",
+      "LumberJump/LumberJump_4.jpg"
+    ]
+  }
+]

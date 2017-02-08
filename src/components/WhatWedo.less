@@ -1,0 +1,39 @@
+.what-we-do {
+  height: auto;
+
+  &__or {
+    position: absolute;
+    right: 5%;
+    bottom: 5em;
+    text-align: right;
+
+    &-text {
+      font-family: 'FiraSans-UltraLight', sans-serif;
+      font-size: 9em;
+    }
+  }
+  &__breaf-link {
+    display: block;
+    font-size: 2.75em;
+    font-family: 'FiraSans-Bold', sans-serif;
+    text-decoration: underline;
+    margin-top: .5em;
+  }
+
+  @media only screen and (max-width: 1600px)  {
+    & {
+      font-size: 90%;
+    }
+  }
+  @media only screen and (max-width: 1500px)  {
+    & {
+      font-size: 80%;
+    }
+  }
+  @media only screen and (max-width: 600px)  {
+    &__or {
+      position: static;
+      text-align: left;
+    }
+  }
+}

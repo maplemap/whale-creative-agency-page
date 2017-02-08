@@ -10,7 +10,7 @@ module.exports = {
     entry: getEntrySources(['./src/main.js']),
     output: {
         path: __dirname + '/public/build',
-        publicPath: "/public/",
+        publicPath: "/build/",
         filename: "bundle.js"
     },
     module: {
@@ -24,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: (process.env.NODE_ENV === "production") 
+                loader: (process.env.NODE_ENV === "production")
                             ? ExtractTextPlugin.extract('style', 'css!less!autoprefixer')
                             : "style-loader!css-loader!autoprefixer-loader!less",
                 exclude: [/node_modules/, /public/]
@@ -34,11 +34,17 @@ module.exports = {
                 loaders: [
                     'file?name=[sha512:hash:base64:7].[ext]',
                     'image-webpack?progressive=true&optimizationLevel=7&interlaced=true'
-                ]
+                ],
+                exclude: [/node_modules/, /public/, /src\/fonts/]
             },
             {
-                test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                loader : 'file?name=[name].[ext]'
+                test   : /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                loader : 'file?name=[name].[ext]',
+                exclude: [/node_modules/, /public/, /src\/img/]
+            },
+            {
+                test: /\.json$/,
+                loader: "json-loader"
             },
             {
                 test: /\.jsx?$/,
@@ -62,12 +68,12 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery'
-        }),
+        // new webpack.ProvidePlugin({
+        //   $: 'jquery',
+        //   jQuery: 'jquery'
+        // }),
         new ExtractTextPlugin('bundle.css', {
-            allChunks: true, 
+            allChunks: true,
             disable: process.env.NODE_ENV == 'development'
         }),
         new webpack.HotModuleReplacementPlugin(),
@@ -79,7 +85,6 @@ if (NODE_ENV == 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                // don't show unreachable variables etc
                 warnings:     false,
                 drop_console: true,
                 unsafe:       true

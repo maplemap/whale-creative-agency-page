@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import './main.less';
-import App from './components/App.jsx';
+import './styles/main.less';
+import App from './App.jsx';
 
 if (module.hot) {
     module.hot.accept();

@@ -1,0 +1,220 @@
+.gallery-review {
+  position: relative;
+  height: 100%;
+
+  &__body {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__project-name {
+    color: white;
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 2.375em;
+    text-transform: lowercase;
+    margin-top: 1.8em;
+  }
+
+  &__project-customer {
+    color: white;
+    font-family: 'FiraSans-SemiBold', sans-serif;
+    font-size: 1.25em;
+    margin-top: .7em;
+
+    &:before {
+      content: 'customer:';
+      display: block;
+      margin-bottom: .1em;
+    }
+
+    @media only screen and (max-height: 950px)  {
+      & {
+        &:before {
+          display: inline-block;;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+
+  &__project-view {
+    position: relative;
+    //min-height: 20em;
+    max-height: 34em;
+    text-align: left;
+    overflow: hidden;
+    margin-top: 3.8em;
+
+    img {
+      width:100% !important;
+      display:block;
+      opacity: 0;
+      transition: opacity 0.5s;
+
+      &.image-loaded {
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (max-height: 950px)  {
+      & {
+        margin-top: 1em;
+      }
+    }
+    @media only screen and (max-height: 900px)  {
+      & {
+        max-height: 30em;
+      }
+    }
+    @media only screen and (max-height: 820px)  {
+      & {
+        max-height: 25em;
+      }
+    }
+  }
+
+  &__project-preview {
+    text-align: left;
+    height: 9.375em;
+    margin-top: 1.4em;
+  }
+
+  &__project-preview-item {
+    position: relative;
+    display: inline-block;
+    width: 24.1%;
+    height: 100%;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 1.2%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .gallery-review__project-image {
+    display:block;
+    width:100% !important;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.image-loaded {
+      opacity: 1;
+    }
+  }
+
+  .slick-slider {
+    .slick-prev:before,
+    .slick-next:before {
+      color: white;
+    }
+  }
+
+  /*** media query ***/
+  @media only screen and (max-width: 1300px) {
+    &__body {
+      width: 70%;
+    }
+  }
+
+  @media only screen and (max-height: 940px)  {
+
+    &__body {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-height: 870px)  {
+
+    &__body {
+      width: 53%;
+    }
+  }
+
+  @media only screen and (max-height: 800px)  {
+
+    &__body {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (max-height: 768px)  {
+
+    &__project-name {
+      margin-top: 1em;
+    }
+  }
+
+  @media only screen and (max-height: 740px)  {
+    &__body {
+      width: 45%;
+    }
+  }
+
+  @media only screen and (max-height: 680px)  {
+    &__body {
+      width: 40%;
+    }
+
+    .gallery-review__project-view {
+      margin-top: 1.8em;
+    }
+  }
+
+  @media only screen and (max-height: 650px)  {
+    &__project-name {
+      margin-top: .8em;
+    }
+  }
+
+
+  /* --iPad -- */
+
+  /* Portrait and Landscape */
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    &__project-view {
+      margin-top: 1.8em;
+    }
+  }
+
+
+  /* --- iPad Pro -- */
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-width: 1366px)
+  and (min-height: 1025px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+  }
+
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-width: 1366px)
+  and (min-height: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    &__body {
+      width: 70%;
+    }
+  }
+}

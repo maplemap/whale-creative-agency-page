@@ -1,0 +1,975 @@
+@import "reset.css";
+@import "font.css";
+@import "slick-slider.less";
+@import "../../node_modules/animate.css/animate.css";
+
+/*** default ***/
+body {
+  font-size: 100%;
+  font-family: 'FiraSans-Regular', sans-serif;
+}
+
+a, a:link,
+a:visited,
+a:hover {
+  color: black;
+}
+
+#main {
+  height: 100%;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/*** logo ***/
+a.logo {
+  color: black;
+  float: left;
+  display: inline-block;
+  font-size: 2.125em;
+  font-family: 'FiraSans-Bold', sans-serif;
+  text-transform: lowercase;
+  line-height: .91em;
+  transition: .3s;
+
+  &__star {
+    color: #1DADB5;
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 0 0 0 5%;
+  }
+
+  &--header {
+    margin-top: .2em;
+  }
+  &--white {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1500px)  {
+    font-size: 1.8em;
+    &--header {
+      margin-top: 0;
+    }
+  }
+}
+
+/*** section-slogan ***/
+.section-slogan {
+  color: black;
+  float: left;
+  font-size: 1.125em;
+  font-family: 'FiraSans-Bold', sans-serif;
+  margin: .125em 0 0 3.4%;
+  transition: .3s;
+
+  &--white {
+    color: white;
+  }
+}
+
+/*** brand-name ***/
+.brand-name {
+  color: black;  /* Fallback: assume this color ON TOP of image */
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 14.7em;
+  line-height: .82em;
+  text-transform: lowercase;
+
+  &__text {
+    display: inline-block;
+    text-align: left;
+
+    i {
+      font-style: normal;
+    }
+  }
+
+  &--presentation {
+
+    .brand-name__text {
+      padding: .4em 0 0.4em 0;
+    }
+
+    @supports (-webkit-background-clip: text) {
+      .brand-name__text {
+        background: url("../img/whale-bg.jpg") no-repeat 52% 100%;
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    @supports not (-webkit-background-clip: text) {
+      .brand-name__text {
+        color: #1DADB5;
+      }
+      .brand-name__star {
+        color: black;
+      }
+    }
+
+    @media only screen and (max-height: 865px)  {
+      & {
+        font-size: 13.7em;
+        margin-top: -.2em;
+      }
+    }
+    @media only screen and (max-height: 750px)  {
+      & {
+        font-size: 12em;
+      }
+    }
+    @media only screen and (max-height: 650px)  {
+      & {
+        font-size: 10.7em;
+      }
+    }
+  }
+
+  &__star {
+    font-size: .74em;
+  }
+  &__W {
+    margin-left: 5.6%;
+  }
+  &__H {
+    margin-left: 13%;
+  }
+  &__A {
+    line-height: .99em;
+    margin-left: 12%;
+  }
+  &__L {
+    margin-left: 24%;
+  }
+  &__E {
+    margin-left: 48%;
+  }
+}
+
+
+/*** terminal-42 ***/
+.terminal-42 {
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 3.625em;
+
+  &__color {
+    color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+  }
+  &__name {
+    color: white;
+  }
+  &__text {
+    color: white;
+    font-family: 'FiraSans-BookItalic', sans-serif;
+  }
+
+  &--presentation {
+    position: absolute;
+    left: 3%;
+    bottom: 8%;
+  }
+}
+
+.description {
+  padding: 2.4em 4% 2.4em 4%;
+
+  &__title {
+    font-size: 2.25em;
+    font-family: 'FiraSans-Bold', sans-serif;
+    text-transform: lowercase;
+  }
+  &__stroke {
+    border-top: 1px solid black;
+    margin: .5em 0 0 0;
+  }
+  &__text {
+    font-size: 1.125em;
+    font-family: 'FiraSans-Regular', sans-serif;
+    line-height: 1.4em;
+    box-sizing: border-box;
+    padding: .6em 0;
+  }
+
+
+  &--team {
+    color: black;
+    position: absolute;
+    left: 5.72916666666667%;
+    bottom: 11.5%;
+    width: 55.7291666666667%;
+    padding-left: 0;
+    background: white;
+
+    &:before {
+      content: attr(data-num);
+      display: block;
+      float: left;
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 8.4375em;
+      margin: .1em 4.4% 0 4.4%;
+    }
+
+    .description__text {
+      overflow: hidden;
+    }
+  }
+
+  &--portfolio {
+    color: white;
+    width: 60%;
+    padding: 0;
+
+    .description__title {
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 1.125em;
+      text-transform: lowercase;
+    }
+    .description__text {
+      min-height: 80px;
+      padding: .3em 0;
+    }
+
+    /*** media query ***/
+    @media only screen and (max-width: 95.625em) {
+      & {
+        width: 75%;
+      }
+    }
+  }
+}
+
+/*** gallery ***/
+.gallery {
+
+  &--portfolio {
+    margin-top: 3.6em;
+
+    .gallery__grid {
+      margin-top: 1.7em;
+
+      &.animated {
+        -webkit-animation-duration: .3s;
+        -o-animation-duration: .3s;
+        -moz-animation-duration: .3s;
+        animation-duration: .3s;
+      }
+    }
+
+    .gallery__item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .gallery__see-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      width: 45px;
+      height: 31px;
+      opacity: 0;
+      text-indent: -9999px;
+      transform: scale(0, 0);
+      transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
+      margin: -15.5px 0 0 -22.5px;
+      background: url("../img/eye-icon.svg") no-repeat center;
+    }
+
+    .gallery__mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 250;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        background: rgba(0,0,0,0.6);
+
+        .gallery__see-icon {
+          opacity: 1;
+          transform: scale(1,1);
+          transition-delay: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.gallery-menu {
+
+  &--portfolio {
+    position: relative;
+    z-index: 70;
+    text-align: right;
+    margin-top: .9375em;
+
+    .gallery-menu__item {
+      display: inline-block;
+      color: white;
+      font-family: 'FiraSans-Bold', sans-serif;
+      font-size: 1.5em;
+      text-transform: lowercase;
+      cursor: pointer;
+      white-space: nowrap;
+      margin: 0 1.4% .1em 2%;
+
+      &:first-child {
+        float: left;
+        text-align: left;
+        margin: 0 75px 0 0;
+      }
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+
+      &:hover,
+      &--current {
+        color: #1DADB5;
+      }
+    }
+  }
+}
+
+/*** popup ***/
+.popup {
+  display: block;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .3s opacity;
+
+  &--show {
+    z-index: 300;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 77.2%;
+    padding: 4.6em 0 5em 6%;
+    margin: 8.625em 0 0 11.4%;
+    overflow: hidden;
+    background: #F8E71C;
+  }
+
+  &--portfolio,
+  &--what-we-do,
+  &--navigation {
+    &.popup--show {
+      position: fixed;
+    }
+  }
+
+  &--navigation {
+    .popup__wrapper {
+      padding: 1.6em 0 5em 6%;
+      background:
+        url('../img/footer-bg-2.png') no-repeat,
+        #F8E71C;
+      background-position: left 858px center;
+      background-size: 43% auto, auto auto;
+    }
+  }
+  @media only screen and (max-width: 1400px)  {
+    &--navigation {
+      .popup__wrapper {
+        margin: 4em 0 0 11.4%;
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px)  {
+    &--what-we-do {
+      font-size: 90%;
+
+      .popup__wrapper {
+        margin: 9em 0 0 11.4%;
+      }
+    }
+  }
+  @media only screen and (max-width: 900px)  {
+    &--what-we-do {
+      font-size: 75%;
+
+      .popup__wrapper {
+        margin: 11.5em 0 0 11.4%;
+      }
+    }
+  }
+  @media only screen and (max-width: 800px)  {
+    &__wrapper {
+      width: 95%;
+    }
+
+    &--navigation {
+      .popup__wrapper {
+        margin: 8.625em 0 0 2.5%;
+      }
+    }
+    &--what-we-do {
+      .popup__wrapper {
+        margin: 11.5em 0 0 2.5%;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px)  {
+    &--what-we-do {
+      font-size: 60%;
+      .popup__wrapper {
+        margin: 14.5em 0 0 2.5%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 400px),
+         only screen and (max-height: 840px)  {
+     & {
+       overflow-x: scroll;
+     }
+     .popup__wrapper {
+       margin-bottom: 4em;
+     }
+  }
+  @media only screen and (max-width: 400px) {
+    & {
+      overflow-x: scroll;
+    }
+    &--what-we-do {
+      font-size: 55%;
+    }
+    &--navigation {
+      .popup__wrapper {
+        padding: 1.6em 0 1em 6%;
+        margin: 6.625em 0 5em 2.5%;
+      }
+    }
+  }
+}
+
+/*** copyright ***/
+.copyright {
+
+  &--footer {
+    color: white;
+    position: absolute;
+    bottom: 3.8em;
+    left: 0;
+    font-family: 'FiraSans-Regular', sans-serif;
+    font-size: 1.75em;
+
+    .copyright__company {
+      font-size: 1.3em;
+
+      i {
+        font-size: .7em;
+        font-style: normal;
+      }
+    }
+
+    .copyright__place {
+      display: block;
+      margin-top: .2em;
+    }
+  }
+}
+
+/*** social ***/
+.socials {
+
+  &__cell {
+
+    a {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      margin-bottom: .6em;
+    }
+  }
+
+  &__behance {
+    background: url("../img/social-beahance-icon.svg") no-repeat center center;
+  }
+  &__dribble {
+    background: url("../img/social-dribble-icon.svg") no-repeat center center;
+  }
+  &__linkedin {
+    background: url("../img/social-linked-icon.svg") no-repeat center center;
+  }
+  &__instagram {
+    width: 35px;
+    background: url("../img/social-instagram-icon.svg") no-repeat center center;
+  }
+  &__soundcloud {
+    background: url("../img/social-soundcloud-icon.svg") no-repeat center center;
+  }
+
+  &--footer {
+    position: absolute;
+    right: 7%;
+    bottom: 5.3em;
+
+    .socials__cell {
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/*** waypoint ***/
+.waypoint {
+  position: absolute;
+  top: 80%;
+  left: 0;
+
+  &--portfolio {
+    top: 20%;
+  }
+}
+
+/*** close-btn ***/
+.close-btn {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: url('../img/close-icon.svg') no-repeat;
+  background-size: cover;
+
+  &--gallery-review {
+    top: 0;
+    right: 0;
+  }
+  &--navigation,
+  &--what-we-do {
+    top: 3.75em;
+    right: 3.4%;
+  }
+
+  @media only screen and (max-width: 1100px)  {
+    &--what-we-do {
+      top: 4.1em;
+    }
+  }
+  @media only screen and (max-width: 900px)  {
+    &--what-we-do {
+      top: 4.9em;
+    }
+  }
+  @media only screen and (max-width: 900px)  {
+    &--what-we-do {
+      top: 6em;
+    }
+  }
+  @media only screen and (max-width: 400px)  {
+    &--what-we-do {
+      top: 6.7em;
+    }
+  }
+}
+
+/*** lead-header ***/
+.lead-header  {
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 7.3125em;
+  line-height: .9em;
+
+  &__underline {
+    position: relative;
+    display: inline-block;
+    font-family: 'FiraSans-Regular', sans-serif;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .06em;
+      position: absolute;
+      left: 0;
+      bottom: -.04em;
+      background: black;
+    }
+  }
+
+  &--presentation {
+    padding-right: 2%
+  }
+  &--what-we-do {
+    position: relative;
+
+    i {
+      position: absolute;
+      right: 100%;
+      font-style: normal;
+    }
+
+  }
+  &--navigation {
+    padding-right: 2%;
+    margin-top: .32em;
+
+    @media only screen and (max-width: 1368px)  {
+      & {
+        font-size: 5em;
+      }
+    }
+    @media only screen and (max-width: 1000px)  {
+      & {
+        font-size: 4.5em;
+      }
+    }
+    @media only screen and (max-width: 800px)  {
+      & {
+        font-size: 3.8em;
+      }
+    }
+    @media only screen and (max-width: 500px)  {
+      & {
+        font-size: 3.2em;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px)  {
+    &--what-we-do,
+    &--footer {
+      font-size: 5em;
+    }
+  }
+}
+
+/*** branches ***/
+
+.branches {
+  text-align: left;
+
+  &__item {
+    display: inline-block;
+    width: 9%;
+    min-width: 165px;
+    text-align: left;
+    vertical-align: top;
+    margin-right: 2%;
+  }
+  &__head {
+    position: relative;
+    display: inline-block;
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 2.25em;
+    margin-bottom: .6em;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: -.04em;
+      background: black;
+    }
+
+    &--marked {
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: -10%;
+        display: block;
+        width: 120%;
+        height: 150%;
+      }
+    }
+  }
+
+  &__point {
+    margin-bottom: 1em;
+
+    &-name {
+      font-family: 'FiraSans-Medium', sans-serif;
+      font-size: 1.25em;
+      line-height: 1.2em;
+
+      a {
+        cursor: pointer;
+      }
+    }
+    &-description {
+      font-family: 'FiraSans-Regular', sans-serif;
+      font-size: .875em;
+      margin-top: .3em;
+    }
+  }
+
+  &--what-we-do {
+    float: left;
+    width: 65%;
+    margin-top: 3em;
+
+    .branches__head {
+      &:before {
+        content: '';
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-bottom: .4em;
+        background: url('../img/branches-icons-spryte.svg') no-repeat;
+      }
+
+      &--mobile {
+        &:before {
+          background-position: -90px 0;
+        }
+      }
+      &--promo {
+        &:before {
+          background-position: -167px 0;
+        }
+      }
+      &--branding {
+        &:before {
+          background-position: -262px 0;
+        }
+      }
+      &--graphic {
+        &:before {
+          background-position: -347px 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1650px)  {
+      & {
+        width: 100%;
+
+        .branches__item {
+          margin-right: 3%;
+        }
+      }
+    }
+    @media only screen and (max-width: 1120px)  {
+      & {
+        .branches__item {
+          min-width: 180px;
+          margin-right: 7%;
+        }
+      }
+    }
+  }
+
+  &--navigation {
+    margin-top: 6em;
+
+    .branches__head {
+      &--marked {
+        &:before {
+          background: #fff;
+        }
+      }
+    }
+
+    .branches__item--contacts {
+      display: none;
+    }
+
+    @media only screen and (max-width: 400px)  {
+      & {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  &--footer {
+    margin: 4.5em 0 0 0;
+
+    .branches__head {
+
+      &--marked {
+        &:before {
+          background: #F8E71C;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1120px)  {
+      & {
+        width: 75%;
+      }
+    }
+  }
+
+
+
+  @media only screen and (max-width: 1120px)  {
+    &--what-we-do,
+    &--footer {
+      font-size: 130%;
+    }
+  }
+  @media only screen and (max-width: 400px)  {
+    &--navigation  {
+      font-size: 85%;
+    }
+    &__item {
+      min-width: 110px;
+      margin: 0 5% 0 0;
+    }
+    &__head {
+      font-size: 1.7em;
+    }
+  }
+}
+
+
+/*** call ***/
+.call {
+  font-family: 'FiraSans-Bold', sans-serif;
+  font-size: 4.8125em;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &--what-we-do {
+    float: right;
+    max-width: 500px;
+    text-align: right;
+    line-height: .83em;
+    padding: .89em .58em 1em .9em;
+    background: #F8E71C;
+
+    @media only screen and (max-width: 1700px)  {
+      & {
+        max-width: 480px;
+      }
+    }
+    @media only screen and (max-width: 1650px)  {
+      & {
+        font-size: 250%;
+        max-width: 100%;
+      }
+    }
+    @media only screen and (max-width: 1100px)  {
+      & {
+        font-size: 200%;
+      }
+    }
+  }
+}
+
+/*** contacts ***/
+.contacts {
+
+
+  &--what-we-do {
+    font-size: 2.75em;
+    font-family: 'FiraSans-Bold', sans-serif;
+
+    .contacts__email,
+    .contacts__skype {
+      margin-top: 2.45em;
+
+      &:before {
+        display: block;
+        font-family: 'FiraSans-Regular', sans-serif;
+        margin-bottom: .1em;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .contacts__email {
+      &:before {
+        content: 'email';
+        display: block;
+      }
+    }
+    .contacts__skype {
+      margin-top: 1.2em;
+
+      &:before {
+        content: 'skype';
+        display: block;
+      }
+    }
+  }
+}
+
+/*** page ***/
+.page {
+
+  &__body {
+    position: relative;
+    z-index: 10;
+    padding: 11.5em 0 5em 16em;
+  }
+
+  &__text {
+    font-family: 'FiraSans-Bold', sans-serif;
+    font-size: 1.5em;
+    margin: .9em 0 0 .5%;
+  }
+
+  &__content {
+    padding: 2em 0 0 .6%;
+  }
+
+  &--what-we-do {
+
+    .page__content {
+      overflow: hidden;
+    }
+  }
+
+  &--footer {
+    .page__body {
+      padding: 13.7em 0 0 15em;
+    }
+  }
+
+  @media only screen and (max-width: 1600px)  {
+    .page__body {
+      padding: 5.5em 0 5em 17em;
+    }
+    &--footer {
+      .page__body {
+        padding: 8em 0 5em 13em;
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px)  {
+    .page__body {
+      padding: 5.5em 0 5em 14em;
+    }
+    &--footer {
+      .page__body {
+        padding: 5.5em 0 5em 12em;
+      }
+    }
+  }
+}
