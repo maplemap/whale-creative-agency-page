@@ -10,7 +10,7 @@ module.exports = {
     entry: getEntrySources(['./src/main.js']),
     output: {
         path: __dirname + '/public/build',
-        publicPath: "/build/",
+        publicPath: "./build/",
         filename: "bundle.js"
     },
     module: {
