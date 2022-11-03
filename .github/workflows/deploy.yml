@@ -19,4 +19,7 @@ jobs:
       - name: Remove .gitignore file
         run: rm .gitignore
       - name: Deploy to gh-pages
-        run: npm run deploy
+        run: |
+          git config --global user.email "sergio.illarionov@gmail.com"
+          git config --global user.name "Serhii Illarionov"
+          npm run deploy
