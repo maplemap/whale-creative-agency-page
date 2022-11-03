@@ -17,5 +17,7 @@ jobs:
         run: npm install
       - name: Create production build
         run: npm run build
+      - name: Remove .gitignore file
+        run: rm .gitignore
       - name: Deploying the static website to gh-pages
-        run: npm run deploy
+        run:  git push origin :gh-pages && git subtree push --prefix public origin gh-pages
