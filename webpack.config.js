@@ -10,7 +10,7 @@ module.exports = {
     entry: getEntrySources(['./src/main.js']),
     output: {
         path: __dirname + '/public/build',
-        publicPath: "/build/",
+        publicPath: "./build/",
         filename: "bundle.js"
     },
     module: {
@@ -74,14 +74,14 @@ module.exports = {
         // }),
         new ExtractTextPlugin('bundle.css', {
             allChunks: true,
-            disable: process.env.NODE_ENV == 'development'
+            disable: process.env.NODE_ENV === 'development'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ]
 };
 
-if (NODE_ENV == 'production') {
+if (NODE_ENV === 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {

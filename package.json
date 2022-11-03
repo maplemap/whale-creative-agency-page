@@ -4,7 +4,9 @@
   "description": "Whale Design Studio Page",
   "scripts": {
     "dev": "webpack-dev-server --progress",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d public"
   },
   "author": {
     "name": "Whale Design Studio"
@@ -32,6 +34,7 @@
     "css-loader": "^0.22.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "gh-pages": "^4.0.0",
     "image-webpack-loader": "^1.8.0",
     "less-loader": "^2.2.2",
     "react-hot-loader": "3.0.0-beta.2",

@@ -16,14 +16,7 @@ jobs:
           cache-dependency-path: 'package-lock.json'
       - name: Install all dependencies
         run: npm install
-      - name: Build
-        run: npm run build
       - name: Remove .gitignore file
         run: rm .gitignore
       - name: Deploy to gh-pages
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: gh-pages # The branch name where you want to push the assets
-          FOLDER: public # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+        run: npm run deploy
