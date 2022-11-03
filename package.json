@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "description": "Whale Design Studio Page",
   "scripts": {
-    "build": "NODE_ENV=development webpack",
-    "watch": "NODE_ENV=development webpack --watch",
-    "prod-build": "NODE_ENV=production webpack",
-    "devserver": "webpack-dev-server --progress"
+    "dev": "webpack-dev-server --progress",
+    "build": "NODE_ENV=production webpack",
+    "deploy": "npm run build && git push origin `git subtree split --prefix public master`:gh-pages --force"
   },
   "author": {
     "name": "Whale Design Studio"
@@ -16,8 +15,8 @@
     "classnames": "^2.2.5",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "react-masonry-component": "^4.0.4",
     "react-nl2br": "^0.1.1",
     "react-scroll": "^1.4.0",

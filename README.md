@@ -1,8 +1,15 @@
 # Whale-Design landing-page application
 
-## Installation (development)
+[Live Demo](https://maplemap.github.io/whale-creative-agency-page/)
 
-1. ```npm install```
-2. ```npm run dev-build```
-3. ```npm run webpack-devserver``` (in another terminal)
-5. open http://localhost:8090
+### Installation (development)
+1. clone or download project
+2. ```npm install```
+3. ```npm run dev```
+4. open http://localhost:8090
+
+### Prepare production build
+1. clone or download project
+2. ```npm install```
+3. ```npm run build```
+4. See the 'public' directory

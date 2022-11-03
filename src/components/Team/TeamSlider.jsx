@@ -63,12 +63,14 @@ class TeamSlider extends React.Component {
 
 class CustomPrevArrow extends React.Component{
     render() {
+        const {numPrevBtn, ...restProp} = this.props;
+        
         return (
             <button
                 type="button"
                 className="slick-prev"
-                data-page-num={this.props.numPrevBtn}
-                {...this.props}
+                data-page-num={numPrevBtn}
+                {...restProp}
             />
         )
     }
@@ -76,12 +78,14 @@ class CustomPrevArrow extends React.Component{
 
 class CustomNextArrow extends React.Component{
     render() {
+        const {numNextBtn, ...restProp} = this.props;
+        
         return (
             <button
                 type="button"
                 className="slick-next"
-                data-page-num={this.props.numNextBtn}
-                {...this.props}
+                data-page-num={numNextBtn}
+                {...restProp}
             />
         )
     }
