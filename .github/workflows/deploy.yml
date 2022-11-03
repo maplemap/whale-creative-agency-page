@@ -1,24 +1,21 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Deploy to GH pages
 on:
   push:
     branches: [ master ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Set up Node 16
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: npm
           cache-dependency-path: 'package-lock.json'
       - name: Install dependencies
-        run: npm install
+      - run: npm install
       - name: Create production build
-        run: npm run build
+      - run: npm run build
       - name: Deploying the static website to gh-pages
-        run: npm run deploy
+      - run: npm run deploy
