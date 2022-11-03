@@ -3,6 +3,7 @@ var webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const NODE_HOST = process.env.NODE_HOST || '0.0.0.0';
 const NODE_PORT = process.env.NODE_PORT || 8090;
+const isProduction = NODE_ENV === "production";
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -10,21 +11,21 @@ module.exports = {
     entry: getEntrySources(['./src/main.js']),
     output: {
         path: __dirname + '/public/build',
-        publicPath: NODE_ENV === "production" ? "./build/" : "/build/",
+        publicPath: "",
         filename: "bundle.js"
     },
     module: {
         loaders: [
             {
                 test: /\.css$/,
-                loader: (process.env.NODE_ENV === "production")
+                loader: isProduction
                             ? ExtractTextPlugin.extract('style', 'css!autoprefixer')
                             : "style-loader!css-loader!autoprefixer-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
                 test: /\.less$/,
-                loader: (process.env.NODE_ENV === "production")
+                loader: isProduction
                             ? ExtractTextPlugin.extract('style', 'css!less!autoprefixer')
                             : "style-loader!css-loader!autoprefixer-loader!less",
                 exclude: [/node_modules/, /public/]
@@ -74,14 +75,14 @@ module.exports = {
         // }),
         new ExtractTextPlugin('bundle.css', {
             allChunks: true,
-            disable: process.env.NODE_ENV === 'development'
+            disable: !isProduction
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ]
 };
 
-if (NODE_ENV === 'production') {
+if (isProduction) {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -94,7 +95,7 @@ if (NODE_ENV === 'production') {
 }
 
 function getEntrySources(sources) {
-    if (process.env.NODE_ENV !== 'production') {
+    if (!isProduction) {
         sources.unshift('react-hot-loader/patch');
         sources.unshift(`webpack-dev-server/client?http://${NODE_HOST}:${NODE_PORT}`);
         sources.unshift('webpack/hot/only-dev-server');
