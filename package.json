@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Whale Design Studio Page",
   "scripts": {
-    "dev": "webpack-dev-server --progress",
+    "dev": "npm run build && webpack-dev-server --progress",
     "build": "NODE_ENV=production webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public"
